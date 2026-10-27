@@ -1,0 +1,87 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>台股當沖看板</title><style>
+:root{--bg:#f4f4f1;--surface:#fff;--ink:#1e2226;--muted:#61686f;--line:#dfe1dc;--accent:#2d4a6b;--accent-soft:#e6ecf3;
+--up:#c8102e;--up-soft:#fbe6e8;--down:#0f7a3d;--down-soft:#e2f2e8;--warn:#8a5a00;--warn-soft:#fdf1d8;
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121417;--surface:#1a1d21;--ink:#e7e9ec;--muted:#9aa1a8;
+--line:#2c3036;--accent:#8fb4dc;--accent-soft:#1f2a37;--up:#ff6b78;--up-soft:#3a1d21;--down:#4fcf87;--down-soft:#173022;
+--warn:#f3c56b;--warn-soft:#3a2f14;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121417;--surface:#1a1d21;--ink:#e7e9ec;--muted:#9aa1a8;--line:#2c3036;--accent:#8fb4dc;
+--accent-soft:#1f2a37;--up:#ff6b78;--up-soft:#3a1d21;--down:#4fcf87;--down-soft:#173022;--warn:#f3c56b;--warn-soft:#3a2f14;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:20px 16px 48px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px}
+h1{font-size:1.5rem;margin:0} h2{font-size:1.05rem;margin:0} h3{font-size:.95rem;margin:.6em 0 .2em}
+.sub,.desc{color:var(--muted);font-size:.86rem;margin:0}
+section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.warnbar{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:.88rem}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:10px;padding:8px 12px} .kpi small{color:var(--muted);display:block;font-size:.78rem}
+.kpi b{font-family:var(--num);font-size:1.25rem}
+svg.spark{width:100%;height:56px;display:block}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{font:inherit;background:none;border:none;border-bottom:3px solid transparent;padding:6px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+.tablebox{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:.78rem;color:var(--muted);font-weight:500;cursor:pointer;user-select:none}
+th.l,td.l{text-align:left} td.num{font-family:var(--num)}
+.chip{display:inline-block;font-size:.75rem;padding:0 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--down-soft);color:var(--down);border-color:transparent}
+.chip.obs{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.few{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.chip.bad{background:var(--up-soft);color:var(--up);border-color:transparent}
+details summary{cursor:pointer;color:var(--accent)}
+.md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
+footer{color:var(--muted);font-size:.82rem;text-align:center}
+a{color:var(--accent)}
+</style></head><body><div class="wrap"><header><div><h1>台股隔日當沖看板</h1><p class="sub">資料日 2026-10-22・產生於 2026-10-27 08:30・紅漲綠跌</p></div><p class="sub">資料：證交所、櫃買中心公開資料</p></header><p class="warnbar">本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</p><section><h2>市場概況 2026-10-22</h2><div class="kpis"><div class="kpi"><small>上市 1081 檔</small><b class="down">-1.31%</b><small>漲 247・跌 760（普通股等權平均漲跌）</small></div><div class="kpi"><small>上櫃 866 檔</small><b class="down">-1.53%</b><small>漲 146・跌 657（普通股等權平均漲跌）</small></div></div><svg class="spark" viewBox="0 0 600 56" preserveAspectRatio="none" role="img" aria-label="近期上漲家數比例"><line x1="0" x2="600" y1="26.7" y2="26.7" stroke="var(--line)" stroke-dasharray="4 4"/><polyline fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" points="0.0,52.0 10.2,46.1 20.3,42.3 30.5,6.0 40.7,19.1 50.8,20.4 61.0,17.8 71.2,26.7 81.4,30.9 91.5,15.8 101.7,34.7 111.9,22.7 122.0,32.4 132.2,39.5 142.4,28.7 152.5,43.5 162.7,34.8 172.9,17.5 183.1,25.8 193.2,37.6 203.4,32.2 213.6,13.4 223.7,27.6 233.9,34.7 244.1,38.0 254.2,24.6 264.4,35.2 274.6,45.2 284.7,17.2 294.9,34.0 305.1,40.6 315.3,25.8 325.4,41.1 335.6,43.5 345.8,36.0 355.9,43.1 366.1,16.1 376.3,18.5 386.4,16.3 396.6,28.4 406.8,38.2 416.9,34.1 427.1,32.8 437.3,33.1 447.5,15.6 457.6,33.5 467.8,27.9 478.0,36.4 488.1,33.1 498.3,25.6 508.5,32.5 518.6,29.9 528.8,42.9 539.0,16.8 549.2,47.3 559.3,18.9 569.5,46.6 579.7,38.6 589.8,22.4 600.0,44.5"/></svg><p class="desc">折線是近 60 個交易日「上漲家數比例」，虛線為 50%。</p></section><section><h2>2026-10-23 當沖候選名單</h2><p class="warnbar">目前沒有「上線」的策略（策略要先通過 walk-forward 回測：驗證期獲利因子 &gt; 1.2 且樣本 ≥ 30）。所以正式名單是空的；下面「觀察中」的訊號照樣記錄、對答案，但不建議參考。</p><p class="desc">模擬規則：2026-10-23 開盤價進場、收盤價出場；停損 = 進場價 −2%（做多）或 ＋2%（做空）。「參考停損」是用今日收盤價估的，實際以開盤價計。每個策略最多 5 檔。</p><div class="tabs" data-tabs><button class="tab" data-t="L" aria-selected="true">做多 0</button><button class="tab" data-t="S" aria-selected="false">做空 0</button></div><div data-pane="L"><p class="desc">沒有符合條件的股票。</p></div><div data-pane="S" hidden><p class="desc">沒有符合條件的股票。</p></div><details><summary>觀察中策略的訊號（11 檔，不列入名單）</summary><div class="tablebox"><table class="sort"><thead><tr><th class="l">股票</th><th class="l">市場</th><th class="l">策略</th><th>今日收盤</th><th>參考停損</th><th class="l">理由</th></tr></thead><tbody><tr><td class="l"><span class="num">2465</span> 麗臺</td><td class="l">上市</td><td class="l">多1 強勢延續</td><td class="num">96.20</td><td class="num">94.28</td><td class="l">漲跌 +9.9%、量比 9.0、10,481 張</td></tr><tr><td class="l"><span class="num">3691</span> 碩禾</td><td class="l">上櫃</td><td class="l">多1 強勢延續</td><td class="num">109.00</td><td class="num">106.82</td><td class="l">漲跌 +9.9%、量比 3.0、1,337 張</td></tr><tr><td class="l"><span class="num">6148</span> 驊宏資</td><td class="l">上櫃</td><td class="l">多1 強勢延續</td><td class="num">44.20</td><td class="num">43.32</td><td class="l">漲跌 +10.0%、量比 2.1、16,604 張</td></tr><tr><td class="l"><span class="num">1101</span> 台泥</td><td class="l">上市</td><td class="l">多1 強勢延續</td><td class="num">27.95</td><td class="num">27.39</td><td class="l">漲跌 +4.3%、量比 2.7、103,438 張</td></tr><tr><td class="l"><span class="num">2615</span> 萬海</td><td class="l">上市</td><td class="l">多2 法人追價</td><td class="num">119.50</td><td class="num">117.11</td><td class="l">漲跌 +2.6%、量比 0.8、11,406 張</td></tr><tr><td class="l"><span class="num">6873</span> 泓德能源</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">57.40</td><td class="num">58.55</td><td class="l">漲跌 -9.9%、量比 3.9、1,418 張</td></tr><tr><td class="l"><span class="num">2492</span> 華新科</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">368.00</td><td class="num">375.36</td><td class="l">漲跌 -9.2%、量比 3.1、56,103 張</td></tr><tr><td class="l"><span class="num">3229</span> 晟鈦</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">48.65</td><td class="num">49.62</td><td class="l">漲跌 -8.0%、量比 2.6、1,553 張</td></tr><tr><td class="l"><span class="num">8064</span> 東捷</td><td class="l">上櫃</td><td class="l">空1 弱勢延續</td><td class="num">117.00</td><td class="num">119.34</td><td class="l">漲跌 -6.0%、量比 2.9、11,699 張</td></tr><tr><td class="l"><span class="num">6164</span> 華興</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">12.40</td><td class="num">12.65</td><td class="l">漲跌 -6.8%、量比 2.4、1,148 張</td></tr><tr><td class="l"><span class="num">8089</span> 康全電訊</td><td class="l">上櫃</td><td class="l">空2 漲多反轉</td><td class="num">27.10</td><td class="num">27.64</td><td class="l">漲跌 +3.2%、量比 2.3、3,965 張</td></tr></tbody></table></div></details></section><section><h2>策略成績</h2><div class="tablebox"><table class="sort"><thead><tr><th class="l">策略</th><th class="l">狀態</th><th>追蹤樣本</th><th>勝率</th><th>平均淨報酬</th><th>獲利因子</th><th>最大回撤</th><th>近20日合計</th><th>近60日合計</th><th>回測樣本</th><th>回測平均</th><th>回測PF</th><th>驗證期PF（筆）</th></tr></thead><tbody><tr><td class="l">多1 強勢延續</td><td class="l"><span class="chip obs">觀察</span></td><td class="num" data-v="0">0 <span class="chip few">樣本不足</span></td><td class="num">—</td><td class="num " data-v="">—</td><td class="num">—</td><td class="num">—</td><td class="num " data-v="0.0">+0.00%</td><td class="num " data-v="0.0">+0.00%</td><td class="num">2219</td><td class="num down" data-v="-0.00643">-0.643%</td><td class="num">0.59</td><td class="num">0.64（291）</td></tr><tr><td class="l">多2 法人追價</td><td class="l"><span class="chip obs">觀察</span></td><td class="num" data-v="0">0 <span class="chip few">樣本不足</span></td><td class="num">—</td><td class="num " data-v="">—</td><td class="num">—</td><td class="num">—</td><td class="num " data-v="0.0">+0.00%</td><td class="num " data-v="0.0">+0.00%</td><td class="num">1235</td><td class="num down" data-v="-0.00344">-0.344%</td><td class="num">0.64</td><td class="num">0.54（197）</td></tr><tr><td class="l">空1 弱勢延續</td><td class="l"><span class="chip obs">觀察</span></td><td class="num" data-v="0">0 <span class="chip few">樣本不足</span></td><td class="num">—</td><td class="num " data-v="">—</td><td class="num">—</td><td class="num">—</td><td class="num " data-v="0.0">+0.00%</td><td class="num " data-v="0.0">+0.00%</td><td class="num">973</td><td class="num up" data-v="0.00268">+0.268%</td><td class="num">1.30</td><td class="num">0.75（133）</td></tr><tr><td class="l">空2 漲多反轉</td><td class="l"><span class="chip obs">觀察</span></td><td class="num" data-v="0">0 <span class="chip few">樣本不足</span></td><td class="num">—</td><td class="num " data-v="">—</td><td class="num">—</td><td class="num">—</td><td class="num " data-v="0.0">+0.00%</td><td class="num " data-v="0.0">+0.00%</td><td class="num">349</td><td class="num up" data-v="0.00287">+0.287%</td><td class="num">1.23</td><td class="num">0.77（49）</td></tr></tbody></table></div><p class="desc">「追蹤」是每天收盤留下的訊號、隔天對答案的實際模擬結果（上線與觀察都算）；「回測」是用歷史資料模擬（回測更新於 2026-10-26）。報酬已扣手續費與當沖稅。最大回撤＝逐筆淨報酬累加後，高點到低點的最大落差。樣本少於 30 筆標「樣本不足」，不可當作可靠。</p></section><section><h2>最近對答案</h2><p class="desc">還沒有對完答案的訊號。</p></section><section><h2>最近一次週檢討</h2><p class="desc">週檢討_2026-10-26.md</p><div class="md"><h2>週檢討 2026-10-26（統計版）</h2>
+<p>&gt; 本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</p>
+<p>資料期間：2024-10-28 ～ 2026-10-22（483 個交易日）。每筆成本 0.2298%（已從報酬扣除）。</p>
+<h3>結論</h3>
+<ul>
+<li>目前上線策略：無（全部在觀察或待回測，隔日正式名單會是空的）</li>
+<li>本週沒有參數或狀態變更。</li>
+</ul>
+<h3>各策略成績</h3>
+<div class="tablebox"><table>
+<tr><th>策略</th><th>狀態</th><th>本週追蹤</th><th>近60日追蹤</th><th>近60日回測</th><th>全部回測</th><th>驗證期</th></tr>
+<tr><td>多1 強勢延續</td><td>觀察</td><td>—</td><td>—</td><td>275筆 平均-0.61% PF0.61</td><td>2219筆 平均-0.64% PF0.59</td><td>291筆 平均-0.56% PF0.64</td></tr>
+<tr><td>多2 法人追價</td><td>觀察</td><td>—</td><td>—</td><td>185筆 平均-0.38% PF0.58</td><td>1235筆 平均-0.34% PF0.64</td><td>197筆 平均-0.44% PF0.54</td></tr>
+<tr><td>空1 弱勢延續</td><td>觀察</td><td>—</td><td>—</td><td>123筆 平均-0.30% PF0.74</td><td>973筆 平均+0.27% PF1.30</td><td>133筆 平均-0.29% PF0.75</td></tr>
+<tr><td>空2 漲多反轉</td><td>觀察</td><td>—</td><td>—</td><td>47筆 平均-0.30% PF0.79</td><td>349筆 平均+0.29% PF1.23</td><td>49筆 平均-0.34% PF0.77</td></tr>
+</table></div>
+<h3>虧損最大的訊號（近 60 日回測）</h3>
+<p>最差 10 筆中：10 筆觸及停損；2 筆當天大盤走勢與部位相反；1 筆開盤跳空對部位不利；訊號日平均量比 5.2。（產業資料尚未收集，無法分析產業。）</p>
+<div class="tablebox"><table>
+<tr><th>交易日</th><th>股票</th><th>策略</th><th>淨報酬</th><th>大盤</th><th>跳空</th><th>量比</th></tr>
+<tr><td>2026-09-30</td><td>5465 富驊</td><td>空2 漲多反轉</td><td>-2.23%</td><td>+0.95%</td><td>-5.48%</td><td>1.36</td></tr>
+<tr><td>2026-08-13</td><td>4960 誠美材</td><td>多1 強勢延續</td><td>-2.23%</td><td>+0.23%</td><td>+0.00%</td><td>4.81</td></tr>
+<tr><td>2026-08-13</td><td>2324 仁寶</td><td>多1 強勢延續</td><td>-2.23%</td><td>+0.23%</td><td>+0.50%</td><td>5.27</td></tr>
+<tr><td>2026-08-12</td><td>1563 巧新</td><td>多1 強勢延續</td><td>-2.23%</td><td>+0.72%</td><td>+2.09%</td><td>4.0</td></tr>
+<tr><td>2026-08-12</td><td>9914 美利達</td><td>多1 強勢延續</td><td>-2.23%</td><td>+0.72%</td><td>+0.32%</td><td>4.12</td></tr>
+<tr><td>2026-08-12</td><td>4716 大立</td><td>多1 強勢延續</td><td>-2.23%</td><td>+0.72%</td><td>+0.00%</td><td>5.1</td></tr>
+<tr><td>2026-08-12</td><td>5426 振發</td><td>多1 強勢延續</td><td>-2.23%</td><td>+0.72%</td><td>+1.62%</td><td>4.88</td></tr>
+<tr><td>2026-09-17</td><td>3467 台灣精材</td><td>空2 漲多反轉</td><td>-2.23%</td><td>+0.68%</td><td>+1.68%</td><td>15.74</td></tr>
+<tr><td>2026-09-15</td><td>2338 光罩</td><td>空2 漲多反轉</td><td>-2.23%</td><td>-0.64%</td><td>-1.46%</td><td>3.21</td></tr>
+<tr><td>2026-09-11</td><td>3229 晟鈦</td><td>空2 漲多反轉</td><td>-2.23%</td><td>-0.98%</td><td>-0.16%</td><td>3.63</td></tr>
+</table></div>
+<h3>參數調整說明</h3>
+<ul>
+<li>多1 強勢延續：訓練期最佳參數驗證未通過（PF 0.67、306 筆），維持原參數；近 60 日淨報酬 -166.57%、PF 0.61，降為觀察；目前參數 {&#x27;min_ret&#x27;: 0.04, &#x27;near_high&#x27;: 0.01, &#x27;vol_mult&#x27;: 2.0}</li>
+<li>多2 法人追價：訓練期最佳參數驗證未通過（PF 0.31、16 筆），維持原參數；近 60 日淨報酬 -70.56%、PF 0.58，降為觀察；目前參數 {&#x27;days&#x27;: 3, &#x27;min_ret&#x27;: 0.0}</li>
+<li>空1 弱勢延續：訓練期最佳參數驗證未通過（PF 0.94、82 筆），維持原參數；近 60 日淨報酬 -37.16%、PF 0.74，降為觀察；目前參數 {&#x27;min_ret&#x27;: 0.04, &#x27;near_low&#x27;: 0.01, &#x27;vol_mult&#x27;: 2.0}</li>
+<li>空2 漲多反轉：訓練期最佳參數驗證未通過（PF 0.65、21 筆），維持原參數；近 60 日淨報酬 -14.21%、PF 0.79，降為觀察；目前參數 {&#x27;days&#x27;: 4, &#x27;min_gain&#x27;: 0.15, &#x27;shadow&#x27;: 0.5}</li>
+</ul>
+<p>---</p>
+<p>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</p></div></section><footer>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</footer></div><script>
+document.querySelectorAll('[data-tabs]').forEach(g=>{const bs=g.querySelectorAll('.tab');bs.forEach(b=>b.onclick=()=>{
+bs.forEach(x=>x.setAttribute('aria-selected',x===b));g.parentNode.querySelectorAll('[data-pane]').forEach(p=>p.hidden=p.dataset.pane!==b.dataset.t)})});
+document.querySelectorAll('table.sort').forEach(t=>t.querySelectorAll('th').forEach((h,i)=>h.onclick=()=>{
+const rows=[...t.tBodies[0].rows],asc=h.dataset.asc!=='1';h.dataset.asc=asc?'1':'0';
+const v=r=>{const s=r.cells[i].dataset.v??r.cells[i].innerText;const n=parseFloat(s.replace(/[,%+]/g,''));return isNaN(n)?s:n};
+rows.sort((a,b)=>{const x=v(a),y=v(b);return (x>y?1:x<y?-1:0)*(asc?1:-1)});rows.forEach(r=>t.tBodies[0].appendChild(r))}));
+</script></body></html>
