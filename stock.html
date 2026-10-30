@@ -84,4 +84,11 @@ document.querySelectorAll('table.sort').forEach(t=>t.querySelectorAll('th').forE
 const rows=[...t.tBodies[0].rows],asc=h.dataset.asc!=='1';h.dataset.asc=asc?'1':'0';
 const v=r=>{const s=r.cells[i].dataset.v??r.cells[i].innerText;const n=parseFloat(s.replace(/[,%+]/g,''));return isNaN(n)?s:n};
 rows.sort((a,b)=>{const x=v(a),y=v(b);return (x>y?1:x<y?-1:0)*(asc?1:-1)});rows.forEach(r=>t.tBodies[0].appendChild(r))}));
-</script></body></html>
+</script></body></html><script>(function(){
+var mine=Date.parse(document.lastModified)||0;
+function check(){fetch('index.html?t='+Date.now(),{method:'HEAD',cache:'no-store'}).then(function(r){
+var lm=Date.parse(r.headers.get('Last-Modified')||'');
+if(lm&&lm>mine+30000){location.replace(location.pathname+'?t='+Date.now());}
+}).catch(function(){});}
+document.addEventListener('visibilitychange',function(){if(!document.hidden)check();});
+setInterval(function(){if(!document.hidden)check();},120000);check();})();</script>
