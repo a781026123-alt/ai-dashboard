@@ -39,7 +39,7 @@ if(wd==0||wd==6)k='eve';else if(m<6*60)k='eve';else if(m<8*60+45)k='pre';else if
 var x=P[k];document.getElementById('hero').href=x[0];document.getElementById('heroTitle').textContent=x[1]+'｜'+x[2];
 document.getElementById('heroTime').textContent='更新 '+x[3];
 document.getElementById({pre:'c_pre',open:'c_pre',mid:'c_close',eve:'c_eve'}[k]).classList.add('now');
-var h=t.getHours();document.getElementById('hello').textContent=(h<11?'早安':h<18?'午安':'晚安')+'，現在 '+('0'+h).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
+var h=t.getHours();document.getElementById('hello').textContent=(h<5?'夜深了':h<11?'早安':h<18?'午安':'晚安')+'，現在 '+('0'+h).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
 })();</script>
 <script>(function(){
 var mine=Date.parse(document.lastModified)||0;
