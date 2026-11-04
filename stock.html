@@ -88,7 +88,7 @@ rows.sort((a,b)=>{const x=v(a),y=v(b);return (x>y?1:x<y?-1:0)*(asc?1:-1)});rows.
 var mine=Date.parse(document.lastModified)||0;
 function check(){fetch('index.html?t='+Date.now(),{method:'HEAD',cache:'no-store'}).then(function(r){
 var lm=Date.parse(r.headers.get('Last-Modified')||'');
-if(lm&&lm>mine+30000){location.replace(location.pathname+'?t='+Date.now());}
+if(lm&&lm>mine+30000){location.replace(location.pathname+'?t='+Date.now()+location.hash);}
 }).catch(function(){});}
 document.addEventListener('visibilitychange',function(){if(!document.hidden)check();});
 setInterval(function(){if(!document.hidden)check();},120000);check();})();</script>

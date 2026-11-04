@@ -1,4 +1,5 @@
-<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>個股分析</title><style>
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>個股分析</title><style>
 :root{--bg:#f5f3ff;--surface:#fff;--ink:#1f1b3a;--muted:#6b6790;--line:#e6e1fb;--accent:#7c5cff;--accent-soft:#efeaff;
 --up:#f0294f;--up-soft:#ffe5ea;--down:#0fae6e;--down-soft:#dcf7ea;--warn:#b25e00;--warn-soft:#fff1dc;
 --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace}
@@ -38,11 +39,35 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
- a.kpi{color:inherit;text-decoration:none}</style><body><div class=wrap><header><div><h1>個股分析</h1><p class=sub>在 Claude 對話裡給代號或名稱就會產生</p></div><a href="../index.html">回首頁</a></header><section><div class=kpis><a class=kpi href="2330.html"><b>2330 台積電</b><small>11/05 00:59 分析</small></a><a class=kpi href="2603.html"><b>2603 長榮</b><small>11/05 00:59 分析</small></a><a class=kpi href="2412.html"><b>2412 中華電</b><small>11/05 00:59 分析</small></a><a class=kpi href="0050.html"><b>0050 元大台灣50</b><small>11/05 00:59 分析</small></a></div></section><footer>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</footer></div></body></html><script>(function(){
+
+.search{display:flex;gap:8px} .search input{flex:1;font:inherit;font-size:18px;padding:12px 14px;border-radius:14px;border:2px solid var(--accent);background:var(--surface);color:var(--ink)}
+.search button{font:inherit;font-size:16px;border:none;border-radius:14px;padding:0 18px;color:#fff;background:linear-gradient(135deg,#7c5cff,#ff5ca8)}
+.hint{display:flex;flex-wrap:wrap;gap:6px} .hint a{font-size:14px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);text-decoration:none}
+#sug a{display:block;padding:8px 4px;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}</style><body><div class=wrap>
+<header><div><h1>個股分析</h1><p class=sub>打代號或名稱｜資料到 2026-11-04 收盤（每天 16:50 更新）</p></div><a href="../index.html">回首頁</a></header>
+<section><form class=search onsubmit="go(document.getElementById('q').value);return false"><input id=q placeholder="例如 2412 或 中華電" autocomplete=off inputmode=search>
+<button>查</button></form><div id=sug></div><div class=hint><a href="#2330" onclick="go('2330');return false">2330 台積電</a><a href="#2412" onclick="go('2412');return false">2412 中華電</a><a href="#2603" onclick="go('2603');return false">2603 長榮</a><a href="#2317" onclick="go('2317');return false">2317 鴻海</a><a href="#0050" onclick="go('0050');return false">0050 台灣50</a><a href="#00632R" onclick="go('00632R');return false">00632R 反1</a></div></section><div id=out></div>
+<footer>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</footer></div>
+<script>
+var L=[];fetch('data/list.json?t='+Date.now()).then(function(r){return r.json()}).then(function(j){L=j;if(location.hash.length>1)go(decodeURIComponent(location.hash.slice(1)));});
+var q=document.getElementById('q'),sug=document.getElementById('sug'),out=document.getElementById('out');
+function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function match(t){t=t.trim().toUpperCase();if(!t)return[];var a=L.filter(function(x){return x[0]==t});if(a.length)return a;
+return L.filter(function(x){return x[0].indexOf(t)==0||x[1].toUpperCase().indexOf(t)>=0}).slice(0,8)}
+q.oninput=function(){var m=match(q.value);sug.innerHTML=q.value.trim()&&!(m.length==1&&m[0][0]==q.value.trim().toUpperCase())?m.map(function(x){return '<a href="#'+x[0]+'" onclick="go(\''+x[0]+'\');return false">'+x[0]+' '+esc(x[1])+'</a>'}).join(''):''};
+function go(t){var m=match(t);sug.innerHTML='';if(!m.length){out.innerHTML='<section><p class=desc>找不到「'+esc(t)+'」。可能代號打錯，或是成交量太少（20 日平均不到 100 張）沒有分析。</p></section>';return}
+var c=m[0][0];q.value=c+' '+m[0][1];location.hash=c;out.innerHTML='<section><p class=desc>讀取中…</p></section>';
+fetch('data/'+c+'.json?t='+Date.now()).then(function(r){return r.json()}).then(show).catch(function(){out.innerHTML='<section><p class=desc>讀不到資料，請稍後再試。</p></section>'})}
+function show(a){var h='<section><h2>'+a.code+' '+esc(a.name)+'｜白話總結</h2><ul class=desc>'+a.notes.map(function(n){return '<li>'+n+'</li>'}).join('')+'</ul><p class=desc>資料到 '+a.date+' 收盤，'+a.made+' 產生。歷史資料整理，不是即時報價，也不是買賣建議。</p></section>';
+a.sections.forEach(function(s){h+='<section><h2>'+s.h+'</h2>';if(s.k)h+='<div class=kpis>'+s.k.map(function(k){return '<div class=kpi><small>'+k[0]+'</small><b class="num '+k[2]+'">'+k[1]+'</b>'+(k[3]?'<small>'+k[3]+'</small>':'')+'</div>'}).join('')+'</div>';
+if(s.p)h+='<p class=desc>'+s.p+'</p>';if(s.t)h+='<div class=tablebox><table><thead><tr>'+s.t.head.map(function(x){return '<th class=l>'+x+'</th>'}).join('')+'</tr></thead><tbody>'+s.t.rows.map(function(r){return '<tr>'+r.map(function(x){return '<td class=l>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';h+='</section>'});
+out.innerHTML=h;window.scrollTo(0,q.getBoundingClientRect().top+window.scrollY-10)}
+window.onhashchange=function(){var c=decodeURIComponent(location.hash.slice(1));if(c&&q.value.indexOf(c)!=0)go(c)};
+</script><script>(function(){
 var mine=Date.parse(document.lastModified)||0;
 function check(){fetch('index.html?t='+Date.now(),{method:'HEAD',cache:'no-store'}).then(function(r){
 var lm=Date.parse(r.headers.get('Last-Modified')||'');
-if(lm&&lm>mine+30000){location.replace(location.pathname+'?t='+Date.now());}
+if(lm&&lm>mine+30000){location.replace(location.pathname+'?t='+Date.now()+location.hash);}
 }).catch(function(){});}
 document.addEventListener('visibilitychange',function(){if(!document.hidden)check();});
 setInterval(function(){if(!document.hidden)check();},120000);check();})();</script>
