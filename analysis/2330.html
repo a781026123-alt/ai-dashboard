@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>2330 台積電 個股分析</title><style>
+:root{--bg:#f5f3ff;--surface:#fff;--ink:#1f1b3a;--muted:#6b6790;--line:#e6e1fb;--accent:#7c5cff;--accent-soft:#efeaff;
+--up:#f0294f;--up-soft:#ffe5ea;--down:#0fae6e;--down-soft:#dcf7ea;--warn:#b25e00;--warn-soft:#fff1dc;
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#110f1f;--surface:#1c1930;--ink:#efedff;--muted:#a49fc7;
+--line:#2c2850;--accent:#a996ff;--accent-soft:#2a2350;--up:#ff6b85;--up-soft:#3d1a2a;--down:#3ee09a;--down-soft:#123326;
+--warn:#ffc46b;--warn-soft:#3a2c14;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#110f1f;--surface:#1c1930;--ink:#efedff;--muted:#a49fc7;--line:#2c2850;--accent:#a996ff;
+--accent-soft:#2a2350;--up:#ff6b85;--up-soft:#3d1a2a;--down:#3ee09a;--down-soft:#123326;--warn:#ffc46b;--warn-soft:#3a2c14;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:20px 16px 48px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px}
+h1{font-size:1.6rem;margin:0;background:linear-gradient(135deg,#7c5cff,#ff5ca8);-webkit-background-clip:text;background-clip:text;color:transparent} h2{font-size:1.05rem;margin:0} h3{font-size:.95rem;margin:.6em 0 .2em}
+.sub,.desc{color:var(--muted);font-size:.86rem;margin:0}
+section{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 2px 12px rgba(31,27,58,.06);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.warnbar{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:.88rem}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)} .kpi small{color:var(--muted);display:block;font-size:.78rem}
+.kpi b{font-family:var(--num);font-size:1.25rem}
+svg.spark{width:100%;height:56px;display:block}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{font:inherit;background:none;border:none;border-bottom:3px solid transparent;padding:6px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+.tablebox{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:.78rem;color:var(--muted);font-weight:500;cursor:pointer;user-select:none}
+th.l,td.l{text-align:left} td.num{font-family:var(--num)}
+.chip{display:inline-block;font-size:.75rem;padding:0 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--down-soft);color:var(--down);border-color:transparent}
+.chip.obs{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.few{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.chip.bad{background:var(--up-soft);color:var(--up);border-color:transparent}
+details summary{cursor:pointer;color:var(--accent)}
+.md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
+footer{color:var(--muted);font-size:.82rem;text-align:center}
+a{color:var(--accent)}
+</style><body><div class=wrap><header><div><h1>2330 台積電</h1><p class=sub>個股分析｜資料到 2026-11-04｜產生 11/05 00:59</p></div><a href="index.html">分析清單</a></header><section><h2>白話總結</h2><ul class=desc><li>走勢在月線下，偏弱整理，在一年區間的 73% 位置</li><li>每天波動小（高低差平均 1.3%），當沖空間有限</li><li>外資連 19 天賣</li></ul><p class=desc>以上全部是 2026-11-04 收盤後的歷史資料整理，不是即時報價，也不是買賣建議。</p></section><section><h2>基本資料（2026-11-04 收盤）</h2><div class=kpis><div class=kpi><small>收盤價</small><b class=num>2,260.00</b><small>上市</small></div><div class=kpi><small>1 張金額</small><b class=num>226.0 萬</b><small>⚠ 1 張 226.0 萬，超過 20 萬額度（可考慮零股）</small></div><div class=kpi><small>當沖碰 2% 停損最多賠</small><b class=num>50,393 元</b><small>含手續費與當沖稅</small></div><div class=kpi><small>當沖資格</small><b>先買後賣 可以</b><small>先賣後買 可以；平盤下放空 可以</small></div></div></section><section><h2>走勢：<span class=down>在月線下，偏弱整理</span></h2><div class=kpis><div class=kpi><small>近 1 天</small><b class="num down">-1.53%</b></div><div class=kpi><small>近 5 天</small><b class="num down">-6.80%</b></div><div class=kpi><small>近 20 天</small><b class="num down">-9.60%</b></div><div class=kpi><small>近 60 天</small><b class="num down">-6.03%</b></div><div class=kpi><small>近 250 天</small><b class="num up">+52.70%</b></div></div><p class=desc>均線（調整除權息後）：5 日 2,334.00、20 日（月線）2,440.00、60 日（季線）2,428.08、120 日（半年線）2,390.25。一年內最高 2,590.00、最低 1,375.00，現在在這個區間的 <b>73%</b> 位置（100%＝在最高點）。</p></section><section><h2>量能</h2><div class=kpis><div class=kpi><small>今天成交</small><b class=num>53,552 張</b><small>是 20 日平均的 1.7 倍</small></div><div class=kpi><small>5 日平均</small><b class=num>38,112 張</b></div><div class=kpi><small>20 日平均</small><b class=num>31,802 張</b></div><div class=kpi><small>今天成交金額</small><b class=num>1,215.5 億</b></div></div><p class=desc>當沖要量大才好進出：20 日平均 31,802 張，流動性夠。</p></section><section><h2>當沖波動（近 60 個交易日）</h2><div class=kpis><div class=kpi><small>平均每天高低差</small><b class=num>1.33%</b><small>越大越有當沖空間，也越容易被洗</small></div><div class=kpi><small>開盤到收盤平均（不分方向）</small><b class=num>0.75%</b><small>收盤比開盤高的天數 47%</small></div><div class=kpi><small>開盤跳空平均（不分方向）</small><b class=num>0.83%</b></div><div class=kpi><small>開盤做多碰 2% 停損</small><b class=num>3% 的天數</b></div><div class=kpi><small>開盤做空碰 2% 停損</small><b class=num>2% 的天數</b></div><div class=kpi><small>每天開盤無腦做多／做空</small><b class="num">-0.24%／-0.22%</b><small>平均淨報酬，已扣成本、含停損</small></div></div><p class=desc>「每天開盤無腦做」是對照組：如果連這個都是負的，代表要靠訊號篩選才有機會；這不是建議每天做。</p></section><section><h2>三大法人</h2><div class=kpis><div class=kpi><small>外資（張）</small><b class="num down">今天 -21,604</b><small>5 天 -56,955｜20 天 -203,138</small></div><div class=kpi><small>投信（張）</small><b class="num up">今天 +3,715</b><small>5 天 +11,943｜20 天 +32,812</small></div><div class=kpi><small>自營商（張）</small><b class="num up">今天 +5,967</b><small>5 天 +11,152｜20 天 +27,409</small></div></div><p class=desc>外資已經連續 19 天賣超。</p></section><section><h2>融資融券（2026-11-03）</h2><div class=kpis><div class=kpi><small>融資餘額</small><b class=num>34,346 張</b><small>5 天 -516｜20 天 -1,126</small></div><div class=kpi><small>融券餘額</small><b class=num>111 張</b><small>券資比 0.3%</small></div></div><p class=desc>融資＝散戶借錢買。股價跌、融資卻一直增加，代表散戶在攤平，賣壓可能還沒結束；券資比高（例如 30% 以上）時，空方回補可能推升股價（軋空）。</p></section><section><h2>估值（2026-11-03）</h2><div class=kpis><div class=kpi><small>本益比</small><b class=num>26.6 倍</b><small>股價是每年賺的幾倍，越低越便宜（虧損公司沒有）</small></div><div class=kpi><small>殖利率</small><b class=num>0.96%</b><small>用現在股價買，每年配息大約幾 %</small></div><div class=kpi><small>股價淨值比</small><b class=num>9.25 倍</b><small>1 以下＝股價低於公司帳面淨值</small></div></div><p class=desc>當沖主要看量價，估值影響小；但可以知道這是「穩定配息股」還是「題材成長股」。</p></section><section><h2>跟大盤（0050）的關係（近 120 天）</h2><div class=kpis><div class=kpi><small>Beta（大盤動 1%，它平均動幾 %）</small><b class=num>0.87</b><small>大於 1＝比大盤猛，小於 1＝比較牛皮</small></div><div class=kpi><small>跟大盤同方向的程度</small><b class=num>0.89</b><small>1＝完全同步，0＝沒關係</small></div><div class=kpi><small>大盤跌 1% 以上的日子</small><b class="num down">-2.00%</b><small>共 26 天平均</small></div><div class=kpi><small>大盤漲 1% 以上的日子</small><b class="num up">+2.06%</b><small>共 30 天平均</small></div><div class=kpi><small>近 5 天比大盤</small><b class="num up">+1.30%</b><small>正＝比大盤強</small></div><div class=kpi><small>近 20 天比大盤</small><b class="num up">+1.88%</b><small>正＝比大盤強</small></div><div class=kpi><small>近 60 天比大盤</small><b class="num down">-2.22%</b><small>正＝比大盤強</small></div></div></section><footer>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</footer></div></body></html><script>(function(){
+var mine=Date.parse(document.lastModified)||0;
+function check(){fetch('index.html?t='+Date.now(),{method:'HEAD',cache:'no-store'}).then(function(r){
+var lm=Date.parse(r.headers.get('Last-Modified')||'');
+if(lm&&lm>mine+30000){location.replace(location.pathname+'?t='+Date.now());}
+}).catch(function(){});}
+document.addEventListener('visibilitychange',function(){if(!document.hidden)check();});
+setInterval(function(){if(!document.hidden)check();},120000);check();})();</script>
