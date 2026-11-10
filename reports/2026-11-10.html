@@ -1,0 +1,85 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>台股當沖看板</title><style>
+:root{--bg:#f5f3ff;--surface:#fff;--ink:#1f1b3a;--muted:#6b6790;--line:#e6e1fb;--accent:#7c5cff;--accent-soft:#efeaff;
+--up:#f0294f;--up-soft:#ffe5ea;--down:#0fae6e;--down-soft:#dcf7ea;--warn:#b25e00;--warn-soft:#fff1dc;
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#110f1f;--surface:#1c1930;--ink:#efedff;--muted:#a49fc7;
+--line:#2c2850;--accent:#a996ff;--accent-soft:#2a2350;--up:#ff6b85;--up-soft:#3d1a2a;--down:#3ee09a;--down-soft:#123326;
+--warn:#ffc46b;--warn-soft:#3a2c14;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#110f1f;--surface:#1c1930;--ink:#efedff;--muted:#a49fc7;--line:#2c2850;--accent:#a996ff;
+--accent-soft:#2a2350;--up:#ff6b85;--up-soft:#3d1a2a;--down:#3ee09a;--down-soft:#123326;--warn:#ffc46b;--warn-soft:#3a2c14;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:20px 16px 48px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px}
+h1{font-size:1.6rem;margin:0;background:linear-gradient(135deg,#7c5cff,#ff5ca8);-webkit-background-clip:text;background-clip:text;color:transparent} h2{font-size:1.05rem;margin:0} h3{font-size:.95rem;margin:.6em 0 .2em}
+.sub,.desc{color:var(--muted);font-size:.86rem;margin:0}
+section{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 2px 12px rgba(31,27,58,.06);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.warnbar{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:.88rem}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)} .kpi small{color:var(--muted);display:block;font-size:.78rem}
+.kpi b{font-family:var(--num);font-size:1.25rem}
+svg.spark{width:100%;height:56px;display:block}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{font:inherit;background:none;border:none;border-bottom:3px solid transparent;padding:6px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+.tablebox{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:.78rem;color:var(--muted);font-weight:500;cursor:pointer;user-select:none}
+th.l,td.l{text-align:left} td.num{font-family:var(--num)}
+.chip{display:inline-block;font-size:.75rem;padding:0 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--down-soft);color:var(--down);border-color:transparent}
+.chip.obs{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.few{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.chip.bad{background:var(--up-soft);color:var(--up);border-color:transparent}
+details summary{cursor:pointer;color:var(--accent)}
+.md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
+footer{color:var(--muted);font-size:.82rem;text-align:center}
+a{color:var(--accent)}
+</style></head><body><div class="wrap"><header><div><h1>台股隔日當沖看板</h1><p class="sub">資料日 2026-11-10・產生於 2026-11-10 16:31・紅漲綠跌</p></div><p class="sub">資料：證交所、櫃買中心公開資料</p></header><p class="warnbar">本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</p><section><h2>市場概況 2026-11-10</h2><div class="kpis"><div class="kpi"><small>上市 1089 檔</small><b class="up">+0.59%</b><small>漲 527・跌 494（普通股等權平均漲跌）</small></div><div class="kpi"><small>上櫃 868 檔</small><b class="up">+0.93%</b><small>漲 451・跌 360（普通股等權平均漲跌）</small></div></div><svg class="spark" viewBox="0 0 600 56" preserveAspectRatio="none" role="img" aria-label="近期上漲家數比例"><line x1="0" x2="600" y1="23.8" y2="23.8" stroke="var(--line)" stroke-dasharray="4 4"/><polyline fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" points="0.0,19.5 10.2,29.9 20.3,37.6 30.5,25.9 40.7,41.9 50.8,32.5 61.0,13.9 71.2,22.8 81.4,35.5 91.5,29.7 101.7,9.5 111.9,24.8 122.0,32.4 132.2,36.0 142.4,21.5 152.5,32.9 162.7,43.7 172.9,13.6 183.1,31.7 193.2,38.8 203.4,22.8 213.6,39.3 223.7,41.9 233.9,33.8 244.1,41.4 254.2,12.4 264.4,15.0 274.6,12.6 284.7,25.6 294.9,36.2 305.1,31.7 315.3,30.3 325.4,30.6 335.6,11.8 345.8,31.1 355.9,25.1 366.1,34.2 376.3,30.7 386.4,22.6 396.6,30.1 406.8,27.2 416.9,41.2 427.1,13.1 437.3,45.9 447.5,15.4 457.6,45.2 467.8,36.5 478.0,19.1 488.1,42.9 498.3,30.6 508.5,13.0 518.6,41.8 528.8,48.7 539.0,25.9 549.2,52.0 559.3,28.6 569.5,46.6 579.7,49.0 589.8,6.0 600.0,23.8"/></svg><p class="desc">折線是近 60 個交易日「上漲家數比例」，虛線為 50%。</p></section><section><h2>2026-11-11 當沖候選名單</h2><p class="warnbar">目前沒有「上線」的策略（策略要先通過 walk-forward 回測：驗證期獲利因子 &gt; 1.2 且樣本 ≥ 30）。所以正式名單是空的；下面「觀察中」的訊號照樣記錄、對答案，但不建議參考。</p><p class="desc">模擬規則：2026-11-11 開盤價進場、收盤價出場；停損 = 進場價 −2%（做多）或 ＋2%（做空）。「參考停損」是用今日收盤價估的，實際以開盤價計。每個策略最多 5 檔。</p><div class="tabs" data-tabs><button class="tab" data-t="L" aria-selected="true">做多 0</button><button class="tab" data-t="S" aria-selected="false">做空 0</button></div><div data-pane="L"><p class="desc">沒有符合條件的股票。</p></div><div data-pane="S" hidden><p class="desc">沒有符合條件的股票。</p></div><details><summary>觀察中策略的訊號（11 檔，不列入名單）</summary><div class="tablebox"><table class="sort"><thead><tr><th class="l">股票</th><th class="l">市場</th><th class="l">策略</th><th>今日收盤</th><th>參考停損</th><th class="l">理由</th></tr></thead><tbody><tr><td class="l"><span class="num">4577</span> 達航科技</td><td class="l">上櫃</td><td class="l">多1 強勢延續</td><td class="num">125.00</td><td class="num">122.50</td><td class="l">漲跌 +9.6%、量比 4.4、4,326 張</td></tr><tr><td class="l"><span class="num">6617</span> 共信-KY</td><td class="l">上櫃</td><td class="l">多1 強勢延續</td><td class="num">118.50</td><td class="num">116.13</td><td class="l">漲跌 +9.7%、量比 3.0、1,224 張</td></tr><tr><td class="l"><span class="num">6757</span> 台灣虎航</td><td class="l">上市</td><td class="l">多1 強勢延續</td><td class="num">59.30</td><td class="num">58.11</td><td class="l">漲跌 +8.2%、量比 3.1、6,149 張</td></tr><tr><td class="l"><span class="num">3709</span> 鑫聯大投控</td><td class="l">上櫃</td><td class="l">多1 強勢延續</td><td class="num">62.90</td><td class="num">61.64</td><td class="l">漲跌 +9.0%、量比 2.6、1,373 張</td></tr><tr><td class="l"><span class="num">5230</span> 雷笛克光學</td><td class="l">上櫃</td><td class="l">多1 強勢延續</td><td class="num">30.85</td><td class="num">30.23</td><td class="l">漲跌 +10.0%、量比 2.2、8,030 張</td></tr><tr><td class="l"><span class="num">6191</span> 精成科</td><td class="l">上市</td><td class="l">多2 法人追價</td><td class="num">83.70</td><td class="num">82.03</td><td class="l">漲跌 +7.7%、量比 1.5、5,036 張</td></tr><tr><td class="l"><span class="num">2478</span> 大毅</td><td class="l">上市</td><td class="l">多2 法人追價</td><td class="num">101.50</td><td class="num">99.47</td><td class="l">漲跌 +3.3%、量比 0.9、3,287 張</td></tr><tr><td class="l"><span class="num">1336</span> 台翰</td><td class="l">上櫃</td><td class="l">空1 弱勢延續</td><td class="num">15.20</td><td class="num">15.50</td><td class="l">漲跌 -9.8%、量比 8.6、2,305 張</td></tr><tr><td class="l"><span class="num">1319</span> 東陽</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">69.60</td><td class="num">70.99</td><td class="l">漲跌 -9.3%、量比 4.7、8,316 張</td></tr><tr><td class="l"><span class="num">3005</span> 神基</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">107.00</td><td class="num">109.14</td><td class="l">漲跌 -8.2%、量比 3.1、8,590 張</td></tr><tr><td class="l"><span class="num">2374</span> 佳能</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">52.40</td><td class="num">53.45</td><td class="l">漲跌 -7.1%、量比 2.3、5,766 張</td></tr></tbody></table></div></details></section><section><h2>今日盤中監看</h2><div class="tablebox"><table><thead><tr><th class="l">時間</th><th class="l">股票</th><th class="l">策略</th><th class="l">事件</th><th>價格</th><th class="l">說明</th></tr></thead><tbody><tr><td class="l num">09:05</td><td class="l">1227</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">26.2</td><td class="l">空 模擬進場價 26.2</td></tr><tr><td class="l num">09:05</td><td class="l">1416</td><td class="l">多1 強勢延續</td><td class="l">觸及停損</td><td class="num">18.52</td><td class="l">多 廣豐 停損價 18.52，最低 18.25／最高 18.9</td></tr><tr><td class="l num">09:05</td><td class="l">1416</td><td class="l">多1 強勢延續</td><td class="l">開盤進場</td><td class="num">18.9</td><td class="l">多 模擬進場價 18.9</td></tr><tr><td class="l num">09:05</td><td class="l">3605</td><td class="l">空1 弱勢延續</td><td class="l">觸及停損</td><td class="num">124.95</td><td class="l">空 宏致 停損價 124.95，最低 121.5／最高 126.5</td></tr><tr><td class="l num">09:05</td><td class="l">3605</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">122.5</td><td class="l">空 模擬進場價 122.5</td></tr><tr><td class="l num">09:05</td><td class="l">3703</td><td class="l">多1 強勢延續</td><td class="l">開盤進場</td><td class="num">23.2</td><td class="l">多 模擬進場價 23.2</td></tr><tr><td class="l num">09:05</td><td class="l">4763</td><td class="l">多2 法人追價</td><td class="l">開盤進場</td><td class="num">44.5</td><td class="l">多 模擬進場價 44.5</td></tr><tr><td class="l num">09:05</td><td class="l">4771</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">178.5</td><td class="l">空 模擬進場價 178.5</td></tr><tr><td class="l num">09:05</td><td class="l">4904</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">105.5</td><td class="l">空 模擬進場價 105.5</td></tr><tr><td class="l num">09:05</td><td class="l">5904</td><td class="l">多2 法人追價</td><td class="l">開盤進場</td><td class="num">75.2</td><td class="l">多 模擬進場價 75.2</td></tr><tr><td class="l num">09:05</td><td class="l">6589</td><td class="l">多1 強勢延續</td><td class="l">開盤進場</td><td class="num">51.0</td><td class="l">多 模擬進場價 51.0</td></tr><tr><td class="l num">09:05</td><td class="l">6962</td><td class="l">多2 法人追價</td><td class="l">開盤進場</td><td class="num">30.8</td><td class="l">多 模擬進場價 30.8</td></tr><tr><td class="l num">10:05</td><td class="l">4771</td><td class="l">空1 弱勢延續</td><td class="l">觸及停損</td><td class="num">182.07</td><td class="l">空 望隼 停損價 182.07，最低 175.0／最高 184.0</td></tr><tr><td class="l num">11:35</td><td class="l">4763</td><td class="l">多2 法人追價</td><td class="l">觸及停損</td><td class="num">43.61</td><td class="l">多 材料*-KY 停損價 43.61，最低 43.5／最高 45.3</td></tr></tbody></table></div></section><section><h2>策略檢討（白話）</h2><div class="md"><p>更新：2026-11-09（每週日晚上的「每週優化」會改寫這份）</p>
+<h3>一句話結論</h3>
+<p>目前沒有任何一種「隔天當沖選股法」是真的賺錢的，所以正式推薦是 0 檔。我寧可不推，也不要硬推害你賠錢。</p>
+<h3>每個方法錯在哪、怎麼改</h3>
+<p><b>多1 強勢延續</b>（今天大漲、量大、收在最高點附近的股票，隔天買）</p>
+<ul>
+<li>錯在哪：今天大漲的股票，隔天常常「開高走低」。開盤一買就套在最高點，碰到停損出場。</li>
+<li>怎麼改：改成開盤不追，等 09:30 後還站在開盤價之上才進場；正在測試中。</li>
+</ul>
+<p><b>多2 法人追價</b>（法人連買幾天的股票，隔天買）</p>
+<ul>
+<li>錯在哪：法人買超的消息大家都看得到，隔天開盤價早就反映了，進場時已經沒有便宜可撿。</li>
+<li>怎麼改：法人資料只當「加分」，不單獨當買進理由。</li>
+</ul>
+<p><b>空1 弱勢延續</b>（今天大跌、量大、收在最低點附近的股票，隔天放空）</p>
+<ul>
+<li>錯在哪：跌多的股票隔天很容易「跌深反彈」，放空的人被軋。</li>
+<li>怎麼改：只在大盤也偏弱的日子才考慮放空，大盤反彈的日子不空。</li>
+</ul>
+<p><b>空2 漲多反轉</b>（連漲好幾天、出現長上影線的股票，隔天放空）</p>
+<ul>
+<li>錯在哪：機會太少，一年只有幾次，樣本不夠，看不出是不是真的有用。</li>
+<li>怎麼改：繼續觀察累積樣本，不急著上線。</li>
+</ul>
+<h3>這週新學到的事</h3>
+<ul>
+<li><b>開盤會開高還是開低，猜得很準；開盤之後漲還是跌，猜不準。</b> 昨晚美股費半、台積電 ADR 漲跌，大約 8 成可以猜中台股開高或開低。但開盤之後的走勢跟丟銅板差不多，所以網頁上「一眼看懂」會直接告訴你開盤預估，並提醒你開盤第一波不要追。</li>
+<li><b>晚上看到的美股數字可能是舊的。</b> 晚上美股還沒開盤時，費半漲跌其實是前一晚的，台股白天已經反映過了。已經修正：晚上改看台指期夜盤，舊的美股數字不再拿來判斷。</li>
+<li><b>漲停、跌停開盤的股票，回測會騙人。</b> 看起來很賺，其實開盤就鎖死，根本買不到或賣不掉。以後這類股票一律排除。</li>
+<li>ChatGPT 建議的 6 種做法全部測過，都不賺錢，沒有上線。</li>
+</ul>
+<h3>接下來要做的</h3>
+<ul>
+<li>測試「開盤不追、等 09:30 確認方向再進場」能不能讓多1 轉正。</li>
+<li>測試「目前局勢」裡每個指標單獨有沒有用，沒用的拿掉。</li>
+<li>有通過驗證的方法才會變成正式推薦，到時候網頁最上面會直接寫出來。</li>
+</ul>
+<p>（詳細數字由系統自己記錄在 <code>reports/週檢討_日期.md</code> 與 <code>策略變更紀錄.md</code>，不顯示在網頁上。）</p></div></section><footer>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</footer></div><script>
+document.querySelectorAll('[data-tabs]').forEach(g=>{const bs=g.querySelectorAll('.tab');bs.forEach(b=>b.onclick=()=>{
+bs.forEach(x=>x.setAttribute('aria-selected',x===b));g.parentNode.querySelectorAll('[data-pane]').forEach(p=>p.hidden=p.dataset.pane!==b.dataset.t)})});
+document.querySelectorAll('table.sort').forEach(t=>t.querySelectorAll('th').forEach((h,i)=>h.onclick=()=>{
+const rows=[...t.tBodies[0].rows],asc=h.dataset.asc!=='1';h.dataset.asc=asc?'1':'0';
+const v=r=>{const s=r.cells[i].dataset.v??r.cells[i].innerText;const n=parseFloat(s.replace(/[,%+]/g,''));return isNaN(n)?s:n};
+rows.sort((a,b)=>{const x=v(a),y=v(b);return (x>y?1:x<y?-1:0)*(asc?1:-1)});rows.forEach(r=>t.tBodies[0].appendChild(r))}));
+</script></body></html>
