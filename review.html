@@ -1,0 +1,145 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>錯誤與修正</title><style>
+/* 黑曜金（2026-11-11 使用者選定）：黑曜深藍底、香檳金重點、暖珍珠白文字、墨綠輔助；台股紅漲綠跌不變 */
+:root{--bg:#111827;--surface:#1a2333;--ink:#f4f0e6;--muted:#a9a495;--line:#2b3547;--accent:#d6b56d;--accent-soft:#2e2a1e;
+--up:#ff5a6e;--up-soft:#3a1c24;--down:#3ccb7f;--down-soft:#14302a;--warn:#f2a35e;--warn-soft:#33241a;--jade:#526b63;
+--gold-grad:linear-gradient(135deg,#f1d99a,#d6b56d 55%,#a9873f);
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:20px 16px 48px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px}
+h1{font-size:1.6rem;margin:0;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent} h2{font-size:1.05rem;margin:0;color:var(--accent)} h2.up{color:var(--up)} h2.down{color:var(--down)} h3{font-size:.95rem;margin:.6em 0 .2em}
+.sub,.desc{color:var(--muted);font-size:.86rem;margin:0}
+section{background:var(--surface);border:1px solid rgba(214,181,109,.16);border-radius:18px;box-shadow:0 4px 18px rgba(0,0,0,.35);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.warnbar{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:.88rem}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)} .kpi small{color:var(--muted);display:block;font-size:.78rem}
+.kpi b{font-family:var(--num);font-size:1.25rem;color:var(--accent)} .kpi b.up{color:var(--up)} .kpi b.down{color:var(--down)}
+svg.spark{width:100%;height:56px;display:block}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{font:inherit;background:none;border:none;border-bottom:3px solid transparent;padding:6px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+.tablebox{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:.78rem;color:var(--muted);font-weight:500;cursor:pointer;user-select:none}
+th.l,td.l{text-align:left} td.num{font-family:var(--num)}
+.chip{display:inline-block;font-size:.75rem;padding:0 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--jade);color:var(--ink);border-color:transparent}
+.chip.obs{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.few{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.chip.bad{background:var(--up-soft);color:var(--up);border-color:transparent}
+details summary{cursor:pointer;color:var(--accent)}
+.md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
+footer{color:var(--muted);font-size:.82rem;text-align:center}
+a{color:var(--accent)}
+ .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:var(--accent)}</style><body><div class=wrap><header><div><h1>錯誤與修正</h1><p class=sub>更新 2026-11-11 13:20</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-11｜斐波那契（黃金分割）測過，不能用</b></p>
+<ul>
+<li>錯在哪：網路流傳的「前期高點 × 0.618」算法本身就錯，正確算法要拿「這一段漲了多少」去乘。</li>
+<li>怎麼發現：你傳圖片來問，我照正確算法用兩年資料回測，再跟「隨便挑一個位置」比較。</li>
+<li>改了什麼：結果跟隨便挑一樣差，拿來當停損、停利也沒有比較好，所以不加進推薦，網頁上也不放這些價位。</li>
+</ul>
+<p><b>2026-11-11｜「跟著大盤走」第一次跑，出現 -100%</b></p>
+<ul>
+<li>錯在哪：某檔股票那一刻剛好沒有成交，報價是 0，被當成跌 100%。</li>
+<li>怎麼發現：做好後打開網頁抽查，楠梓電顯示 -100%。</li>
+<li>改了什麼：沒成交的報價改成略過，用上一筆價格。</li>
+</ul>
+<p><b>2026-11-11｜換網頁顏色時，把早上的開盤快報蓋掉</b></p>
+<ul>
+<li>錯在哪：為了換顏色重新產生網頁，開盤快報被中午的資料重算，內容變得不對。</li>
+<li>怎麼發現：換完顏色後逐頁檢查時看到「更新 13:07」。</li>
+<li>改了什麼：從上傳紀錄救回早上 08:50 那一版，只換顏色。以後換樣式只換顏色設定，不重算內容。</li>
+</ul>
+<p><b>2026-11-09｜晚上把「舊的」美股漲跌當成新消息</b></p>
+<ul>
+<li>錯在哪：晚上美股還沒開盤時，看到的費半漲 4.2% 其實是前一晚的，台股白天已經漲過了。系統卻算成「明天開高 2.2%」。</li>
+<li>怎麼發現：檢查晚間快報時，發現那天台股已經大漲 5%，數字對不起來。</li>
+<li>改了什麼：美股報價要比台股上次收盤晚，才算新消息。晚上改看台指期夜盤，舊的美股數字不再拿來判斷。</li>
+</ul>
+<p><b>2026-11-08｜漲停、跌停開盤的股票，回測成績是假的</b></p>
+<ul>
+<li>錯在哪：開盤就漲停或跌停的股票，回測看起來超賺，但實際上整天鎖死，根本買不到、賣不掉。</li>
+<li>怎麼發現：測 ChatGPT 建議的方法時，某些成績好到不合理，逐筆去查才發現。</li>
+<li>改了什麼：這類股票照實際「買不到、賣不掉」來算，算完全部都是賠的，所以沒有上線。</li>
+</ul>
+<p><b>2026-11-08｜一天很多檔一起出訊號，成績被灌水</b></p>
+<ul>
+<li>錯在哪：大跌那天幾百檔一起反彈，一檔算一筆，成績就被那一天灌高。</li>
+<li>怎麼發現：同一個方法改成「一天算一筆」，成績從賺變成賠。</li>
+<li>改了什麼：以後同一天很多檔一起出訊號的方法，一律改用「一天算一筆」來判斷。</li>
+</ul>
+<p><b>2026-11-04｜兩個上傳工作同時跑，互相卡住</b></p>
+<ul>
+<li>錯在哪：10:15 有兩個工作同時上傳網頁，搶同一個位置，其中一個失敗。</li>
+<li>怎麼發現：每天的健康檢查看到失敗紀錄。</li>
+<li>改了什麼：上傳改成排隊，後到的等前一個做完再傳。</li>
+</ul>
+<p><b>2026-11-02｜盤中快報的「最新價」其實是昨天收盤價</b></p>
+<ul>
+<li>錯在哪：證交所的即時報價在那一刻沒成交時是空白，程式拿昨天收盤價代替，模擬成績全錯。</li>
+<li>怎麼發現：抽查時發現好幾檔的最新價都剛好等於昨收。</li>
+<li>改了什麼：改用當下買價和賣價的中間值。</li>
+</ul>
+<p><b>2026-11-02｜週一早上抓不到三大法人資料</b></p>
+<ul>
+<li>錯在哪：查詢日期遇到週末，期交所會回錯誤頁。</li>
+<li>怎麼發現：週一盤前快報的法人欄位是空的。</li>
+<li>改了什麼：遇到週末、假日，自動往前推到上一個交易日。</li>
+</ul>
+<p><b>2026-10-30｜08:45～09:00 的加權指數顯示「—」</b></p>
+<ul>
+<li>錯在哪：這段時間還沒開盤，期交所沒有今天的價格，程式卻沒有改用昨收。</li>
+<li>怎麼發現：08:50 打開盤前快報看到空白。</li>
+<li>改了什麼：還沒開盤時改顯示昨天收盤。</li>
+</ul>
+<p><b>2026-10-28｜盤前快報的「昨收」差了一天</b></p>
+<ul>
+<li>錯在哪：期交所資料裡的欄位，被誤當成昨天收盤，其實是前天的。</li>
+<li>怎麼發現：拿漲跌數字反推，發現對不起來。</li>
+<li>改了什麼：改用正確的欄位，並且用漲跌數字再驗算一次。</li>
+</ul>
+<p><b>2026-10-31／10-29｜排程偶爾被中途關掉</b></p>
+<ul>
+<li>錯在哪：電腦或視窗被關，程式跑到一半就停了，連失敗都來不及記錄。</li>
+<li>怎麼發現：健康檢查比對 Windows 排程器的結果才看到。</li>
+<li>改了什麼：程式一開始就先寫「執行中」，以後被中斷也查得到。網頁內容會由下一個排程補上。</li>
+</ul></div></section><section><h2>六合彩</h2><div class="md"><p><b>目前的實際戰績（10/24 開始記錄）</b></p>
+<ul>
+<li>A 組：對了 5 期，六碼共中 4 個號碼。隨機選號平均大約中 3.7 個，所以跟隨機差不多。</li>
+<li>B 組：對了 3 期，六碼共中 3 個號碼。隨機平均大約中 2.2 個，也還在運氣範圍內。</li>
+<li>歷史回測也一樣：23 種方法全部「和隨機一樣」，沒有哪一種真的比較準。六合彩是隨機的，這裡只是誠實記錄。</li>
+</ul>
+<p><b>2026-11-03｜B 組選號全挑小號（1、2、3、4、5、7）</b></p>
+<ul>
+<li>錯在哪：好幾個號碼同票時，程式依號碼大小排，結果都挑小號。</li>
+<li>怎麼發現：看到牌「太整齊」覺得不對勁。</li>
+<li>改了什麼：同票時改看各方法裡排第幾。以後看到太整齊的牌都會抽查。</li>
+</ul>
+<p><b>2026-11-03｜回測混入舊時代的資料</b></p>
+<ul>
+<li>錯在哪：2002 年以前的六合彩不是 49 顆球，而是 45 或 47 顆，程式卻全部當 49 顆算。「冷號」方法一直挑 46～49，被誤判成很差，其他方法則被墊高。</li>
+<li>怎麼發現：冷號成績差到不合理，往回查資料才發現。</li>
+<li>改了什麼：回測只用 2002 年 7 月以後、49 顆球的資料。</li>
+</ul>
+<p><b>2026-10-26｜原本的開獎資料網站擋程式</b></p>
+<ul>
+<li>錯在哪：原本下載開獎號碼的網站改成要人工驗證，程式抓不到。</li>
+<li>怎麼發現：自動更新失敗。</li>
+<li>改了什麼：改抓香港賽馬會官網的資料，每次抓 3 個月。</li>
+</ul>
+<p><b>2026-10-29｜晚上 22:45 的更新被中途關掉</b></p>
+<ul>
+<li>錯在哪：排程跑到一半被關，那天的開獎沒抓到。</li>
+<li>怎麼發現：健康檢查時看到。</li>
+<li>改了什麼：當晚重跑成功，隔天 10:00 也會再抓一次，不會漏期。</li>
+</ul></div></section></div></body></html><script>(function(){
+var mine=Date.parse(document.lastModified)||0;
+function check(){fetch('index.html?t='+Date.now(),{method:'HEAD',cache:'no-store'}).then(function(r){
+var lm=Date.parse(r.headers.get('Last-Modified')||'');
+if(lm&&lm>mine+30000){location.replace(location.pathname+'?t='+Date.now()+location.hash);}
+}).catch(function(){});}
+document.addEventListener('visibilitychange',function(){if(!document.hidden)check();});
+setInterval(function(){if(!document.hidden)check();},120000);check();})();</script>
