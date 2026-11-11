@@ -21,7 +21,7 @@ h2{font-size:15px;color:var(--muted);margin:22px 4px 8px;font-weight:600}
 <h2>台股快報（一天四份）</h2>
 <div class=grid>
 <a class=card id=c_pre href="premarket.html"><span class=ic>🌅</span><b>盤前／開盤</b><small>08:30、08:50｜2026-11-11 08:50</small></a>
-<a class=card id=c_close href="closing.html"><span class=ic>⚡</span><b>盤中／收盤</b><small>每 30 分、13:50｜2026-11-10 13:50</small></a>
+<a class=card id=c_close href="closing.html"><span class=ic>⚡</span><b>盤中／收盤</b><small>每 30 分、13:50｜2026-11-11 09:15</small></a>
 <a class="card wide" id=c_eve href="evening.html"><span class=ic>🌙</span><b>晚間快報：明天做多／做空（200 元以內）</b><small>16:50、22:30｜2026-11-10 22:30</small></a>
 <a class="card wide" href="analysis/index.html"><span class=ic>🔍</span><b>個股分析</b><small>打代號或名稱搜尋，每天 16:50 更新｜2026-11-10 16:50</small></a>
 <a class="card wide" href="stock.html"><span class=ic>📊</span><b>策略檢討（白話）</b><small>哪裡錯、怎麼改，偶爾看就好｜2026-11-11 08:30</small></a>
@@ -34,7 +34,7 @@ h2{font-size:15px;color:var(--muted);margin:22px 4px 8px;font-weight:600}
 var t=new Date(),m=t.getHours()*60+t.getMinutes(),wd=t.getDay(),k;
 var P={pre:['premarket.html','盤前快報','台指期夜盤、美股、今天做多做空','2026-11-11 08:50'],
 open:['premarket.html','開盤快報','台指期開盤後、今天做多做空','2026-11-11 08:50'],
-mid:['closing.html','盤中／收盤快報','今天候選股即時模擬成績','2026-11-10 13:50'],
+mid:['closing.html','盤中／收盤快報','今天候選股即時模擬成績','2026-11-11 09:15'],
 eve:['evening.html','晚間快報','明天做多做空、夜盤、美股','2026-11-10 22:30']};
 if(wd==0||wd==6)k='eve';else if(m<6*60)k='eve';else if(m<8*60+45)k='pre';else if(m<9*60+15)k='open';else if(m<16*60+50)k='mid';else k='eve';
 var x=P[k];document.getElementById('hero').href=x[0];document.getElementById('heroTitle').textContent=x[1]+'｜'+x[2];
