@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>我的選股</title><style>
+/* 黑曜金（2026-11-11 使用者選定）：黑曜深藍底、香檳金重點、暖珍珠白文字、墨綠輔助；台股紅漲綠跌不變 */
+:root{--bg:#111827;--surface:#1a2333;--ink:#f4f0e6;--muted:#a9a495;--line:#2b3547;--accent:#d6b56d;--accent-soft:#2e2a1e;
+--up:#ff5a6e;--up-soft:#3a1c24;--down:#3ccb7f;--down-soft:#14302a;--warn:#f2a35e;--warn-soft:#33241a;--jade:#526b63;
+--gold-grad:linear-gradient(135deg,#f1d99a,#d6b56d 55%,#a9873f);
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:20px 16px 48px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px}
+h1{font-size:1.6rem;margin:0;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent} h2{font-size:1.05rem;margin:0;color:var(--accent)} h2.up{color:var(--up)} h2.down{color:var(--down)} h3{font-size:.95rem;margin:.6em 0 .2em}
+.sub,.desc{color:var(--muted);font-size:.86rem;margin:0}
+section{background:var(--surface);border:1px solid rgba(214,181,109,.16);border-radius:18px;box-shadow:0 4px 18px rgba(0,0,0,.35);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.warnbar{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:.88rem}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)} .kpi small{color:var(--muted);display:block;font-size:.78rem}
+.kpi b{font-family:var(--num);font-size:1.25rem;color:var(--accent)} .kpi b.up{color:var(--up)} .kpi b.down{color:var(--down)}
+svg.spark{width:100%;height:56px;display:block}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{font:inherit;background:none;border:none;border-bottom:3px solid transparent;padding:6px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+.tablebox{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:.78rem;color:var(--muted);font-weight:500;cursor:pointer;user-select:none}
+th.l,td.l{text-align:left} td.num{font-family:var(--num)}
+.chip{display:inline-block;font-size:.75rem;padding:0 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--jade);color:var(--ink);border-color:transparent}
+.chip.obs{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.few{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.chip.bad{background:var(--up-soft);color:var(--up);border-color:transparent}
+details summary{cursor:pointer;color:var(--accent)}
+.md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
+footer{color:var(--muted);font-size:.82rem;text-align:center}
+a{color:var(--accent)}
+</style><body><div class=wrap><header><div><h1>我的選股</h1><p class=sub>更新 2026-11-12 00:14</p></div><a href="index.html">回首頁</a></header><section><h2>2026-11-12 分析（收盤後自動復盤）</h2><div class=kpis><div class=kpi><small>1815 富喬｜收 140.5</small><b class=>盤整（+1）</b><small>壓力 161.5｜支撐 135.27</small><small>平常範圍 133.83～147.17</small><small class=desc>收盤在月線 135.3上；5 日線在月線下（短線還弱）；外資買超 23,738 張；收在當天高點附近；大盤（0050）在月線下；今天漲停：隔天常開高但波動大，開高走低要小心</small></div><div class=kpi><small>2337 旺宏｜收 82.7</small><b class=>盤整（-1）</b><small>壓力 95.48｜支撐 80.72</small><small>平常範圍 79.87～85.53</small><small class=desc>收盤跌破月線 95.5；5 日線在月線下（短線還弱）；外資買超 1,718 張；收在當天高點附近；大盤（0050）在月線下</small></div><div class=kpi><small>8150 南茂｜收 88.2</small><b class=>盤整（-1）</b><small>壓力 94.04｜支撐 82.6</small><small>平常範圍 85.21～91.19</small><small class=desc>收盤跌破月線 94.0；5 日線在月線下（短線還弱）；外資買超 3,542 張；收在當天高點附近；大盤（0050）在月線下；今天漲停：隔天常開高但波動大，開高走低要小心</small></div><div class=kpi><small>2303 聯電｜收 104.0</small><b class=>盤整（-1）</b><small>壓力 117.48｜支撐 98.6</small><small>平常範圍 100.89～107.11</small><small class=desc>收盤跌破月線 117.5；5 日線在月線下（短線還弱）；外資買超 13,864 張；收在當天高點附近；大盤（0050）在月線下</small></div><div class=kpi><small>2344 華邦電｜收 136.5</small><b class=down>偏空（-3）</b><small>壓力 151.82｜支撐 130.4</small><small>平常範圍 131.84～141.16</small><small class=desc>收盤跌破月線 151.8；5 日線在月線下（短線還弱）；外資賣超 5,874 張；收在當天高點附近；大盤（0050）在月線下</small></div></div></section><section><p class=desc>規則固定：月線、5 日線對月線、外資、收盤位置、大盤五項各 ±1 分，≥+2 偏多、≤−2 偏空。偏多收漲超過 0.5% 算對、收跌超過 0.5% 算錯；盤整漲跌在 ±1.5% 內算對。分析寫下後不改。</p><p class=desc>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</p></section></div></body></html><script>(function(){
+var mine=Date.parse(document.lastModified)||0;
+function check(){fetch('index.html?t='+Date.now(),{method:'HEAD',cache:'no-store'}).then(function(r){
+var lm=Date.parse(r.headers.get('Last-Modified')||'');
+if(lm&&lm>mine+30000){location.replace(location.pathname+'?t='+Date.now()+location.hash);}
+}).catch(function(){});}
+document.addEventListener('visibilitychange',function(){if(!document.hidden)check();});
+setInterval(function(){if(!document.hidden)check();},120000);check();})();</script>
