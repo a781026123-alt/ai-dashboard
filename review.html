@@ -35,7 +35,19 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
- .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:var(--accent)}</style><body><div class=wrap><header><div><h1>錯誤與修正</h1><p class=sub>更新 2026-11-11 13:20</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-11｜斐波那契（黃金分割）測過，不能用</b></p>
+ .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:var(--accent)}</style><body><div class=wrap><header><div><h1>錯誤與修正</h1><p class=sub>更新 2026-11-11 23:30</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-11｜全部程式檢查一遍，修了 4 個地方</b></p>
+<ul>
+<li>錯在哪：(1) 收盤快報只算停損、沒算停利，跟新規則不一致；(2)「隔日操作參考」的文字還寫舊的固定 2% 停損、跳空 3%；(3) 處置股常在晚上才公布，名單早就算完了，隔天早上還會顯示；(4) 模擬成績紀錄只存在一個檔案裡，壞掉就救不回來。</li>
+<li>怎麼發現：你要求把整個程式檢查一遍，我逐一對照規格書第 2 版。</li>
+<li>改了什麼：(1) 收盤快報加上停利；(2) 文字改成新規則；(3) 每天 08:30 再查一次處置股，在處置中的移出名單；(4) 每天收盤後另存一份備份，留最近 14 天。</li>
+</ul>
+<p><b>2026-11-11｜處置股、全額交割股不再列入名單</b></p>
+<ul>
+<li>錯在哪：這兩種股票交易受限（分盤撮合、要先繳全額），當沖實際上做不了，以前沒有排除。</li>
+<li>怎麼發現：規格書第 2 版有要求，之前找不到資料來源所以沒做。</li>
+<li>改了什麼：找到證交所和櫃買中心的公開資料，每天自動更新；被處置或全額交割的股票不出訊號。處置股有兩年歷史可以回測，全額交割官方只給「目前名單」，所以從今天開始每天存。</li>
+</ul>
+<p><b>2026-11-11｜斐波那契（黃金分割）測過，不能用</b></p>
 <ul>
 <li>錯在哪：網路流傳的「前期高點 × 0.618」算法本身就錯，正確算法要拿「這一段漲了多少」去乘。</li>
 <li>怎麼發現：你傳圖片來問，我照正確算法用兩年資料回測，再跟「隨便挑一個位置」比較。</li>
