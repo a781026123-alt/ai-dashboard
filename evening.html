@@ -1,25 +1,22 @@
 <!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>晚間快報 2026-11-10</title><style>
-:root{--bg:#f5f3ff;--surface:#fff;--ink:#1f1b3a;--muted:#6b6790;--line:#e6e1fb;--accent:#7c5cff;--accent-soft:#efeaff;
---up:#f0294f;--up-soft:#ffe5ea;--down:#0fae6e;--down-soft:#dcf7ea;--warn:#b25e00;--warn-soft:#fff1dc;
---sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#110f1f;--surface:#1c1930;--ink:#efedff;--muted:#a49fc7;
---line:#2c2850;--accent:#a996ff;--accent-soft:#2a2350;--up:#ff6b85;--up-soft:#3d1a2a;--down:#3ee09a;--down-soft:#123326;
---warn:#ffc46b;--warn-soft:#3a2c14;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#110f1f;--surface:#1c1930;--ink:#efedff;--muted:#a49fc7;--line:#2c2850;--accent:#a996ff;
---accent-soft:#2a2350;--up:#ff6b85;--up-soft:#3d1a2a;--down:#3ee09a;--down-soft:#123326;--warn:#ffc46b;--warn-soft:#3a2c14;color-scheme:dark}
+/* 黑曜金（2026-11-11 使用者選定）：黑曜深藍底、香檳金重點、暖珍珠白文字、墨綠輔助；台股紅漲綠跌不變 */
+:root{--bg:#111827;--surface:#1a2333;--ink:#f4f0e6;--muted:#a9a495;--line:#2b3547;--accent:#d6b56d;--accent-soft:#2e2a1e;
+--up:#ff5a6e;--up-soft:#3a1c24;--down:#3ccb7f;--down-soft:#14302a;--warn:#f2a35e;--warn-soft:#33241a;--jade:#526b63;
+--gold-grad:linear-gradient(135deg,#f1d99a,#d6b56d 55%,#a9873f);
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace;color-scheme:dark}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:20px 16px 48px}
 .wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
 header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px}
-h1{font-size:1.6rem;margin:0;background:linear-gradient(135deg,#7c5cff,#ff5ca8);-webkit-background-clip:text;background-clip:text;color:transparent} h2{font-size:1.05rem;margin:0} h3{font-size:.95rem;margin:.6em 0 .2em}
+h1{font-size:1.6rem;margin:0;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent} h2{font-size:1.05rem;margin:0;color:var(--accent)} h2.up{color:var(--up)} h2.down{color:var(--down)} h3{font-size:.95rem;margin:.6em 0 .2em}
 .sub,.desc{color:var(--muted);font-size:.86rem;margin:0}
-section{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 2px 12px rgba(31,27,58,.06);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+section{background:var(--surface);border:1px solid rgba(214,181,109,.16);border-radius:18px;box-shadow:0 4px 18px rgba(0,0,0,.35);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .warnbar{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:.88rem}
 .num{font-family:var(--num);font-variant-numeric:tabular-nums}
 .up{color:var(--up)} .down{color:var(--down)}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
 .kpi{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)} .kpi small{color:var(--muted);display:block;font-size:.78rem}
-.kpi b{font-family:var(--num);font-size:1.25rem}
+.kpi b{font-family:var(--num);font-size:1.25rem;color:var(--accent)} .kpi b.up{color:var(--up)} .kpi b.down{color:var(--down)}
 svg.spark{width:100%;height:56px;display:block}
 .tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
 .tab{font:inherit;background:none;border:none;border-bottom:3px solid transparent;padding:6px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
@@ -30,7 +27,7 @@ th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white
 th{font-size:.78rem;color:var(--muted);font-weight:500;cursor:pointer;user-select:none}
 th.l,td.l{text-align:left} td.num{font-family:var(--num)}
 .chip{display:inline-block;font-size:.75rem;padding:0 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
-.chip.on{background:var(--down-soft);color:var(--down);border-color:transparent}
+.chip.on{background:var(--jade);color:var(--ink);border-color:transparent}
 .chip.obs{background:var(--warn-soft);color:var(--warn);border-color:transparent}
 .chip.few{background:var(--accent-soft);color:var(--accent);border-color:transparent}
 .chip.bad{background:var(--up-soft);color:var(--up);border-color:transparent}
