@@ -35,7 +35,13 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
- .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:var(--accent)}</style><body><div class=wrap><header><div><h1>錯誤與修正</h1><p class=sub>更新 2026-11-11 23:30</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-11｜全部程式檢查一遍，修了 4 個地方</b></p>
+ .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:var(--accent)}</style><body><div class=wrap><header><div><h1>錯誤與修正</h1><p class=sub>更新 2026-11-12 23:41</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-12｜早上「開盤預估」寫開高，結果當天大跌</b></p>
+<ul>
+<li>錯在哪：08:50 的開盤前快報寫「開高，大盤約漲 2%」，那是用昨晚美股收盤算的。但美股收盤後輝達又出大利空，台指期 08:45 開盤其實是小跌，網頁卻沒有跟著改；旁邊還把台指期「日盤」誤寫成「夜盤」。</li>
+<li>怎麼發現：晚上健康檢查抽查數字，看到同一頁「開盤預估」和下面的台指期方向相反。</li>
+<li>改了什麼：08:45 台指期開盤後，開盤預估改用台指期即時的漲跌（它已經包含最新消息），美股推估只放旁邊對照；兩個差很多時會用粗體提醒「以台指期為準」。08:30 那份如果兩者差很多，也會提醒先別當真。名稱也改對了。</li>
+</ul>
+<p><b>2026-11-11｜全部程式檢查一遍，修了 4 個地方</b></p>
 <ul>
 <li>錯在哪：(1) 收盤快報只算停損、沒算停利，跟新規則不一致；(2)「隔日操作參考」的文字還寫舊的固定 2% 停損、跳空 3%；(3) 處置股常在晚上才公布，名單早就算完了，隔天早上還會顯示；(4) 模擬成績紀錄只存在一個檔案裡，壞掉就救不回來。</li>
 <li>怎麼發現：你要求把整個程式檢查一遍，我逐一對照規格書第 2 版。</li>
