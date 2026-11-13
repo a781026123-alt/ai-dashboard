@@ -19,14 +19,14 @@ h2{font-size:15px;color:var(--muted);margin:22px 4px 8px;font-weight:600}
 <a class=hero id=hero href="premarket.html"><small id=heroTag>現在看這份</small><b id=heroTitle>台股快報</b><small id=heroTime></small><span class=go>打開 →</span></a>
 <h2>台股快報（一天四份）</h2>
 <div class=grid>
-<a class=card id=c_pre href="premarket.html"><span class=ic>🌅</span><b>盤前／開盤</b><small>08:30、08:50｜2026-11-13 08:29</small></a>
+<a class=card id=c_pre href="premarket.html"><span class=ic>🌅</span><b>盤前／開盤</b><small>08:30、08:50｜2026-11-13 08:50</small></a>
 <a class=card id=c_close href="closing.html"><span class=ic>⚡</span><b>盤中／收盤</b><small>每 30 分、13:50｜2026-11-12 13:50</small></a>
 <a class="card wide" id=c_eve href="evening.html"><span class=ic>🌙</span><b>晚間快報：明天做多／做空（400 元以內）</b><small>16:50、22:30｜2026-11-12 22:30</small></a>
 <a class="card wide" href="follow.html"><span class=ic>🧭</span><b>看盤比對：大盤與個股</b><small>誰在拉指數、族群強弱、查任一檔跟大盤比｜2026-11-12 16:52</small></a>
 <a class="card wide" href="mywatch.html"><span class=ic>⭐</span><b>我的選股：分析與復盤</b><small>你丟的股票，收盤後自動對答案｜2026-11-13 08:28</small></a>
 <a class="card wide" href="analysis/index.html"><span class=ic>🔍</span><b>個股分析</b><small>打代號或名稱搜尋，每天 16:50 更新｜2026-11-12 16:52</small></a>
 <a class="card wide" href="review.html"><span class=ic>🛠️</span><b>錯誤與修正（台股＋六合彩）</b><small>哪裡錯了、怎麼發現、改了什麼｜2026-11-12 23:41</small></a>
-<a class="card wide" href="stock.html"><span class=ic>📊</span><b>策略檢討（白話）</b><small>哪裡錯、怎麼改，偶爾看就好｜2026-11-12 16:32</small></a>
+<a class="card wide" href="stock.html"><span class=ic>📊</span><b>策略檢討（白話）</b><small>哪裡錯、怎麼改，偶爾看就好｜2026-11-13 08:30</small></a>
 </div>
 <h2>六合彩</h2>
 <a class="card lotto" href="lotto.html"><span class=ic>🎱</span><b>六合彩：A／B 組抓牌與對獎</b><small>2026-11-13 08:18</small></a>
@@ -34,8 +34,8 @@ h2{font-size:15px;color:var(--muted);margin:22px 4px 8px;font-weight:600}
 </div>
 <script>(function(){
 var t=new Date(),m=t.getHours()*60+t.getMinutes(),wd=t.getDay(),k;
-var P={pre:['premarket.html','盤前快報','台指期夜盤、美股、今天做多做空','2026-11-13 08:29'],
-open:['premarket.html','開盤快報','台指期開盤後、今天做多做空','2026-11-13 08:29'],
+var P={pre:['premarket.html','盤前快報','台指期夜盤、美股、今天做多做空','2026-11-13 08:50'],
+open:['premarket.html','開盤快報','台指期開盤後、今天做多做空','2026-11-13 08:50'],
 mid:['closing.html','盤中／收盤快報','今天候選股即時模擬成績','2026-11-12 13:50'],
 eve:['evening.html','晚間快報','明天做多做空、夜盤、美股','2026-11-12 22:30']};
 if(wd==0||wd==6)k='eve';else if(m<6*60)k='eve';else if(m<8*60+45)k='pre';else if(m<9*60+15)k='open';else if(m<16*60+50)k='mid';else k='eve';
