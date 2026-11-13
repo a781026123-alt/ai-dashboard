@@ -13,32 +13,35 @@ h2{font-size:15px;color:var(--muted);margin:22px 4px 8px;font-weight:600}
 .card .ic{font-size:24px} .card b{display:block;font-size:16px;margin:4px 0 2px;color:var(--ink)} .card small{color:var(--muted);font-size:12px}
 .card.now{outline:2px solid var(--gold)} .wide{grid-column:1/-1}
 .lotto{background:linear-gradient(135deg,#1c1430,#2b1c48);border:1px solid rgba(214,181,109,.45)} .card.lotto b{color:var(--gold)} .lotto small{color:#c9c0dc}
+.card.main{border:1px solid var(--gold);background:linear-gradient(135deg,#222c40,#1a2333)} .card.main b{color:var(--gold);font-size:18px}
+.memo{display:block;margin-top:26px;padding:10px 14px;border:1px dashed var(--line);border-radius:10px;color:var(--muted);font-size:12px;background:transparent}
 .note{color:var(--muted);font-size:12px;margin-top:22px;line-height:1.6}
 </style><body><div class=wrap>
 <h1>AI 工作室</h1><p class=hello id=hello></p>
 <a class=hero id=hero href="premarket.html"><small id=heroTag>現在看這份</small><b id=heroTitle>台股快報</b><small id=heroTime></small><span class=go>打開 →</span></a>
-<h2>台股快報（一天四份）</h2>
+<h2>看盤（快報）</h2>
 <div class=grid>
 <a class=card id=c_pre href="premarket.html"><span class=ic>🌅</span><b>盤前／開盤</b><small>08:30、08:50｜2026-11-13 08:50</small></a>
-<a class=card id=c_close href="closing.html"><span class=ic>⚡</span><b>盤中／收盤</b><small>每 30 分、13:50｜2026-11-13 13:15</small></a>
-<a class="card wide" id=c_eve href="evening.html"><span class=ic>🌙</span><b>晚間快報：明天做多／做空（400 元以內）</b><small>16:50、22:30｜2026-11-12 22:30</small></a>
-<a class="card wide" href="follow.html"><span class=ic>🧭</span><b>看盤比對：大盤與個股</b><small>誰在拉指數、族群強弱、查任一檔跟大盤比｜2026-11-13 13:36</small></a>
-<a class="card wide" href="battle.html"><span class=ic>🎯</span><b>當沖備戰名單：選股＋掛單價</b><small>波動大、有量的 15 檔，多空觸價與停損｜2026-11-13 13:38</small></a>
-<a class="card wide" href="mywatch.html"><span class=ic>⭐</span><b>我的選股：分析與復盤</b><small>你丟的股票，收盤後自動對答案｜2026-11-13 08:28</small></a>
+<a class=card id=c_close href="closing.html"><span class=ic>⚡</span><b>盤中／收盤</b><small>每 30 分、13:50｜2026-11-13 13:50</small></a>
+<a class=card href="follow.html"><span class=ic>🧭</span><b>看盤對比</b><small>大盤與個股、族群強弱｜2026-11-13 13:36</small></a>
+<a class=card id=c_eve href="evening.html"><span class=ic>🌙</span><b>晚間</b><small>明天大盤環境｜2026-11-12 22:30</small></a>
+</div>
+<h2>選股</h2>
+<div class=grid>
+<a class="card wide main" href="battle.html"><span class=ic>🎯</span><b>當沖備戰名單</b><small>我選的股（可丟截圖）＋系統推薦、多空觸價與停損、收盤後復盤｜2026-11-13 13:48</small></a>
 <a class="card wide" href="analysis/index.html"><span class=ic>🔍</span><b>個股分析</b><small>打代號或名稱搜尋，每天 16:50 更新｜2026-11-12 16:52</small></a>
-<a class="card wide" href="review.html"><span class=ic>🛠️</span><b>錯誤與修正（台股＋六合彩）</b><small>哪裡錯了、怎麼發現、改了什麼｜2026-11-12 23:41</small></a>
-<a class="card wide" href="stock.html"><span class=ic>📊</span><b>策略檢討（白話）</b><small>哪裡錯、怎麼改，偶爾看就好｜2026-11-13 08:30</small></a>
 </div>
 <h2>六合彩</h2>
 <a class="card lotto" href="lotto.html"><span class=ic>🎱</span><b>六合彩：A／B 組抓牌與對獎</b><small>2026-11-13 10:00</small></a>
+<a class=memo href="review.html">📝 備註：修正錯誤與檢討（哪裡錯了、怎麼改；偶爾看就好）｜2026-11-12 23:41</a>
 <p class=note>台股為個人研究與模擬交易，非投資建議；過去績效不代表未來。六合彩為娛樂用。</p>
 </div>
 <script>(function(){
 var t=new Date(),m=t.getHours()*60+t.getMinutes(),wd=t.getDay(),k;
-var P={pre:['premarket.html','盤前快報','台指期夜盤、美股、今天做多做空','2026-11-13 08:50'],
-open:['premarket.html','開盤快報','台指期開盤後、今天做多做空','2026-11-13 08:50'],
-mid:['closing.html','盤中／收盤快報','今天候選股即時模擬成績','2026-11-13 13:15'],
-eve:['evening.html','晚間快報','明天做多做空、夜盤、美股','2026-11-12 22:30']};
+var P={pre:['premarket.html','盤前快報','台指期夜盤、美股、今天大盤環境','2026-11-13 08:50'],
+open:['premarket.html','開盤快報','台指期開盤後的方向','2026-11-13 08:50'],
+mid:['closing.html','盤中／收盤快報','今天盤勢','2026-11-13 13:50'],
+eve:['evening.html','晚間快報','明天大盤環境、夜盤、美股','2026-11-12 22:30']};
 if(wd==0||wd==6)k='eve';else if(m<6*60)k='eve';else if(m<8*60+45)k='pre';else if(m<9*60+15)k='open';else if(m<16*60+50)k='mid';else k='eve';
 var x=P[k];document.getElementById('hero').href=x[0];document.getElementById('heroTitle').textContent=x[1]+'｜'+x[2];
 document.getElementById('heroTime').textContent='更新 '+x[3];

@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>錯誤與修正</title><style>
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>備註：修正與檢討</title><style>
 /* 黑曜金（2026-11-11 使用者選定）：黑曜深藍底、香檳金重點、暖珍珠白文字、墨綠輔助；台股紅漲綠跌不變 */
 :root{--bg:#111827;--surface:#1a2333;--ink:#f4f0e6;--muted:#a9a495;--line:#2b3547;--accent:#d6b56d;--accent-soft:#2e2a1e;
 --up:#ff5a6e;--up-soft:#3a1c24;--down:#3ccb7f;--down-soft:#14302a;--warn:#f2a35e;--warn-soft:#33241a;--jade:#526b63;
@@ -35,7 +35,7 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
- .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:var(--accent)}</style><body><div class=wrap><header><div><h1>錯誤與修正</h1><p class=sub>更新 2026-11-12 23:41</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-12｜早上「開盤預估」寫開高，結果當天大跌</b></p>
+ body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-12 23:41</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-12｜早上「開盤預估」寫開高，結果當天大跌</b></p>
 <ul>
 <li>錯在哪：08:50 的開盤前快報寫「開高，大盤約漲 2%」，那是用昨晚美股收盤算的。但美股收盤後輝達又出大利空，台指期 08:45 開盤其實是小跌，網頁卻沒有跟著改；旁邊還把台指期「日盤」誤寫成「夜盤」。</li>
 <li>怎麼發現：晚上健康檢查抽查數字，看到同一頁「開盤預估」和下面的台指期方向相反。</li>
@@ -153,7 +153,52 @@ a{color:var(--accent)}
 <li>錯在哪：排程跑到一半被關，那天的開獎沒抓到。</li>
 <li>怎麼發現：健康檢查時看到。</li>
 <li>改了什麼：當晚重跑成功，隔天 10:00 也會再抓一次，不會漏期。</li>
-</ul></div></section></div></body></html><script>(function(){
+</ul></div></section><section><h2>策略檢討（白話）</h2><div class="md"><h2>策略白話檢討</h2>
+<p>更新：2026-11-09（每週日晚上的「每週優化」會改寫這份）</p>
+<h3>一句話結論</h3>
+<p>目前沒有任何一種「隔天當沖選股法」是真的賺錢的，所以正式推薦是 0 檔。我寧可不推，也不要硬推害你賠錢。</p>
+<h3>每個方法錯在哪、怎麼改</h3>
+<p><b>多1 強勢延續</b>（今天大漲、量大、收在最高點附近的股票，隔天買）</p>
+<ul>
+<li>錯在哪：今天大漲的股票，隔天常常「開高走低」。開盤一買就套在最高點，碰到停損出場。</li>
+<li>怎麼改：改成開盤不追，等 09:30 後還站在開盤價之上才進場；正在測試中。</li>
+</ul>
+<p><b>多2 法人追價</b>（法人連買幾天的股票，隔天買）</p>
+<ul>
+<li>錯在哪：法人買超的消息大家都看得到，隔天開盤價早就反映了，進場時已經沒有便宜可撿。</li>
+<li>怎麼改：法人資料只當「加分」，不單獨當買進理由。</li>
+</ul>
+<p><b>空1 弱勢延續</b>（今天大跌、量大、收在最低點附近的股票，隔天放空）</p>
+<ul>
+<li>錯在哪：跌多的股票隔天很容易「跌深反彈」，放空的人被軋。</li>
+<li>怎麼改：只在大盤也偏弱的日子才考慮放空，大盤反彈的日子不空。</li>
+</ul>
+<p><b>空2 漲多反轉</b>（連漲好幾天、出現長上影線的股票，隔天放空）</p>
+<ul>
+<li>錯在哪：機會太少，一年只有幾次，樣本不夠，看不出是不是真的有用。</li>
+<li>怎麼改：繼續觀察累積樣本，不急著上線。</li>
+</ul>
+<h3>這週新學到的事</h3>
+<ul>
+<li><b>開盤會開高還是開低，猜得很準；開盤之後漲還是跌，猜不準。</b> 昨晚美股費半、台積電 ADR 漲跌，大約 8 成可以猜中台股開高或開低。但開盤之後的走勢跟丟銅板差不多，所以網頁上「一眼看懂」會直接告訴你開盤預估，並提醒你開盤第一波不要追。</li>
+<li><b>晚上看到的美股數字可能是舊的。</b> 晚上美股還沒開盤時，費半漲跌其實是前一晚的，台股白天已經反映過了。已經修正：晚上改看台指期夜盤，舊的美股數字不再拿來判斷。</li>
+<li><b>漲停、跌停開盤的股票，回測會騙人。</b> 看起來很賺，其實開盤就鎖死，根本買不到或賣不掉。以後這類股票一律排除。</li>
+<li>ChatGPT 建議的 6 種做法全部測過，都不賺錢，沒有上線。</li>
+<li><b>斐波那契（黃金分割）也測過了，沒用。</b>（11/11 加測）網路上「高點 × 0.618」的算法本身就錯了。照正確算法測，股價跌到 0.382、0.5、0.618 這些位置後隔天買，結果跟隨便挑一個位置買差不多，都是賠的；拿來當停損、停利也沒有比較好。所以沒有加進推薦，網頁上也不放這些價位，免得看起來好像很準。</li>
+</ul>
+<ul>
+<li><b>「月營收大成長就買、抱 2～4 週」也測過了，沒有比較好。</b>（11/11 加測，你問資金不要放太久的方法）表面上看起來會賺，但那是因為這兩年大多頭、什麼都漲。拿去跟「同一批股票隨便平均買」比，並沒有穩定多賺，最近 3 個月還輸。原因是營收成長最多的常常是去年很慘的公司（基期低），成長數字大不代表股價會再漲，而且營收公布前股價通常已經先反映了。所以沒有上線。</li>
+</ul>
+<ul>
+<li><b>11/11 照你的規格書第 2 版改了模擬規則。</b>現在開盤跳太多不追、停損停利看每檔平常的波動、大盤在 20 日線下面就不做多、除權息那天不出訊號，成績也把所有符合的股票都算進去（不只網頁上那 5 檔）。用新規則重算兩年，四個方法還是不賺錢；「空1 弱勢延續」最近 3 個月有變好，但筆數不到 100 筆，還不能相信。前 3 個月（到明年 2/11）只觀察、不自動上線。</li>
+</ul>
+<h3>接下來要做的</h3>
+<ul>
+<li>測試「開盤不追、等 09:30 確認方向再進場」能不能讓多1 轉正。</li>
+<li>測試「目前局勢」裡每個指標單獨有沒有用，沒用的拿掉。</li>
+<li>有通過驗證的方法才會變成正式推薦，到時候網頁最上面會直接寫出來。</li>
+</ul>
+<p>（詳細數字由系統自己記錄在 <code>reports/週檢討_日期.md</code> 與 <code>策略變更紀錄.md</code>，不顯示在網頁上。）</p></div><p><a href="stock.html">完整的策略成績表 →</a>　<a href="mywatch.html">舊的方向分析紀錄 →</a></p></section></div></body></html><script>(function(){
 var mine=Date.parse(document.lastModified)||0;
 function check(){fetch('index.html?t='+Date.now(),{method:'HEAD',cache:'no-store'}).then(function(r){
 var lm=Date.parse(r.headers.get('Last-Modified')||'');
