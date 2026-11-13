@@ -59,9 +59,9 @@ q.oninput=function(){var m=match(q.value);sug.innerHTML=q.value.trim()&&!(m.leng
 function go(t){var m=match(t);sug.innerHTML='';if(!m.length){out.innerHTML='<section><p class=desc>找不到「'+esc(t)+'」。可能代號打錯，或是成交量太少（20 日平均不到 100 張）沒有分析。</p></section>';return}
 var c=m[0][0];q.value=c+' '+m[0][1];location.hash=c;saveH(c);out.innerHTML='<section><p class=desc>讀取中…</p></section>';
 fetch('data/'+c+'.json?t='+Date.now()).then(function(r){return r.json()}).then(show).catch(function(){out.innerHTML='<section><p class=desc>讀不到資料，請稍後再試。</p></section>'})}
-function show(a){var h='<section><h2>'+a.code+' '+esc(a.name)+'｜白話總結</h2><ul class=desc>'+a.notes.map(function(n){return '<li>'+n+'</li>'}).join('')+'</ul><p class=desc>資料到 '+a.date+' 收盤，'+a.made+' 產生。歷史資料整理，不是即時報價，也不是買賣建議。</p></section>';
-a.sections.forEach(function(s){h+='<section><h2>'+s.h+'</h2>';if(s.k)h+='<div class=kpis>'+s.k.map(function(k){return '<div class=kpi><small>'+k[0]+'</small><b class="num '+k[2]+'">'+k[1]+'</b>'+(k[3]?'<small>'+k[3]+'</small>':'')+'</div>'}).join('')+'</div>';
-if(s.p)h+='<p class=desc>'+s.p+'</p>';if(s.t)h+='<div class=tablebox><table><thead><tr>'+s.t.head.map(function(x){return '<th class=l>'+x+'</th>'}).join('')+'</tr></thead><tbody>'+s.t.rows.map(function(r){return '<tr>'+r.map(function(x){return '<td class=l>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';h+='</section>'});
+function show(a){var h='<section><h2>'+a.code+' '+esc(a.name)+'｜重點</h2><ul class=desc>'+a.notes.map(function(n){return '<li>'+n+'</li>'}).join('')+'</ul><p class=desc>資料到 '+a.date+' 收盤，'+a.made+' 產生。歷史資料整理，不是即時報價，也不是買賣建議。</p></section>';
+a.sections.forEach(function(s){h+=s.fold?'<section><details><summary class=desc>'+s.h+'</summary>':'<section><h2>'+s.h+'</h2>';if(s.k)h+='<div class=kpis>'+s.k.map(function(k){return '<div class=kpi><small>'+k[0]+'</small><b class="num '+k[2]+'">'+k[1]+'</b>'+(k[3]?'<small>'+k[3]+'</small>':'')+'</div>'}).join('')+'</div>';
+if(s.p)h+='<p class=desc>'+s.p+'</p>';if(s.t)h+='<div class=tablebox><table><thead><tr>'+s.t.head.map(function(x){return '<th class=l>'+x+'</th>'}).join('')+'</tr></thead><tbody>'+s.t.rows.map(function(r){return '<tr>'+r.map(function(x){return '<td class=l>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';h+=(s.fold?'</details>':'')+'</section>'});
 out.innerHTML=h;window.scrollTo(0,q.getBoundingClientRect().top+window.scrollY-10)}
 window.onhashchange=function(){var c=decodeURIComponent(location.hash.slice(1));if(c&&q.value.indexOf(c)!=0)go(c)};
 </script><script>(function(){
