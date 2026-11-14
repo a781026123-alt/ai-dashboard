@@ -54,7 +54,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-14 14:03</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-14 14:17</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -148,7 +148,9 @@ function drawReg(){if(!BOOK||!D)return;var el=document.getElementById('regbox');
  if(k){var best=[['突破後做多',k.L],['突破後做空',k.S],['碰昨高反而放空',k.FS],['碰昨低反而買進',k.FL]],pn=best.filter(function(x){return x[1]&&x[1].n&&x[1].now>0}),ph=best.filter(function(x){return x[1]&&x[1].n&&x[1].hold>0}),nm_=function(a){return a.map(function(x){return x[0]}).join('、')};
   h+='<div class="lv on"><b>'+RN[k.key]+'</b>：過去 '+BOOK.days+' 個交易日裡有 '+k.days+' 天。每筆平均（以最多賠 4,000 元的部位算）'
    +'<table class=rgt><tr><th></th><th>照現行出場</th><th>抱到收盤</th><th></th></tr>'+best.map(function(x){return regCell(x[0],x[1])}).join('')+'</table>'
-   +(pn.length||ph.length?'<span class=g>'+(pn.length?'照現行出場有賺的：'+nm_(pn):'照現行出場沒有一種是賺的')+'<br>抱到收盤有賺的：'+(ph.length?nm_(ph):'沒有')+'</span>':'<span class=r>過去四種做法都賠，數字上是不做比較好</span>')+(k.key=='6'?'<br><span class=m>震盪盤的「反而買進」只靠開盤那幾分鐘；09:05 以後才進場的平均是賠的。</span>':'')+'</div>'}
+   +(pn.length||ph.length?'<span class=g>'+(pn.length?'照現行出場有賺的：'+nm_(pn):'照現行出場沒有一種是賺的')+'<br>抱到收盤有賺的：'+(ph.length?nm_(ph):'沒有')+'</span>':'<span class=r>過去四種做法都賠，數字上是不做比較好</span>')+(k.key=='6'?'<br><span class=m>震盪盤的「反而買進」只靠開盤那幾分鐘；09:05 以後才進場的平均是賠的。</span>':'')
+   +(function(){var g=BOOK.long&&BOOK.long.kinds&&BOOK.long.kinds[k.key];if(!g)return '';var f=function(c){return c&&c.n?'<b class='+(c.hold>0?'up':'down')+'>'+(c.hold>0?'+':'')+c.hold.toLocaleString()+'</b> 元（'+c.win+'% 賺、'+c.n+' 筆）':'沒有資料'};
+     return '<br><span class=m>拉長到 '+BOOK.long.days+' 天驗證（'+BOOK.long.frm+' 起，這種盤 '+g.days+' 天；突破進場、不設停損抱到收盤）：</span><br>做多 '+f(g.L)+'　做空 '+f(g.S)})()+'</div>'}
  else h+='<div class="lv on"><span class=m>點一個你判斷的盤勢，會顯示那種盤過去的數字。</span></div>';
  h+='<p class=desc style="margin:6px 0 0"><small>盤勢是用大盤「開盤到收盤」事後分類的，當天盤中還會變。樣本只有 '+BOOK.days+' 天（'+BOOK.frm+'～'+BOOK.to+'），僅供參考。</small></p>';
  el.innerHTML=h}
