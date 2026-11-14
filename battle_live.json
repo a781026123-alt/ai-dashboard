@@ -13,6 +13,8 @@
    "o": 145.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -42,6 +44,8 @@
     "mk": "漲",
     "gp": null
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -51,6 +55,8 @@
    "o": 41.525,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -65,6 +71,8 @@
    "o": 337.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -79,6 +87,8 @@
    "o": 100.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -88,6 +98,8 @@
    "o": 525.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -102,6 +114,8 @@
    "o": 56.4,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -116,6 +130,8 @@
    "o": 67.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -147,6 +163,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -161,6 +179,8 @@
    "o": 33.974999999999994,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -175,6 +195,8 @@
    "o": 136.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -189,6 +211,8 @@
    "o": 127.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -203,6 +227,8 @@
    "o": 32.1,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -217,6 +243,8 @@
    "o": 1472.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -231,6 +259,8 @@
    "o": 143.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -245,6 +275,8 @@
    "o": 535.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -259,6 +291,8 @@
    "o": 57.55,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -273,6 +307,8 @@
    "o": 210.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -285,27 +321,10 @@
    "p": 80.6,
    "t": "13:31",
    "o": 76.75,
-   "L": {
-    "e": "09:01",
-    "ep": 76.75,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:16",
-     "09:36"
-    ],
-    "sl": null,
-    "best": 80.6,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -318,27 +337,10 @@
    "p": 20.35,
    "t": "13:31",
    "o": 20.5,
-   "L": {
-    "e": "09:01",
-    "ep": 20.5,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:26",
-     "09:31"
-    ],
-    "sl": null,
-    "best": 21.25,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -371,6 +373,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -402,6 +406,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -434,6 +440,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -467,6 +475,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -496,6 +506,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -527,6 +539,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -541,6 +555,8 @@
    "o": 73.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -555,6 +571,8 @@
    "o": 56.45,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -569,6 +587,8 @@
    "o": 20.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -583,6 +603,8 @@
    "o": 1037.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -597,6 +619,8 @@
    "o": 717.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -628,6 +652,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -660,6 +686,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -674,6 +702,8 @@
    "o": 284.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -707,6 +737,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -721,6 +753,8 @@
    "o": 243.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -753,6 +787,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -767,6 +803,8 @@
    "o": 45.325,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -781,6 +819,8 @@
    "o": 385.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -810,6 +850,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -824,6 +866,8 @@
    "o": 1037.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -838,6 +882,8 @@
    "o": 1005.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -852,6 +898,8 @@
    "o": 96.45,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -865,25 +913,9 @@
    "t": "13:31",
    "o": 18.45,
    "L": null,
-   "S": {
-    "e": "09:01",
-    "ep": 18.45,
-    "tp": 2,
-    "tpt": [
-     "09:01",
-     "10:21"
-    ],
-    "sl": null,
-    "best": 18.25,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": null
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": null
   },
@@ -893,6 +925,8 @@
    "o": 29.325000000000003,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -924,6 +958,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -938,6 +974,8 @@
    "o": 42.325,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -971,6 +1009,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1002,6 +1042,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1016,6 +1058,8 @@
    "o": 30.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1030,6 +1074,8 @@
    "o": 568.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1061,6 +1107,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1093,6 +1141,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1107,6 +1157,8 @@
    "o": 95.85,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1121,6 +1173,8 @@
    "o": 183.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1154,6 +1208,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -1168,6 +1224,8 @@
    "o": 310.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1197,6 +1255,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1211,6 +1271,8 @@
    "o": 33.075,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1225,6 +1287,8 @@
    "o": 102.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1237,27 +1301,10 @@
    "p": 194.5,
    "t": "13:31",
    "o": 200.75,
-   "L": {
-    "e": "09:01",
-    "ep": 200.75,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:06",
-     "09:06"
-    ],
-    "sl": "11:51",
-    "best": 207.75,
-    "ok": "09:06",
-    "slc": "11:56",
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1289,6 +1336,8 @@
     "mk": "跌",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -1320,6 +1369,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1334,6 +1385,8 @@
    "o": 20.4,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1348,6 +1401,8 @@
    "o": 39.925,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1362,6 +1417,8 @@
    "o": 57.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1376,6 +1433,8 @@
    "o": 4272.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1408,6 +1467,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1422,6 +1483,8 @@
    "o": 1145.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1436,6 +1499,8 @@
    "o": 78.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1467,6 +1532,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1481,6 +1548,8 @@
    "o": 35.85,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1495,6 +1564,8 @@
    "o": 30.6,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1526,6 +1597,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1558,6 +1631,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1572,6 +1647,8 @@
    "o": 72.9,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1586,6 +1663,8 @@
    "o": 103.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1618,6 +1697,8 @@
     "mk": "漲",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -1650,6 +1731,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1662,27 +1745,10 @@
    "p": 101.5,
    "t": "13:31",
    "o": 106.25,
-   "L": {
-    "e": "09:01",
-    "ep": 106.25,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "09:01"
-    ],
-    "sl": null,
-    "best": 108.75,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1697,6 +1763,8 @@
    "o": 48.650000000000006,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -1711,6 +1779,8 @@
    "o": 194.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1742,6 +1812,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1754,27 +1826,10 @@
    "p": 182.0,
    "t": "13:31",
    "o": 181.25,
-   "L": {
-    "e": "09:01",
-    "ep": 181.25,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "09:01"
-    ],
-    "sl": null,
-    "best": 182.0,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -1807,6 +1862,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1839,6 +1896,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1853,6 +1912,8 @@
    "o": 155.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1867,6 +1928,8 @@
    "o": 109.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1879,27 +1942,10 @@
    "p": 68.45,
    "t": "13:31",
    "o": 76.4,
-   "L": {
-    "e": "09:01",
-    "ep": 76.4,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "09:01"
-    ],
-    "sl": null,
-    "best": 76.4,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1931,6 +1977,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1945,6 +1993,8 @@
    "o": 157.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -1976,6 +2026,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -1990,6 +2042,8 @@
    "o": 487.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2021,6 +2075,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2050,6 +2106,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -2062,27 +2120,10 @@
    "p": 71.1,
    "t": "13:31",
    "o": 66.19999999999999,
-   "L": {
-    "e": "09:01",
-    "ep": 66.19999999999999,
-    "tp": 3,
-    "tpt": [
-     "09:16",
-     "09:51",
-     "09:51"
-    ],
-    "sl": null,
-    "best": 71.1,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -2097,6 +2138,8 @@
    "o": 234.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2111,6 +2154,8 @@
    "o": 81.05,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2142,6 +2187,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2156,6 +2203,8 @@
    "o": 181.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2170,6 +2219,8 @@
    "o": 227.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2184,6 +2235,8 @@
    "o": 194.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -2198,6 +2251,8 @@
    "o": 187.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2212,6 +2267,8 @@
    "o": 41.4,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2226,6 +2283,8 @@
    "o": 2972.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2259,6 +2318,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -2291,6 +2352,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2323,6 +2386,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2337,6 +2402,8 @@
    "o": 33.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2351,6 +2418,8 @@
    "o": 44.8,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2365,6 +2434,8 @@
    "o": 80.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2396,6 +2467,8 @@
     "mk": "跌",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2427,6 +2500,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2458,6 +2533,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2472,6 +2549,8 @@
    "o": 367.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2504,6 +2583,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2518,6 +2599,8 @@
    "o": 193.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2532,6 +2615,8 @@
    "o": 471.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2546,6 +2631,8 @@
    "o": 47.675,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2578,6 +2665,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -2609,6 +2698,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2640,6 +2731,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2654,6 +2747,8 @@
    "o": 173.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2668,6 +2763,8 @@
    "o": 1387.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2682,6 +2779,8 @@
    "o": 107.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2696,6 +2795,8 @@
    "o": 83.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2710,6 +2811,8 @@
    "o": 133.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2742,6 +2845,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2756,6 +2861,8 @@
    "o": 129.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2770,6 +2877,8 @@
    "o": 40.025,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2802,6 +2911,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2816,6 +2927,8 @@
    "o": 131.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2830,6 +2943,8 @@
    "o": 382.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -2844,6 +2959,8 @@
    "o": 21.225,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2875,6 +2992,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2889,6 +3008,8 @@
    "o": 52.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2903,6 +3024,8 @@
    "o": 31.9,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2917,6 +3040,8 @@
    "o": 283.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -2950,6 +3075,8 @@
     "gp": null
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -2959,6 +3086,8 @@
    "o": 39.775,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2973,6 +3102,8 @@
    "o": 40.025,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -2987,6 +3118,8 @@
    "o": 39.45,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3001,6 +3134,8 @@
    "o": 152.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3015,6 +3150,8 @@
    "o": 29.975,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3029,6 +3166,8 @@
    "o": 211.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3043,6 +3182,8 @@
    "o": 122.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3057,6 +3198,8 @@
    "o": 65.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3071,6 +3214,8 @@
    "o": 170.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3085,6 +3230,8 @@
    "o": 37.075,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3114,6 +3261,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3128,6 +3277,8 @@
    "o": 314.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3142,6 +3293,8 @@
    "o": 26.225,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3156,6 +3309,8 @@
    "o": 171.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3188,6 +3343,8 @@
     "gp": null
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -3197,6 +3354,8 @@
    "o": 44.825,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -3206,6 +3365,8 @@
    "o": 34.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3220,6 +3381,8 @@
    "o": 61.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3251,6 +3414,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -3265,6 +3430,8 @@
    "o": 31.85,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -3273,22 +3440,9 @@
    "t": "13:31",
    "o": 53.5,
    "L": null,
-   "S": {
-    "e": "09:01",
-    "ep": 53.5,
-    "tp": 0,
-    "tpt": [],
-    "sl": "09:21",
-    "best": 53.5,
-    "ok": null,
-    "slc": "09:26",
-    "ev": null,
-    "sv": null,
-    "ck": "----0",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": [
     "盤",
@@ -3303,6 +3457,8 @@
    "o": 253.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3335,6 +3491,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3364,6 +3522,8 @@
     "mk": "漲",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3397,6 +3557,8 @@
     "mk": "漲",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -3426,6 +3588,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3440,6 +3604,8 @@
    "o": 1622.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3471,6 +3637,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3502,6 +3670,8 @@
     "mk": "漲",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3533,6 +3703,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3564,6 +3736,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3595,6 +3769,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3609,6 +3785,8 @@
    "o": 54.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3623,6 +3801,8 @@
    "o": 81.85,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3637,6 +3817,8 @@
    "o": 713.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3651,6 +3833,8 @@
    "o": 113.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3665,6 +3849,8 @@
    "o": 95.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3679,6 +3865,8 @@
    "o": 34.775,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3710,6 +3898,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3741,6 +3931,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3755,6 +3947,8 @@
    "o": 234.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3787,6 +3981,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3801,6 +3997,8 @@
    "o": 80.19999999999999,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3833,6 +4031,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3847,6 +4047,8 @@
    "o": 1560.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3861,6 +4063,8 @@
    "o": 387.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3873,26 +4077,7 @@
    "p": 393.0,
    "t": "13:31",
    "o": 467.5,
-   "L": {
-    "e": "09:01",
-    "ep": 467.5,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "09:01"
-    ],
-    "sl": "10:51",
-    "best": 474.5,
-    "ok": "09:06",
-    "slc": "10:56",
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": {
     "e": "10:51",
     "ep": 412.0,
@@ -3913,6 +4098,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3944,6 +4131,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -3958,6 +4147,8 @@
    "o": 159.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3972,6 +4163,8 @@
    "o": 83.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -3986,6 +4179,8 @@
    "o": 30.674999999999997,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4000,6 +4195,8 @@
    "o": 57.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4014,6 +4211,8 @@
    "o": 446.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4028,6 +4227,8 @@
    "o": 421.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4042,6 +4243,8 @@
    "o": 364.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4056,6 +4259,8 @@
    "o": 403.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4087,6 +4292,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4100,26 +4307,9 @@
    "t": "13:31",
    "o": 120.25,
    "L": null,
-   "S": {
-    "e": "09:01",
-    "ep": 120.25,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "10:06",
-     "11:56"
-    ],
-    "sl": null,
-    "best": 117.5,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": [
     "盤",
@@ -4151,6 +4341,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4165,6 +4357,8 @@
    "o": 128.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4179,6 +4373,8 @@
    "o": 12.825,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4193,6 +4389,8 @@
    "o": 418.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4225,6 +4423,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4254,6 +4454,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4302,6 +4504,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4316,6 +4520,8 @@
    "o": 202.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4330,6 +4536,8 @@
    "o": 126.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4344,6 +4552,8 @@
    "o": 608.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4358,6 +4568,8 @@
    "o": 655.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4372,6 +4584,8 @@
    "o": 62.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4405,6 +4619,8 @@
     "gp": null
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -4429,6 +4645,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4461,6 +4679,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4475,6 +4695,8 @@
    "o": 48.025,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4487,27 +4709,10 @@
    "p": 25.1,
    "t": "13:31",
    "o": 24.225,
-   "L": {
-    "e": "09:01",
-    "ep": 24.225,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:16",
-     "09:21"
-    ],
-    "sl": null,
-    "best": 25.1,
-    "ok": "09:21",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": null
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -4534,6 +4739,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4548,6 +4755,8 @@
    "o": 102.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4562,6 +4771,8 @@
    "o": 173.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4576,6 +4787,8 @@
    "o": 39.925,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4590,6 +4803,8 @@
    "o": 173.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4621,6 +4836,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4635,6 +4852,8 @@
    "o": 41.425,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4649,6 +4868,8 @@
    "o": 86.94999999999999,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4663,6 +4884,8 @@
    "o": 979.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4677,6 +4900,8 @@
    "o": 106.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4691,6 +4916,8 @@
    "o": 123.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4720,6 +4947,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4734,6 +4963,8 @@
    "o": 135.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4763,6 +4994,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4777,6 +5010,8 @@
    "o": 78.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4791,6 +5026,8 @@
    "o": 79.2,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4822,6 +5059,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4836,6 +5075,8 @@
    "o": 295.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4850,6 +5091,8 @@
    "o": 62.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4864,6 +5107,8 @@
    "o": 66.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4878,6 +5123,8 @@
    "o": 63.05,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4892,6 +5139,8 @@
    "o": 387.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4906,6 +5155,8 @@
    "o": 15.850000000000001,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -4935,6 +5186,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4949,6 +5202,8 @@
    "o": 305.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4963,6 +5218,8 @@
    "o": 58.05,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4977,6 +5234,8 @@
    "o": 81.19999999999999,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -4991,6 +5250,8 @@
    "o": 145.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5022,6 +5283,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5036,6 +5299,8 @@
    "o": 125.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5050,6 +5315,8 @@
    "o": 134.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5064,6 +5331,8 @@
    "o": 57.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5093,6 +5362,8 @@
     "mk": "漲",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5124,6 +5395,8 @@
     "mk": "漲",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5138,6 +5411,8 @@
    "o": 32.525,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5169,6 +5444,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5183,6 +5460,8 @@
    "o": 99.85,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5215,6 +5494,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5244,6 +5525,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5275,6 +5558,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5287,27 +5572,10 @@
    "p": 249.5,
    "t": "13:31",
    "o": 238.5,
-   "L": {
-    "e": "09:01",
-    "ep": 238.5,
-    "tp": 3,
-    "tpt": [
-     "09:06",
-     "09:06",
-     "09:06"
-    ],
-    "sl": null,
-    "best": 249.5,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5340,6 +5608,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5352,26 +5622,10 @@
    "p": 4000.0,
    "t": "13:31",
    "o": 4040.0,
-   "L": {
-    "e": "09:01",
-    "ep": 4040.0,
-    "tp": 2,
-    "tpt": [
-     "09:01",
-     "09:01"
-    ],
-    "sl": null,
-    "best": 4040.0,
-    "ok": "09:11",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5386,6 +5640,8 @@
    "o": 182.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5417,6 +5673,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5430,26 +5688,9 @@
    "t": "13:31",
    "o": 201.5,
    "L": null,
-   "S": {
-    "e": "09:01",
-    "ep": 201.5,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "09:01"
-    ],
-    "sl": null,
-    "best": 195.75,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": [
     "跌",
@@ -5464,6 +5705,8 @@
    "o": 1715.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5478,6 +5721,8 @@
    "o": 145.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5507,6 +5752,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5521,6 +5768,8 @@
    "o": 28.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5550,6 +5799,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5564,6 +5815,8 @@
    "o": 165.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5578,6 +5831,8 @@
    "o": 141.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5592,6 +5847,8 @@
    "o": 33.05,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5606,6 +5863,8 @@
    "o": 59.349999999999994,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5620,6 +5879,8 @@
    "o": 54.55,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5634,6 +5895,8 @@
    "o": 142.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5648,6 +5911,8 @@
    "o": 27.375,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5662,6 +5927,8 @@
    "o": 69.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5676,6 +5943,8 @@
    "o": 37.975,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5690,6 +5959,8 @@
    "o": 104.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5722,6 +5993,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5736,6 +6009,8 @@
    "o": 33.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5750,6 +6025,8 @@
    "o": 235.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5764,6 +6041,8 @@
    "o": 227.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5778,6 +6057,8 @@
    "o": 68.94999999999999,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5792,6 +6073,8 @@
    "o": 44.675,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -5823,6 +6106,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5856,6 +6141,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5885,6 +6172,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5899,6 +6188,8 @@
    "o": 49.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5928,6 +6219,8 @@
     "gp": "跌"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -5961,6 +6254,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -5975,6 +6270,8 @@
    "o": 55.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6004,6 +6301,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6035,6 +6334,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6047,27 +6348,10 @@
    "p": 196.0,
    "t": "13:31",
    "o": 190.75,
-   "L": {
-    "e": "09:01",
-    "ep": 190.75,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:06",
-     "09:06"
-    ],
-    "sl": null,
-    "best": 196.0,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6082,6 +6366,8 @@
    "o": 181.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6113,6 +6399,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6127,6 +6415,8 @@
    "o": 35.45,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6156,6 +6446,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6170,6 +6462,8 @@
    "o": 111.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6184,6 +6478,8 @@
    "o": 133.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6198,6 +6494,8 @@
    "o": 26.075,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6212,6 +6510,8 @@
    "o": 74.65,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6241,6 +6541,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6272,6 +6574,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6303,6 +6607,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6336,6 +6642,8 @@
     "mk": "漲",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -6367,6 +6675,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6381,6 +6691,8 @@
    "o": 46.975,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6395,6 +6707,8 @@
    "o": 166.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6426,6 +6740,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6455,6 +6771,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6469,6 +6787,8 @@
    "o": 75.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6498,6 +6818,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6529,6 +6851,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -6562,6 +6886,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -6576,6 +6902,8 @@
    "o": 31.3,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6605,6 +6933,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6619,6 +6949,8 @@
    "o": 11.275,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6652,6 +6984,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6683,6 +7017,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6712,6 +7048,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6743,6 +7081,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6772,6 +7112,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6786,6 +7128,8 @@
    "o": 82.69999999999999,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6818,6 +7162,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6832,6 +7178,8 @@
    "o": 84.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6846,6 +7194,8 @@
    "o": 69.65,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6860,6 +7210,8 @@
    "o": 18.725,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -6893,6 +7245,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -6907,6 +7261,8 @@
    "o": 29.225,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6921,6 +7277,8 @@
    "o": 11.075,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6952,6 +7310,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6984,6 +7344,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -6998,6 +7360,8 @@
    "o": 18.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7012,6 +7376,8 @@
    "o": 37.825,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7041,6 +7407,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7055,6 +7423,8 @@
    "o": 15.425,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7069,6 +7439,8 @@
    "o": 25.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7083,6 +7455,8 @@
    "o": 44.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7097,6 +7471,8 @@
    "o": 13.675,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7111,6 +7487,8 @@
    "o": 617.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7125,6 +7503,8 @@
    "o": 26.675,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7139,6 +7519,8 @@
    "o": 258.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7151,27 +7533,10 @@
    "p": 141.25,
    "t": "13:31",
    "o": 149.75,
-   "L": {
-    "e": "09:01",
-    "ep": 149.75,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "09:01"
-    ],
-    "sl": "11:51",
-    "best": 149.75,
-    "ok": "09:06",
-    "slc": "11:56",
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7204,6 +7569,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7218,6 +7585,8 @@
    "o": 98.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7232,6 +7601,8 @@
    "o": 51.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -7258,6 +7629,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7272,6 +7645,8 @@
    "o": 88.44999999999999,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7286,6 +7661,8 @@
    "o": 75.2,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -7295,6 +7672,8 @@
    "o": 33.775,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7309,6 +7688,8 @@
    "o": 91.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7340,6 +7721,8 @@
     "mk": "跌",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7371,6 +7754,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7385,6 +7770,8 @@
    "o": 61.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7399,6 +7786,8 @@
    "o": 28.775,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -7428,6 +7817,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7442,6 +7833,8 @@
    "o": 45.7,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7471,6 +7864,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7502,6 +7897,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7516,6 +7913,8 @@
    "o": 36.375,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7545,6 +7944,8 @@
     "mk": "漲",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7576,6 +7977,8 @@
     "gp": "跌"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7590,6 +7993,8 @@
    "o": 76.85,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7604,6 +8009,8 @@
    "o": 21.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7618,6 +8025,8 @@
    "o": 54.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7632,6 +8041,8 @@
    "o": 72.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7646,6 +8057,8 @@
    "o": 185.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7660,6 +8073,8 @@
    "o": 51.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7693,6 +8108,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7707,6 +8124,8 @@
    "o": 168.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7738,6 +8157,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -7752,6 +8173,8 @@
    "o": 92.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -7776,6 +8199,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7790,6 +8215,8 @@
    "o": 33.425,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7821,6 +8248,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7835,6 +8264,8 @@
    "o": 15.875,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7847,27 +8278,10 @@
    "p": 65.9,
    "t": "13:31",
    "o": 61.9,
-   "L": {
-    "e": "09:01",
-    "ep": 61.9,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:06",
-     "09:06"
-    ],
-    "sl": null,
-    "best": 66.6,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -7882,6 +8296,8 @@
    "o": 52.349999999999994,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7913,6 +8329,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7944,6 +8362,8 @@
     "mk": "漲",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7958,6 +8378,8 @@
    "o": 465.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -7989,6 +8411,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8020,6 +8444,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8051,6 +8477,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8082,6 +8510,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8113,6 +8543,8 @@
     "mk": "漲",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8127,6 +8559,8 @@
    "o": 23.6,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8141,6 +8575,8 @@
    "o": 143.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -8148,25 +8584,10 @@
    "p": 23.0,
    "t": "13:31",
    "o": 23.475,
-   "L": {
-    "e": "09:01",
-    "ep": 23.475,
-    "tp": 1,
-    "tpt": [
-     "09:01"
-    ],
-    "sl": "11:56",
-    "best": 23.475,
-    "ok": null,
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----0",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8181,6 +8602,8 @@
    "o": 90.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8210,6 +8633,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8241,6 +8666,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8254,24 +8681,9 @@
    "t": "13:31",
    "o": 47.525,
    "L": null,
-   "S": {
-    "e": "09:01",
-    "ep": 47.525,
-    "tp": 1,
-    "tpt": [
-     "09:01"
-    ],
-    "sl": null,
-    "best": 44.275,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": [
     "跌",
@@ -8302,25 +8714,9 @@
     "mk": "盤",
     "gp": "漲"
    },
-   "S": {
-    "e": "09:01",
-    "ep": 80.65,
-    "tp": 2,
-    "tpt": [
-     "09:01",
-     "09:01"
-    ],
-    "sl": "10:06",
-    "best": 80.65,
-    "ok": "10:56",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": [
     "盤",
@@ -8335,6 +8731,8 @@
    "o": 52.4,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8349,6 +8747,8 @@
    "o": 146.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8380,6 +8780,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8411,6 +8813,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8442,6 +8846,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8456,6 +8862,8 @@
    "o": 14.375,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8487,6 +8895,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8501,6 +8911,8 @@
    "o": 31.1,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8515,6 +8927,8 @@
    "o": 64.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8529,6 +8943,8 @@
    "o": 107.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8560,6 +8976,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8591,6 +9009,8 @@
     "mk": "漲",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8605,6 +9025,8 @@
    "o": 25.475,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8619,6 +9041,8 @@
    "o": 46.875,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8648,6 +9072,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8662,6 +9088,8 @@
    "o": 53.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8676,6 +9104,8 @@
    "o": 44.375,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8690,6 +9120,8 @@
    "o": 12.55,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8704,6 +9136,8 @@
    "o": 81.1,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8735,6 +9169,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8749,6 +9185,8 @@
    "o": 47.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8763,6 +9201,8 @@
    "o": 19.525,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8794,6 +9234,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8808,6 +9250,8 @@
    "o": 71.65,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8837,6 +9281,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8851,6 +9297,8 @@
    "o": 47.775,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8863,25 +9311,10 @@
    "p": 45.8,
    "t": "13:31",
    "o": 46.775,
-   "L": {
-    "e": "09:01",
-    "ep": 46.775,
-    "tp": 1,
-    "tpt": [
-     "09:01"
-    ],
-    "sl": null,
-    "best": 46.775,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8896,6 +9329,8 @@
    "o": 135.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -8927,6 +9362,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -8941,6 +9378,8 @@
    "o": 20.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -8950,6 +9389,8 @@
    "o": 36.6,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8964,6 +9405,8 @@
    "o": 12.2,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -8995,6 +9438,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -9026,6 +9471,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9077,6 +9524,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9108,6 +9557,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9122,6 +9573,8 @@
    "o": 23.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9136,6 +9589,8 @@
    "o": 33.65,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -9165,6 +9620,8 @@
     "mk": "盤",
     "gp": null
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -9174,6 +9631,8 @@
    "o": 166.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9205,6 +9664,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -9233,26 +9694,9 @@
     "mk": "盤",
     "gp": "漲"
    },
-   "S": {
-    "e": "09:01",
-    "ep": 35.849999999999994,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "10:46"
-    ],
-    "sl": null,
-    "best": 34.400000000000006,
-    "ok": "09:36",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": [
     "盤",
@@ -9267,6 +9711,8 @@
    "o": 71.55000000000001,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9281,6 +9727,8 @@
    "o": 11.850000000000001,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -9293,27 +9741,10 @@
    "p": 42.8,
    "t": "13:31",
    "o": 42.8,
-   "L": {
-    "e": "09:01",
-    "ep": 42.8,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "09:01"
-    ],
-    "sl": null,
-    "best": 42.8,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -9343,6 +9774,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9372,6 +9805,8 @@
     "gp": null
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -9396,6 +9831,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9427,6 +9864,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9441,6 +9880,8 @@
    "o": 61.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9455,6 +9896,8 @@
    "o": 12.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9486,6 +9929,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9515,6 +9960,8 @@
     "mk": "跌",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9546,6 +9993,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9560,6 +10009,8 @@
    "o": 67.1,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9574,6 +10025,8 @@
    "o": 78.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -9588,6 +10041,8 @@
    "o": 55.15,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9602,6 +10057,8 @@
    "o": 11.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9633,6 +10090,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9647,6 +10106,8 @@
    "o": 72.05,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9678,6 +10139,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9707,6 +10170,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9736,6 +10201,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9749,24 +10216,9 @@
    "t": "13:31",
    "o": 39.375,
    "L": null,
-   "S": {
-    "e": "09:01",
-    "ep": 39.375,
-    "tp": 1,
-    "tpt": [
-     "09:01"
-    ],
-    "sl": null,
-    "best": 38.875,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": null
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": null
   },
@@ -9791,6 +10243,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9805,6 +10259,8 @@
    "o": 11.774999999999999,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9834,6 +10290,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -9865,6 +10323,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9879,6 +10339,8 @@
    "o": 14.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -9910,6 +10372,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9924,6 +10388,8 @@
    "o": 10.2,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -9953,6 +10419,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -9967,6 +10435,8 @@
    "o": 48.974999999999994,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -9993,6 +10463,8 @@
     "gp": null
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -10019,6 +10491,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10048,6 +10522,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10077,6 +10553,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -10091,6 +10569,8 @@
    "o": 11.375,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -10120,6 +10600,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10151,6 +10633,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10182,6 +10666,8 @@
     "mk": "漲",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -10213,6 +10699,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10242,6 +10730,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -10256,6 +10746,8 @@
    "o": 27.65,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10285,6 +10777,8 @@
     "mk": "跌",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10314,6 +10808,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10343,6 +10839,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10357,6 +10855,8 @@
    "o": 11.05,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10388,6 +10888,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -10402,6 +10904,8 @@
    "o": 23.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -10411,6 +10915,8 @@
    "o": 75.25,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -10437,6 +10943,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10468,6 +10976,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10482,6 +10992,8 @@
    "o": 26.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -10513,6 +11025,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -10544,6 +11058,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10558,6 +11074,8 @@
    "o": 2372.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -10589,6 +11107,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10603,6 +11123,8 @@
    "o": 16.775,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10617,6 +11139,8 @@
    "o": 17.6,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10663,6 +11187,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10709,6 +11235,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": "多",
    "g": [
     "漲",
@@ -10721,27 +11249,10 @@
    "p": 40.65,
    "t": "13:31",
    "o": 41.4,
-   "L": {
-    "e": "09:01",
-    "ep": 41.4,
-    "tp": 3,
-    "tpt": [
-     "09:01",
-     "09:01",
-     "09:01"
-    ],
-    "sl": null,
-    "best": 43.175,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -10756,6 +11267,8 @@
    "o": 27.3,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -10765,6 +11278,8 @@
    "o": 11.475,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -10796,6 +11311,8 @@
     "mk": "盤",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -10827,6 +11344,8 @@
     "mk": "漲",
     "gp": null
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -10853,6 +11372,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -10867,6 +11388,8 @@
    "o": 19.1,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -10898,6 +11421,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10912,6 +11437,8 @@
    "o": 16.125,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -10943,6 +11470,8 @@
     "mk": "漲",
     "gp": null
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -10969,6 +11498,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11000,6 +11531,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11014,6 +11547,8 @@
    "o": 27.975,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11027,24 +11562,9 @@
    "t": "13:31",
    "o": 151.75,
    "L": null,
-   "S": {
-    "e": "09:01",
-    "ep": 151.75,
-    "tp": 1,
-    "tpt": [
-     "09:01"
-    ],
-    "sl": null,
-    "best": 140.75,
-    "ok": "09:06",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "S": null,
+   "xL": false,
+   "xS": true,
    "f": null,
    "g": [
     "盤",
@@ -11057,25 +11577,10 @@
    "p": 28.35,
    "t": "13:31",
    "o": 28.025,
-   "L": {
-    "e": "09:01",
-    "ep": 28.025,
-    "tp": 1,
-    "tpt": [
-     "09:01"
-    ],
-    "sl": null,
-    "best": 28.4,
-    "ok": "09:21",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": null
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -11102,6 +11607,8 @@
     "gp": "跌"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11131,6 +11638,8 @@
     "mk": "漲",
     "gp": null
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -11157,6 +11666,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11171,6 +11682,8 @@
    "o": 30.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11185,6 +11698,8 @@
    "o": 15.975,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11216,6 +11731,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -11260,6 +11777,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": "多",
    "g": [
     "盤",
@@ -11274,6 +11793,8 @@
    "o": 12.725,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11303,6 +11824,8 @@
     "mk": "跌",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -11332,6 +11855,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11363,6 +11888,8 @@
     "mk": "盤",
     "gp": null
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -11389,6 +11916,8 @@
     "mk": "盤",
     "gp": null
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -11413,6 +11942,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11425,25 +11956,10 @@
    "p": 56.6,
    "t": "13:31",
    "o": 56.099999999999994,
-   "L": {
-    "e": "09:01",
-    "ep": 56.099999999999994,
-    "tp": 1,
-    "tpt": [
-     "09:01"
-    ],
-    "sl": "09:11",
-    "best": 56.099999999999994,
-    "ok": "09:31",
-    "slc": null,
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11458,6 +11974,8 @@
    "o": 13.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11472,6 +11990,8 @@
    "o": 215.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11486,6 +12006,8 @@
    "o": 17.4,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11517,6 +12039,8 @@
     "gp": "跌"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11548,6 +12072,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -11579,6 +12105,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11610,6 +12138,8 @@
     "mk": "漲",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11624,6 +12154,8 @@
    "o": 19.7,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11638,6 +12170,8 @@
    "o": 10.375,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11652,6 +12186,8 @@
    "o": 94.1,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11666,6 +12202,8 @@
    "o": 14.95,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11695,6 +12233,8 @@
     "mk": "漲",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11709,6 +12249,8 @@
    "o": 51.35,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11740,6 +12282,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11754,6 +12298,8 @@
    "o": 29.2,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11768,6 +12314,8 @@
    "o": 121.75,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -11777,6 +12325,8 @@
    "o": 12.575,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11791,6 +12341,8 @@
    "o": 10.149999999999999,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11820,6 +12372,8 @@
     "gp": "盤"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -11849,6 +12403,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -11861,23 +12417,10 @@
    "p": 38.4,
    "t": "13:31",
    "o": 38.225,
-   "L": {
-    "e": "09:01",
-    "ep": 38.225,
-    "tp": 0,
-    "tpt": [],
-    "sl": "10:56",
-    "best": 38.225,
-    "ok": "12:41",
-    "slc": "11:01",
-    "ev": null,
-    "sv": null,
-    "ck": "----1",
-    "tr": "中",
-    "mk": "盤",
-    "gp": "盤"
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11909,6 +12452,8 @@
     "mk": "漲",
     "gp": null
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -11918,6 +12463,8 @@
    "o": 14.075,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "盤",
@@ -11932,6 +12479,8 @@
    "o": 16.375,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11946,6 +12495,8 @@
    "o": 17.5,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11960,6 +12511,8 @@
    "o": 20.45,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -11974,6 +12527,8 @@
    "o": 22.875,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -12003,6 +12558,8 @@
     "gp": "跌"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -12017,6 +12574,8 @@
    "o": 169.0,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -12026,6 +12585,8 @@
    "o": 25.475,
    "L": null,
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -12038,23 +12599,10 @@
    "p": 13.9,
    "t": "13:31",
    "o": 14.0,
-   "L": {
-    "e": "09:01",
-    "ep": 14.0,
-    "tp": 0,
-    "tpt": [],
-    "sl": "09:06",
-    "best": 14.0,
-    "ok": null,
-    "slc": "09:26",
-    "ev": null,
-    "sv": null,
-    "ck": "----0",
-    "tr": "中",
-    "mk": "盤",
-    "gp": null
-   },
+   "L": null,
    "S": null,
+   "xL": true,
+   "xS": false,
    "f": null,
    "g": null
   },
@@ -12094,6 +12642,8 @@
     "mk": "漲",
     "gp": "盤"
    },
+   "xL": false,
+   "xS": false,
    "f": "多",
    "g": [
     "跌",
@@ -12123,6 +12673,8 @@
     "mk": "盤",
     "gp": "漲"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -12152,6 +12704,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "跌",
@@ -12181,6 +12735,8 @@
     "mk": "盤",
     "gp": "跌"
    },
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
@@ -12210,6 +12766,8 @@
     "gp": "漲"
    },
    "S": null,
+   "xL": false,
+   "xS": false,
    "f": null,
    "g": [
     "漲",
