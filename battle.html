@@ -41,6 +41,8 @@ a{color:var(--accent)}
 .bc .ft{margin-top:8px;font-size:.8rem;text-align:right}
 .bc .lv{font-size:.78rem;margin-top:6px;padding:5px 8px;border-radius:8px;background:rgba(255,255,255,.05);display:none;line-height:1.55} .bc .lv.on{display:block} .bc .lv b{font-weight:700}
 .bc .lv .fl{display:inline-block;margin:3px 0;padding:2px 8px;border-radius:6px;font-weight:700;color:#fff;background:#e5484d} .bc .lv .fl.s{background:#1fa971} .bc .lv .fl.w{background:transparent;border:1.5px dashed #e5484d;color:#ff7a8a} .bc .lv .fl.w.s{border-color:#1fa971;color:#4fd6a0} .bc .lv .fl.x{background:rgba(255,255,255,.12);color:var(--muted)}
+.bc .lv .tr{display:inline-block;padding:0 6px;margin-right:6px;border-radius:5px;font-weight:700;font-size:.74rem} .bc .lv .ty{background:rgba(214,181,109,.3);color:#f1d99a} .bc .lv .tn{background:rgba(255,255,255,.14);color:#fff;border:1px dashed #aaa} .bc .lv .tx{background:rgba(255,255,255,.08);color:var(--muted)}
+.bc .lv .cy,.bc .lv .cn,.bc .lv .cx{font-size:.74rem;margin-right:6px;white-space:nowrap} .bc .lv .cy{color:#e6c77a} .bc .lv .cn{color:var(--muted);opacity:.75} .bc .lv .cx{color:var(--muted);opacity:.5}
 .bc .lv .g{color:#e6c77a} .bc .lv .r{color:#ff7a8a} .bc .lv .m{color:var(--muted)}
 .bc .wn{font-size:.75rem;color:#e9a23b;margin-top:4px}
 .bc .sd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
@@ -49,7 +51,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-14 12:13</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-14 12:25</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -116,11 +118,14 @@ var LV=null;
 function lvside(nm,v,tps,p,stop){if(!v)return '<span class=m>做'+nm+'還沒到進場點</span>';var vx=function(n){return n?'<span class='+(n>=2?'g':'m')+'>（量 '+n+' 倍）</span>':''},s='<b>做'+nm+' '+v.e+' 進場</b>'+vx(v.ev),out=nm=='多'?p<=stop:p>=stop;
  if(v.tp)s+=' → <span class=g>'+v.tpt[v.tp-1]+' 到止盈'+'①②③'.charAt(v.tp-1)+(tps[v.tp-1]!=null?' '+tps[v.tp-1]:'')+'</span>';
  if(v.sl)s+=' → <span class=r>'+v.sl+' 碰停損</span>'+vx(v.sv)+(v.tp?'<span class=m>（先到過止盈）</span>':'')+(v.slc?'<span class=m>（'+v.slc+' 連兩筆都在停損外）</span>':out?'<span class=m>（只碰到一筆，等下一筆確認）</span>':'<span class=g>（之後彈回停損線內）</span>');
- if(!v.tp&&!v.sl)s+=' <span class=m>還在中間</span>';return s}
+ if(!v.tp&&!v.sl)s+=' <span class=m>還在中間</span>';
+ if(v.ck){var nm5=['大盤','族群',nm=='多'?'比大盤強':'比大盤弱','量','站穩'],y=0,n=0,h='';for(var i=0;i<5;i++){var k=v.ck.charAt(i);if(k!='-')n++;if(k=='1')y++;h+='<span class=c'+(k=='1'?'y':k=='0'?'n':'x')+'>'+nm5[i]+(k=='1'?'✓':k=='0'?'✗':'–')+'</span>'}
+  s+='<br><span class="tr t'+(v.tr=='順'?'y':v.tr=='逆'?'n':'x')+'">'+(v.tr=='順'?'順勢':v.tr=='逆'?'逆勢':'大盤盤整')+' '+y+'/'+n+'</span>'+h}
+ return s}
 function drawLive(){if(!LV||!D||LV.date!=D.target)return;[].forEach.call(document.querySelectorAll('.bc[data-code]'),function(el){var c=el.getAttribute('data-code'),v=LV.stocks[c],x=D.stocks[c],box=el.querySelector('.lv');if(!box)return;
  if(!v||!x){box.className='lv on';box.innerHTML='<span class=m>盤中沒有這檔的資料（量太小，沒有列入每 5 分鐘快照）</span>';return}
  var ch=(v.p/x.c-1)*100;box.className='lv on';
- box.innerHTML='現價 <b class='+(ch>0?'up':ch<0?'down':'')+'>'+v.p+'（'+(ch>0?'+':'')+ch.toFixed(1)+'%）</b> <span class=m>'+v.t+' 的快照</span><br>'+flipTag(v,x)+lvside('多',v.L,[x.lb,x.lp,x.lp2],v.p,x.ls)+(x.so==1?'<br>'+lvside('空',v.S,[x.sb,x.sp2,x.sp3],v.p,x.ss):'')})}
+ box.innerHTML='現價 <b class='+(ch>0?'up':ch<0?'down':'')+'>'+v.p+'（'+(ch>0?'+':'')+ch.toFixed(1)+'%）</b> <span class=m>'+v.t+' 的快照</span><br><span class=m>大盤'+({'漲':'在漲','跌':'在跌','盤':'盤整'}[LV.mk]||'')+(LV.pts!=null?'（比開盤 '+(LV.pts>0?'+':'')+LV.pts+' 點）':'')+(v.g?'｜同族群 '+v.g[1]+' 漲 '+v.g[2]+' 跌':'')+'</span><br>'+flipTag(v,x)+lvside('多',v.L,[x.lb,x.lp,x.lp2],v.p,x.ls)+(x.so==1?'<br>'+lvside('空',v.S,[x.sb,x.sp2,x.sp3],v.p,x.ss):'')})}
 function flipTag(v,x){if(!v.f)return '';var sh=v.f=='空',e=sh?v.S:v.L,tr=sh?x.st:x.lt,on=sh?v.p<=tr:v.p>=tr,a='做'+(sh?'多':'空')+'失敗，',b=(sh?'跌破做空':'站上做多')+'觸價';
  if(e.ok)return '<span class="fl '+(sh?'s':'l')+'">'+a+'轉做'+v.f+'（'+e.ok+' 站穩）</span><br>';
  if(on)return '<span class="fl w '+(sh?'s':'l')+'">'+a+b+'，等下一筆確認</span><br>';
