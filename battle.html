@@ -54,7 +54,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-14 14:17</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-14 16:50</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -90,7 +90,7 @@ function card(code){var x=D.stocks[code];if(!x)return'';var nf=function(v){retur
  var chip=function(lab,price,g,cls){return '<div class="tp '+(cls||'')+'"><i>'+lab+'</i><b>'+price+'</b><em>'+nf(g)+'</em></div>'};
  var chips=function(lo,hi,hi2,pr,p2,g){return '<div class=tps>'+(x.su?chip('①最低',lo,g[0],'lo')+chip('②'+pr+'%',hi,g[1])+(hi2?chip('③'+p2+'%',hi2,g[2]):''):chip('最低止盈',lo,g[0],'lo')+'<div class="tp no"><i>沒把握</i><em>紅字就走</em></div>')+'</div>'};
  var L='<div><div class=tr>做多 站上 <b class=up>'+x.lt+'</b></div><div class=sl>停損 '+x.ls+'</div>'+(x.lp?chips(x.lb,x.lp,x.lp2,x.pl,x.p2l,x.gl):'')+'</div>';
- var S=x.so==1?'<div><div class=tr>做空 跌破 <b class=down>'+x.st+'</b></div><div class=sl>停損 '+x.ss+'</div>'+(x.sp2?chips(x.sb,x.sp2,x.sp3,x.ps,x.p2s,x.gs):'')+'</div>':'<div><div class=tr>做空</div><div class=sl>這檔不能當沖先賣</div></div>';
+ var S=x.so==1?'<div><div class=tr>做空 跌破 <b class=down>'+x.st+'</b></div><div class=sl>停損 '+x.ss+'</div>'+(x.sp2?chips(x.sb,x.sp2,x.sp3,x.ps,x.p2s,x.gs):'')+'</div>':'<div><div class=tr>做空</div><div class=sl>這檔不能當沖先賣'+(x.sn?'<br>（'+esc(x.sn)+'）':'')+'</div></div>';
  var w=x.w.length?'<div class=wn>⚠ '+esc(x.w.join('；'))+'</div>':'';
  return '<div class=bc data-code="'+code+'"><div class=hd><span><a class=nm href="analysis/index.html#'+code+'">'+code+' '+esc(x.n)+'</a>　收 '+x.c+' <span class='+(x.r>0?'up':x.r<0?'down':'')+'>'+(x.r>0?'+':'')+x.r.toFixed(2)+'%</span></span><a href="#" data-del="'+code+'">移除</a></div>'+w+'<div class=lv></div><div class=sd>'+L+S+'</div><div class=ft><a href="analysis/index.html#'+code+'">個股分析 →</a></div></div>'}
 function draw(){if(!D)return;$('mytitle').textContent=D.target+' 我選的股';var a=get().filter(function(c){return D.stocks[c]});
