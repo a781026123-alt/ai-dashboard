@@ -44,6 +44,8 @@ a{color:var(--accent)}
 .bc .lv .tr{display:inline-block;padding:0 6px;margin-right:6px;border-radius:5px;font-weight:700;font-size:.74rem} .bc .lv .ty{background:rgba(214,181,109,.3);color:#f1d99a} .bc .lv .tn{background:rgba(255,255,255,.14);color:#fff;border:1px dashed #aaa} .bc .lv .tx{background:rgba(255,255,255,.08);color:var(--muted)}
 .bc .lv .cy,.bc .lv .cn,.bc .lv .cx{font-size:.74rem;margin-right:6px;white-space:nowrap} .bc .lv .cy{color:#e6c77a} .bc .lv .cn{color:var(--muted);opacity:.75} .bc .lv .cx{color:var(--muted);opacity:.5}
 .bc .lv a{color:#cfd6e4;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3)} #mknews{margin-bottom:12px}
+#regbox{margin-bottom:12px} .rgb{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0} .rgb button{font-size:.8rem;padding:5px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:transparent;color:inherit;cursor:pointer} .rgb button.on{background:#d6b56d;color:#1b1b1b;border-color:#d6b56d;font-weight:700}
+.rgt{width:100%;border-collapse:collapse;margin:6px 0;font-size:.8rem} .rgt th{font-weight:400;color:var(--muted);text-align:right;padding:2px 4px} .rgt td{padding:3px 4px;text-align:right} .rgt td:first-child{text-align:left}
 .bc .lv .g{color:#e6c77a} .bc .lv .r{color:#ff7a8a} .bc .lv .m{color:var(--muted)}
 .bc .wn{font-size:.75rem;color:#e9a23b;margin-top:4px}
 .bc .sd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
@@ -52,7 +54,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-14 13:48</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-14 13:58</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -93,7 +95,7 @@ function card(code){var x=D.stocks[code];if(!x)return'';var nf=function(v){retur
  return '<div class=bc data-code="'+code+'"><div class=hd><span><a class=nm href="analysis/index.html#'+code+'">'+code+' '+esc(x.n)+'</a>　收 '+x.c+' <span class='+(x.r>0?'up':x.r<0?'down':'')+'>'+(x.r>0?'+':'')+x.r.toFixed(2)+'%</span></span><a href="#" data-del="'+code+'">移除</a></div>'+w+'<div class=lv></div><div class=sd>'+L+S+'</div><div class=ft><a href="analysis/index.html#'+code+'">個股分析 →</a></div></div>'}
 function draw(){if(!D)return;$('mytitle').textContent=D.target+' 我選的股';var a=get().filter(function(c){return D.stocks[c]});
  a.sort(function(p,q){var g=D.stocks[p].g.localeCompare(D.stocks[q].g,'zh-Hant');return g||D.stocks[q].a10-D.stocks[p].a10});
- $('mylist').innerHTML=a.map(card).join('');drawLive();if(a.length&&!$('mymsg').textContent)msg('共 '+a.length+' 檔，依 '+D.date+' 收盤計算，同族群排在一起。收盤後這裡會自動復盤這幾檔。')}
+ $('mylist').innerHTML=a.map(card).join('');drawLive();drawReg();if(a.length&&!$('mymsg').textContent)msg('共 '+a.length+' 檔，依 '+D.date+' 收盤計算，同族群排在一起。收盤後這裡會自動復盤這幾檔。')}
 function find(text){var hit=[],t=text.replace(/[ \t]+/g,'');
  (text.match(/(^|[^\d.])[1-9]\d{3}(?![\d.])/gm)||[]).forEach(function(c){c=c.slice(-4);if(D.stocks[c]&&hit.indexOf(c)<0)hit.push(c)});
  var names=Object.keys(D.stocks).map(function(c){return[D.stocks[c].n,c]}).sort(function(a,b){return b[0].length-a[0].length});
@@ -129,13 +131,35 @@ function drawLive(){if(!LV||!D||LV.date!=D.target)return;[].forEach.call(documen
  box.innerHTML='現價 <b class='+(ch>0?'up':ch<0?'down':'')+'>'+v.p+'（'+(ch>0?'+':'')+ch.toFixed(1)+'%）</b> <span class=m>'+v.t+' 的快照</span><br><span class=m>大盤'+({'漲':'在漲','跌':'在跌','盤':'盤整'}[LV.mk]||'')+(LV.pts!=null?'（比開盤 '+(LV.pts>0?'+':'')+LV.pts+' 點）':'')+(v.g?'｜同族群 '+v.g[1]+' 漲 '+v.g[2]+' 跌':'')+'</span><br>'+flipTag(v,x)+lvside('多',v.L,[x.lb,x.lp,x.lp2],v.p,x.ls,v.xL,x.su)+(x.so==1?'<br>'+lvside('空',v.S,[x.sb,x.sp2,x.sp3],v.p,x.ss,v.xS,x.su):'')+nwl((LV.news||{})[c])});
  var mk=document.getElementById('mknews');if(!mk){mk=document.createElement('div');mk.id='mknews';mk.className='bc';var a=document.querySelector('.bc[data-code]');if(a)a.parentNode.insertBefore(mk,a)}
  if(mk){var n=LV.mknews||[];mk.style.display=n.length?'':'none';mk.innerHTML='<div class=hd><span class=nm>大盤消息</span><span class=m style="font-size:.74rem;color:var(--muted)">只幫你了解原因，不是進場訊號</span></div><div class="lv on">'+n.map(function(i){return (i.big?'<b class=r>⚠</b> ':'')+'<span class=m>'+i.t+' ['+esc(i.theme)+']</span> <a href="'+i.url+'" target=_blank rel=noopener>'+esc(i.title)+'</a>'}).join('<br>')+'</div>'}}
+var BOOK=null,RK=['1','2','3','4','5','6'],RN={'1':'盤中大漲','2':'小漲一路走','3':'盤中大跌','4':'小跌一路走','5':'平穩','6':'來回震盪'};
+function regSel(){try{return localStorage.getItem('reg_'+(D?D.target:''))}catch(e){return null}}
+function regSet(k){try{localStorage.setItem('reg_'+(D?D.target:''),k)}catch(e){}drawReg()}
+function regAfter(tab,key){var c=BOOK&&BOOK[tab]&&BOOK[tab][key];if(!c)return '';var n=0,a=[];RK.forEach(function(k){if(c[k]){n+=c[k];a.push([c[k],RN[k]])}});a.sort(function(x,y){return y[0]-x[0]});return '過去這樣的 '+n+' 天：'+a.map(function(x){return x[1]+' '+x[0]+' 天'}).join('、')}
+function regCell(nm,c){if(!c||!c.n)return '<tr><td>'+nm+'</td><td colspan=3 class=m>沒有資料</td></tr>';var f=function(v){return '<b class='+(v>0?'up':'down')+'>'+(v>0?'+':'')+v.toLocaleString()+'</b>'};return '<tr><td>'+nm+'</td><td>'+f(c.now)+'</td><td>'+f(c.hold)+'</td><td class=m>'+c.n+' 筆</td></tr>'}
+function drawReg(){if(!BOOK||!D)return;var el=document.getElementById('regbox');if(!el){el=document.createElement('div');el.id='regbox';el.className='bc';var a=document.querySelector('.bc[data-code]');if(!a)return;a.parentNode.insertBefore(el,a)}
+ var r=LV&&LV.date==D.target?LV.reg:null,h='<div class=hd><span class=nm>今天的盤勢</span><span class=m style="font-size:.74rem;color:var(--muted)">系統給線索，你來判斷</span></div><div class="lv on">';
+ if(r){h+='<b>'+r.t+'</b> 大盤比開盤 <b class='+(r.pts>0?'up':'down')+'>'+(r.pts>0?'+':'')+r.pts.toLocaleString()+' 點（'+(r.oc>0?'+':'')+r.oc+'%）</b>，盤中上下 '+r.amp+'%'+(r.kind?'，目前像「<b>'+RN[r.kind]+'</b>」':'（09:30 後才判斷）');
+  if(r.f30g)h+='<br><span class=m>開盤 30 分鐘 '+(r.f30>0?'+':'')+r.f30+'%。'+regAfter('open30',r.f30g)+'</span>';
+  if(r.pag)h+='<br><span class=m>昨天大盤上下 '+r.pa+'%。'+regAfter('prevvol',r.pag)+'</span>'}
+ else h+='<span class=m>開盤後這裡會出現大盤目前的走法，以及開盤 30 分鐘、昨天波動這兩個線索。</span>';
+ var sel=regSel()||(r&&r.kind)||null;
+ h+='</div><div class=rgb>'+RK.map(function(k){return '<button class="'+(sel==k?'on':'')+'" onclick="regSet(\''+k+'\')">'+RN[k]+'</button>'}).join('')+'</div>';
+ var k=null;BOOK.kinds.forEach(function(x){if(x.key==sel)k=x});
+ if(k){var best=[['突破後做多',k.L],['突破後做空',k.S],['碰昨高反而放空',k.FS],['碰昨低反而買進',k.FL]],pos=best.filter(function(x){return x[1]&&x[1].n&&(x[1].now>0||x[1].hold>0)});
+  h+='<div class="lv on"><b>'+RN[k.key]+'</b>：過去 '+BOOK.days+' 個交易日裡有 '+k.days+' 天。每筆平均（以最多賠 4,000 元的部位算）'
+   +'<table class=rgt><tr><th></th><th>照現行出場</th><th>抱到收盤</th><th></th></tr>'+best.map(function(x){return regCell(x[0],x[1])}).join('')+'</table>'
+   +(pos.length?'<span class=g>過去有賺的：'+pos.map(function(x){return x[0]}).join('、')+'</span>':'<span class=r>過去四種做法都賠，數字上是不做比較好</span>')+'</div>'}
+ else h+='<div class="lv on"><span class=m>點一個你判斷的盤勢，會顯示那種盤過去的數字。</span></div>';
+ h+='<p class=desc style="margin:6px 0 0"><small>盤勢是用大盤「開盤到收盤」事後分類的，當天盤中還會變。樣本只有 '+BOOK.days+' 天（'+BOOK.frm+'～'+BOOK.to+'），僅供參考。</small></p>';
+ el.innerHTML=h}
+fetch('regime_playbook.json?'+Date.now()).then(function(r){return r.json()}).then(function(j){BOOK=j;drawReg()}).catch(function(){});
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function nwl(a){if(!a||!a.length)return '';return a.map(function(i){return '<br><span class=m>'+i.t+' 消息</span> <a href="'+i.url+'" target=_blank rel=noopener>'+esc(i.title)+'</a>'}).join('')}
 function flipTag(v,x){if(!v.f)return '';var sh=v.f=='空',e=sh?v.S:v.L,tr=sh?x.st:x.lt,on=sh?v.p<=tr:v.p>=tr,a='做'+(sh?'多':'空')+'失敗，',b=(sh?'跌破做空':'站上做多')+'觸價';
  if(e.ok)return '<span class="fl '+(sh?'s':'l')+'">'+a+'轉做'+v.f+'（'+e.ok+' 站穩）</span><br>';
  if(on)return '<span class="fl w '+(sh?'s':'l')+'">'+a+b+'，等下一筆確認</span><br>';
  return '<span class="fl x">'+a+b+'後又'+(sh?'彈回':'跌回')+'，先不算反手</span><br>'}
-function loadLive(){fetch('battle_live.json?'+Date.now()).then(function(r){return r.json()}).then(function(j){LV=j;drawLive()}).catch(function(){})}
+function loadLive(){fetch('battle_live.json?'+Date.now()).then(function(r){return r.json()}).then(function(j){LV=j;drawLive();drawReg()}).catch(function(){})}
 setInterval(loadLive,60000);
 window.battleLiveTest=function(j){LV=j;LV.date=D.target;drawLive()};   /* 收盤後驗證畫面用：把別天的盤中資料當成今天畫出來 */
 fetch('battle_data.json?'+Date.now()).then(function(r){return r.json()}).then(function(j){D=j;try{var o=JSON.parse(localStorage.getItem('battle_my')||'[]');if(o.length){set(uniq(local(D.target).concat(o)));localStorage.removeItem('battle_my')}}catch(e){}draw();loadLive();
