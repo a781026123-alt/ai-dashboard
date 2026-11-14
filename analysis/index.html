@@ -36,7 +36,18 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
-
+ .bcs{display:grid;gap:10px}
+.bc{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)}
+.bc .hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:.82rem;color:var(--muted)} .bc .hd a.nm{color:inherit;filter:brightness(1.6);font-weight:700;text-decoration:none;font-size:.98rem}
+.bc .ft{margin-top:8px;font-size:.8rem;text-align:right}
+.bc .wn{font-size:.75rem;color:#e9a23b;margin-top:4px}
+.bc .sd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+.bc .tr{font-size:.8rem;color:var(--muted);white-space:nowrap} .bc .tr b{font-size:1.3rem}
+.bc .sl{font-size:.75rem;color:var(--muted);margin:1px 0 6px}
+.tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
+.tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
+.tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center} .bc{margin-bottom:10px}
 .search{display:flex;gap:8px} .search input{flex:1;min-width:0;font:inherit;font-size:18px;padding:12px 14px;border-radius:14px;border:2px solid var(--accent);background:var(--surface);color:var(--ink)}
 .search button{font:inherit;font-size:16px;border:none;border-radius:14px;padding:0 18px;color:#111827;font-weight:700;background:var(--gold-grad)}
 .hint{display:flex;flex-wrap:wrap;gap:6px} .hint a{font-size:14px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);text-decoration:none}
@@ -60,7 +71,7 @@ function go(t){var m=match(t);sug.innerHTML='';if(!m.length){out.innerHTML='<sec
 var c=m[0][0];q.value=c+' '+m[0][1];location.hash=c;saveH(c);out.innerHTML='<section><p class=desc>讀取中…</p></section>';
 fetch('data/'+c+'.json?t='+Date.now()).then(function(r){return r.json()}).then(show).catch(function(){out.innerHTML='<section><p class=desc>讀不到資料，請稍後再試。</p></section>'})}
 function show(a){var h='<section><h2>'+a.code+' '+esc(a.name)+'｜重點</h2><ul class=desc>'+a.notes.map(function(n){return '<li>'+n+'</li>'}).join('')+'</ul><p class=desc>資料到 '+a.date+' 收盤，'+a.made+' 產生。歷史資料整理，不是即時報價，也不是買賣建議。</p></section>';
-a.sections.forEach(function(s){h+=s.fold?'<section><details><summary class=desc>'+s.h+'</summary>':'<section><h2>'+s.h+'</h2>';if(s.k)h+='<div class=kpis>'+s.k.map(function(k){return '<div class=kpi><small>'+k[0]+'</small><b class="num '+k[2]+'">'+k[1]+'</b>'+(k[3]?'<small>'+k[3]+'</small>':'')+'</div>'}).join('')+'</div>';
+a.sections.forEach(function(s){h+=s.fold?'<section><details><summary class=desc>'+s.h+'</summary>':'<section><h2>'+s.h+'</h2>';if(s.html)h+=s.html+'<p class=desc>金色方塊＝止盈價：上面是過去走到的機率，下面是 1 張賺多少元（已扣手續費和稅）。只有一個方塊＝沒把握，紅字就走。</p>';if(s.k)h+='<div class=kpis>'+s.k.map(function(k){return '<div class=kpi><small>'+k[0]+'</small><b class="num '+k[2]+'">'+k[1]+'</b>'+(k[3]?'<small>'+k[3]+'</small>':'')+'</div>'}).join('')+'</div>';
 if(s.p)h+='<p class=desc>'+s.p+'</p>';if(s.t)h+='<div class=tablebox><table><thead><tr>'+s.t.head.map(function(x){return '<th class=l>'+x+'</th>'}).join('')+'</tr></thead><tbody>'+s.t.rows.map(function(r){return '<tr>'+r.map(function(x){return '<td class=l>'+esc(x)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>';h+=(s.fold?'</details>':'')+'</section>'});
 out.innerHTML=h;window.scrollTo(0,q.getBoundingClientRect().top+window.scrollY-10)}
 window.onhashchange=function(){var c=decodeURIComponent(location.hash.slice(1));if(c&&q.value.indexOf(c)!=0)go(c)};
