@@ -35,7 +35,19 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
- body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-13 13:57</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-13｜備戰名單頁「我選的股」一開始讀不到資料</b></p>
+ body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-14 13:24</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-14｜拿過去兩個多月去試打，發現照備戰名單「碰到就進」整體是賠的</b></p>
+<ul>
+<li>錯在哪：備戰名單的價位、止盈、反手、量大這些提醒，之前都只用日線檢查過，沒有用盤中走勢真的走一遍。我原本說要等 12 月資料夠了才測，其實有公開的 5 分鐘資料可以馬上測。</li>
+<li>怎麼發現：使用者問「為什麼不用過去的紀錄、假裝看不到結果去試打」。照做之後發現：開盤前 5 分鐘就進場的賠最多；只拿最低止盈（紅字就走）賺的次數最多、卻賠最多；量大、反手都沒有比較好；只有「大盤、同族群、比大盤強弱三個都順」的進場是賺的。</li>
+<li>改了什麼：開盤前 5 分鐘就碰到價位的那一邊當天不追；沒把握的股票改寫「不建議做」；手機推播只推三個都順的進場；量只顯示、不當加分。這次只測了兩個多月，之後每兩週重測一次。</li>
+</ul>
+<p><b>2026-11-14｜寫新程式時蓋掉了原本的新聞程式、又誤刪一段主程式</b></p>
+<ul>
+<li>錯在哪：新增盤中新聞時用了跟盤前快報一樣的檔名，把原本的蓋掉；後來改量的算法時切錯範圍，刪到盤中追蹤的主流程。</li>
+<li>怎麼發現：第一個是存檔時發現不對，第二個是測試馬上報錯。兩個都是當場還原，沒有影響任何排程。</li>
+<li>改了什麼：以後新增檔案先查檔名有沒有人用；替換程式後要確認每個功能都還在，並重跑測試。</li>
+</ul>
+<p><b>2026-11-13｜備戰名單頁「我選的股」一開始讀不到資料</b></p>
 <ul>
 <li>錯在哪：新頁面上線後，打代號或傳截圖都顯示「資料載入失敗」。上傳程式把資料檔也當成網頁處理，多加了一段東西，手機就讀不懂了。</li>
 <li>怎麼發現：重新設計完，實際用手機版面打開檢查時才看到；前一次只確認網址打得開，沒有真的看畫面。</li>
