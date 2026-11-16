@@ -35,48 +35,56 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
-</style></head><body><div class="wrap"><header><div><h1>台股隔日當沖看板</h1><p class="sub">資料日 2026-11-13・產生於 2026-11-15 21:01・紅漲綠跌</p></div><p class="sub">資料：證交所、櫃買中心公開資料</p></header><p class="warnbar">本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</p><section><h2>市場概況 2026-11-13</h2><div class="kpis"><div class="kpi"><small>上市 1088 檔</small><b class="up">+1.43%</b><small>漲 812・跌 200（普通股等權平均漲跌）</small></div><div class="kpi"><small>上櫃 876 檔</small><b class="up">+1.44%</b><small>漲 584・跌 230（普通股等權平均漲跌）</small></div></div><svg class="spark" viewBox="0 0 600 56" preserveAspectRatio="none" role="img" aria-label="近期上漲家數比例"><line x1="0" x2="600" y1="23.8" y2="23.8" stroke="var(--line)" stroke-dasharray="4 4"/><polyline fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" points="0.0,25.9 10.2,41.9 20.3,32.5 30.5,13.9 40.7,22.8 50.8,35.5 61.0,29.7 71.2,9.5 81.4,24.8 91.5,32.4 101.7,36.0 111.9,21.5 122.0,32.9 132.2,43.7 142.4,13.6 152.5,31.7 162.7,38.8 172.9,22.8 183.1,39.3 193.2,41.9 203.4,33.8 213.6,41.4 223.7,12.4 233.9,15.0 244.1,12.6 254.2,25.6 264.4,36.2 274.6,31.7 284.7,30.3 294.9,30.6 305.1,11.8 315.3,31.1 325.4,25.1 335.6,34.2 345.8,30.7 355.9,22.6 366.1,30.1 376.3,27.2 386.4,41.2 396.6,13.1 406.8,45.9 416.9,15.4 427.1,45.2 437.3,36.5 447.5,19.1 457.6,42.9 467.8,30.6 478.0,13.0 488.1,41.8 498.3,48.7 508.5,25.9 518.6,52.0 528.8,28.6 539.0,46.6 549.2,49.0 559.3,6.0 569.5,23.8 579.7,17.9 589.8,38.8 600.0,10.3"/></svg><p class="desc">折線是近 60 個交易日「上漲家數比例」，虛線為 50%。</p></section><section><h2>2026-11-16 當沖候選名單</h2><p class="warnbar">目前沒有「上線」的策略（策略要先通過 walk-forward 回測：驗證期獲利因子 &gt; 1.2 且樣本 ≥ 100）。所以正式名單是空的；下面「觀察中」的訊號照樣記錄、對答案，但不建議參考。</p><p class="desc">模擬規則（規格書第 2 版）：2026-11-16 開盤價進場（加 0.1% 滑價），開盤跳空超過 2% 或開在漲跌停就放棄；停損＝該股近 10 日平均振幅的一半、停利＝停損 2 倍，都沒碰到就收盤出場。只在大盤（0050／富櫃 50）站上 20 日線時做多、跌破時做空；20 日均成交金額 ≥ 2 億。「參考停損」用今日收盤價估，實際以開盤價計。每個策略顯示成交金額最大的 5 檔，成績則把所有觸發的都算進去。</p><div class="tabs" data-tabs><button class="tab" data-t="L" aria-selected="true">做多 0</button><button class="tab" data-t="S" aria-selected="false">做空 0</button></div><div data-pane="L"><p class="desc">沒有符合條件的股票。</p></div><div data-pane="S" hidden><p class="desc">沒有符合條件的股票。</p></div><details><summary>觀察中策略的訊號（5 檔，不列入名單）</summary><div class="tablebox"><table class="sort"><thead><tr><th class="l">股票</th><th class="l">市場</th><th class="l">策略</th><th>今日收盤</th><th>參考停損</th><th class="l">理由</th></tr></thead><tbody><tr><td class="l"><span class="num">6538</span> 倉和</td><td class="l">上櫃</td><td class="l">空1 弱勢延續</td><td class="num">293.50</td><td class="num">312.29</td><td class="l">保守區、漲跌 -10.0%、量比 2.0、成交 58.6 億</td></tr><tr><td class="l"><span class="num">2027</span> 大成鋼</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">44.50</td><td class="num">45.60</td><td class="l">積極區、漲跌 -9.3%、量比 5.7、成交 31.4 億</td></tr><tr><td class="l"><span class="num">1795</span> 美時</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">141.50</td><td class="num">144.54</td><td class="l">積極區、漲跌 -9.3%、量比 2.6、成交 8.8 億</td></tr><tr><td class="l"><span class="num">1802</span> 台玻</td><td class="l">上市</td><td class="l">空2 漲多反轉</td><td class="num">85.10</td><td class="num">88.79</td><td class="l">保守區、漲跌 +4.2%、量比 2.1、成交 374.2 億</td></tr><tr><td class="l"><span class="num">2313</span> 華通</td><td class="l">上市</td><td class="l">空2 漲多反轉</td><td class="num">205.50</td><td class="num">213.91</td><td class="l">保守區、漲跌 +4.8%、量比 1.4、成交 100.1 億</td></tr></tbody></table></div></details></section><section><h2>今日盤中監看</h2><div class="tablebox"><table><thead><tr><th class="l">時間</th><th class="l">股票</th><th class="l">策略</th><th class="l">事件</th><th>價格</th><th class="l">說明</th></tr></thead><tbody><tr><td class="l num">09:05</td><td class="l">1714</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">15.45</td><td class="l">空 模擬進場價 15.45</td></tr><tr><td class="l num">09:05</td><td class="l">2356</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">47.0</td><td class="l">空 模擬進場價 47.0</td></tr><tr><td class="l num">09:05</td><td class="l">5475</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">205.0</td><td class="l">空 模擬進場價 205.0</td></tr><tr><td class="l num">09:05</td><td class="l">6426</td><td class="l">空2 漲多反轉</td><td class="l">開盤進場</td><td class="num">291.0</td><td class="l">空 模擬進場價 291.0</td></tr><tr><td class="l num">09:35</td><td class="l">6426</td><td class="l">空2 漲多反轉</td><td class="l">觸及停損</td><td class="num">301.66</td><td class="l">空 統新 停損價 301.66，最低 291.0／最高 309.0</td></tr></tbody></table></div></section><section><h2>策略檢討（白話）</h2><div class="md"><p>更新：2026-11-09（每週日晚上的「每週優化」會改寫這份）</p>
+</style></head><body><div class="wrap"><header><div><h1>台股隔日當沖看板</h1><p class="sub">資料日 2026-11-13・產生於 2026-11-16 08:30・紅漲綠跌</p></div><p class="sub">資料：證交所、櫃買中心公開資料</p></header><p class="warnbar">本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</p><section><h2>市場概況 2026-11-13</h2><div class="kpis"><div class="kpi"><small>上市 1088 檔</small><b class="up">+1.43%</b><small>漲 812・跌 200（普通股等權平均漲跌）</small></div><div class="kpi"><small>上櫃 876 檔</small><b class="up">+1.44%</b><small>漲 584・跌 230（普通股等權平均漲跌）</small></div></div><svg class="spark" viewBox="0 0 600 56" preserveAspectRatio="none" role="img" aria-label="近期上漲家數比例"><line x1="0" x2="600" y1="23.8" y2="23.8" stroke="var(--line)" stroke-dasharray="4 4"/><polyline fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" points="0.0,25.9 10.2,41.9 20.3,32.5 30.5,13.9 40.7,22.8 50.8,35.5 61.0,29.7 71.2,9.5 81.4,24.8 91.5,32.4 101.7,36.0 111.9,21.5 122.0,32.9 132.2,43.7 142.4,13.6 152.5,31.7 162.7,38.8 172.9,22.8 183.1,39.3 193.2,41.9 203.4,33.8 213.6,41.4 223.7,12.4 233.9,15.0 244.1,12.6 254.2,25.6 264.4,36.2 274.6,31.7 284.7,30.3 294.9,30.6 305.1,11.8 315.3,31.1 325.4,25.1 335.6,34.2 345.8,30.7 355.9,22.6 366.1,30.1 376.3,27.2 386.4,41.2 396.6,13.1 406.8,45.9 416.9,15.4 427.1,45.2 437.3,36.5 447.5,19.1 457.6,42.9 467.8,30.6 478.0,13.0 488.1,41.8 498.3,48.7 508.5,25.9 518.6,52.0 528.8,28.6 539.0,46.6 549.2,49.0 559.3,6.0 569.5,23.8 579.7,17.9 589.8,38.8 600.0,10.3"/></svg><p class="desc">折線是近 60 個交易日「上漲家數比例」，虛線為 50%。</p></section><section><h2>2026-11-16 當沖候選名單</h2><p class="warnbar">目前沒有「上線」的策略（策略要先通過 walk-forward 回測：驗證期獲利因子 &gt; 1.2 且樣本 ≥ 100）。所以正式名單是空的；下面「觀察中」的訊號照樣記錄、對答案，但不建議參考。</p><p class="desc">模擬規則（規格書第 2 版）：2026-11-16 開盤價進場（加 0.1% 滑價），開盤跳空超過 2% 或開在漲跌停就放棄；停損＝該股近 10 日平均振幅的一半、停利＝停損 2 倍，都沒碰到就收盤出場。只在大盤（0050／富櫃 50）站上 20 日線時做多、跌破時做空；20 日均成交金額 ≥ 2 億。「參考停損」用今日收盤價估，實際以開盤價計。每個策略顯示成交金額最大的 5 檔，成績則把所有觸發的都算進去。</p><div class="tabs" data-tabs><button class="tab" data-t="L" aria-selected="true">做多 0</button><button class="tab" data-t="S" aria-selected="false">做空 0</button></div><div data-pane="L"><p class="desc">沒有符合條件的股票。</p></div><div data-pane="S" hidden><p class="desc">沒有符合條件的股票。</p></div><details><summary>觀察中策略的訊號（5 檔，不列入名單）</summary><div class="tablebox"><table class="sort"><thead><tr><th class="l">股票</th><th class="l">市場</th><th class="l">策略</th><th>今日收盤</th><th>參考停損</th><th class="l">理由</th></tr></thead><tbody><tr><td class="l"><span class="num">6538</span> 倉和</td><td class="l">上櫃</td><td class="l">空1 弱勢延續</td><td class="num">293.50</td><td class="num">312.29</td><td class="l">保守區、漲跌 -10.0%、量比 2.0、成交 58.6 億</td></tr><tr><td class="l"><span class="num">2027</span> 大成鋼</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">44.50</td><td class="num">45.60</td><td class="l">積極區、漲跌 -9.3%、量比 5.7、成交 31.4 億</td></tr><tr><td class="l"><span class="num">1795</span> 美時</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">141.50</td><td class="num">144.54</td><td class="l">積極區、漲跌 -9.3%、量比 2.6、成交 8.8 億</td></tr><tr><td class="l"><span class="num">1802</span> 台玻</td><td class="l">上市</td><td class="l">空2 漲多反轉</td><td class="num">85.10</td><td class="num">88.79</td><td class="l">保守區、漲跌 +4.2%、量比 2.1、成交 374.2 億</td></tr><tr><td class="l"><span class="num">2313</span> 華通</td><td class="l">上市</td><td class="l">空2 漲多反轉</td><td class="num">205.50</td><td class="num">213.91</td><td class="l">保守區、漲跌 +4.8%、量比 1.4、成交 100.1 億</td></tr></tbody></table></div></details></section><section><h2>今日盤中監看</h2><div class="tablebox"><table><thead><tr><th class="l">時間</th><th class="l">股票</th><th class="l">策略</th><th class="l">事件</th><th>價格</th><th class="l">說明</th></tr></thead><tbody><tr><td class="l num">09:05</td><td class="l">1714</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">15.45</td><td class="l">空 模擬進場價 15.45</td></tr><tr><td class="l num">09:05</td><td class="l">2356</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">47.0</td><td class="l">空 模擬進場價 47.0</td></tr><tr><td class="l num">09:05</td><td class="l">5475</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">205.0</td><td class="l">空 模擬進場價 205.0</td></tr><tr><td class="l num">09:05</td><td class="l">6426</td><td class="l">空2 漲多反轉</td><td class="l">開盤進場</td><td class="num">291.0</td><td class="l">空 模擬進場價 291.0</td></tr><tr><td class="l num">09:35</td><td class="l">6426</td><td class="l">空2 漲多反轉</td><td class="l">觸及停損</td><td class="num">301.66</td><td class="l">空 統新 停損價 301.66，最低 291.0／最高 309.0</td></tr></tbody></table></div></section><section><h2>策略檢討（白話）</h2><div class="md"><p>更新：2026-11-15（每週日晚上的「每週優化」會改寫這份）</p>
+<p>&gt; 僅為個人研究與模擬，非投資建議；過去績效不代表未來。系統只提醒、絕不下單。</p>
 <h3>一句話結論</h3>
-<p>目前沒有任何一種「隔天當沖選股法」是真的賺錢的，所以正式推薦是 0 檔。我寧可不推，也不要硬推害你賠錢。</p>
+<p>到目前為止，沒有任何一種「照規則機械式進場」的做法是穩定賺錢的，所以正式推薦還是 0 檔。這週最大的收穫是你提的想法：<b>先分清楚今天是什麼盤</b>。同一套做法，在一路跌的日子做空大多是賺的，在來回震盪的日子多空都賠，而震盪的日子最多。</p>
 <h3>每個方法錯在哪、怎麼改</h3>
-<p><b>多1 強勢延續</b>（今天大漲、量大、收在最高點附近的股票，隔天買）</p>
+<p><b>多1 強勢延續</b>（今天大漲、量大、收在最高點附近，隔天買）</p>
 <ul>
-<li>錯在哪：今天大漲的股票，隔天常常「開高走低」。開盤一買就套在最高點，碰到停損出場。</li>
-<li>怎麼改：改成開盤不追，等 09:30 後還站在開盤價之上才進場；正在測試中。</li>
+<li>錯在哪：隔天常開高走低，一買就套在高點。這週剛好碰到大漲日所以小賺，但拉長看還是賠。</li>
+<li>現在：系統已自動把它「停用」，不顯示、只在背景繼續記錄。</li>
 </ul>
-<p><b>多2 法人追價</b>（法人連買幾天的股票，隔天買）</p>
+<p><b>多2 法人追價</b>（法人連買幾天，隔天買）</p>
 <ul>
-<li>錯在哪：法人買超的消息大家都看得到，隔天開盤價早就反映了，進場時已經沒有便宜可撿。</li>
-<li>怎麼改：法人資料只當「加分」，不單獨當買進理由。</li>
+<li>錯在哪：法人買超大家都看得到，隔天開盤價早就反映了。</li>
+<li>現在：同樣自動停用，背景記錄。</li>
 </ul>
-<p><b>空1 弱勢延續</b>（今天大跌、量大、收在最低點附近的股票，隔天放空）</p>
+<p><b>空1 弱勢延續</b>（今天大跌、量大、收在最低點附近，隔天放空）</p>
 <ul>
-<li>錯在哪：跌多的股票隔天很容易「跌深反彈」，放空的人被軋。</li>
-<li>怎麼改：只在大盤也偏弱的日子才考慮放空，大盤反彈的日子不空。</li>
+<li>錯在哪：跌深的股票隔天很容易急彈。最近最賠的三筆都是這樣：隔天開盤就跳高，一路被軋上去，其中兩筆就在這週大盤大漲的日子。</li>
+<li>怎麼改：繼續觀察，不上線。</li>
 </ul>
-<p><b>空2 漲多反轉</b>（連漲好幾天、出現長上影線的股票，隔天放空）</p>
+<p><b>空2 漲多反轉</b>（連漲好幾天、出現長上影線，隔天放空）</p>
 <ul>
-<li>錯在哪：機會太少，一年只有幾次，樣本不夠，看不出是不是真的有用。</li>
-<li>怎麼改：繼續觀察累積樣本，不急著上線。</li>
+<li>錯在哪：機會太少，這週只有一筆而且賠，看不出有沒有用。</li>
+<li>怎麼改：繼續累積。</li>
+</ul>
+<p><b>空6 大漲法人賣</b>（之前唯一「快要及格」的候選）</p>
+<ul>
+<li>錯在哪：它之前看起來不錯，是用舊的算法（固定小停損、沒算鎖漲停買不回）。這週改用你規格書第 2 版的算法重算，其實是賠的。</li>
+<li>怎麼改：不再追蹤。這也是我的疏失：規則 11/11 改版時就該馬上重算，不該讓舊數字多掛一週。</li>
+</ul>
+<p><b>當沖備戰名單（碰到昨高就追多、跌破昨低就追空）</b></p>
+<ul>
+<li>錯在哪：選股沒問題，選到的股票隔天波動確實比較大。問題在進場方式：照價位「碰到就進」，用過去兩個多月的盤中走勢重播，整體是賠的；開盤前 5 分鐘進場的賠最多；只賺一點點就跑的，贏的次數多、卻賠最多。量大、反手都沒有比較好。</li>
+<li>怎麼改：照你的意思，系統只負責給即時、正確的資料和過去的數字，做不做由你決定。卡片和推播會標明「開盤 5 分鐘內」「沒把握」「大盤、族群、強弱三項符合幾項」。</li>
 </ul>
 <h3>這週新學到的事</h3>
 <ul>
-<li><b>開盤會開高還是開低，猜得很準；開盤之後漲還是跌，猜不準。</b> 昨晚美股費半、台積電 ADR 漲跌，大約 8 成可以猜中台股開高或開低。但開盤之後的走勢跟丟銅板差不多，所以網頁上「一眼看懂」會直接告訴你開盤預估，並提醒你開盤第一波不要追。</li>
-<li><b>晚上看到的美股數字可能是舊的。</b> 晚上美股還沒開盤時，費半漲跌其實是前一晚的，台股白天已經反映過了。已經修正：晚上改看台指期夜盤，舊的美股數字不再拿來判斷。</li>
-<li><b>漲停、跌停開盤的股票，回測會騙人。</b> 看起來很賺，其實開盤就鎖死，根本買不到或賣不掉。以後這類股票一律排除。</li>
-<li>ChatGPT 建議的 6 種做法全部測過，都不賺錢，沒有上線。</li>
-<li><b>斐波那契（黃金分割）也測過了，沒用。</b>（11/11 加測）網路上「高點 × 0.618」的算法本身就錯了。照正確算法測，股價跌到 0.382、0.5、0.618 這些位置後隔天買，結果跟隨便挑一個位置買差不多，都是賠的；拿來當停損、停利也沒有比較好。所以沒有加進推薦，網頁上也不放這些價位，免得看起來好像很準。</li>
-</ul>
-<ul>
-<li><b>「月營收大成長就買、抱 2～4 週」也測過了，沒有比較好。</b>（11/11 加測，你問資金不要放太久的方法）表面上看起來會賺，但那是因為這兩年大多頭、什麼都漲。拿去跟「同一批股票隨便平均買」比，並沒有穩定多賺，最近 3 個月還輸。原因是營收成長最多的常常是去年很慘的公司（基期低），成長數字大不代表股價會再漲，而且營收公布前股價通常已經先反映了。所以沒有上線。</li>
-</ul>
-<ul>
-<li><b>11/11 照你的規格書第 2 版改了模擬規則。</b>現在開盤跳太多不追、停損停利看每檔平常的波動、大盤在 20 日線下面就不做多、除權息那天不出訊號，成績也把所有符合的股票都算進去（不只網頁上那 5 檔）。用新規則重算兩年，四個方法還是不賺錢；「空1 弱勢延續」最近 3 個月有變好，但筆數不到 100 筆，還不能相信。前 3 個月（到明年 2/11）只觀察、不自動上線。</li>
+<li><b>先看是什麼盤，再決定做不做。</b> 大盤盤中明顯一路跌的日子，順著做空大多是賺的；一路漲的日子做多只賺一點點；來回震盪的日子多空都賠，而且這種日子最常見。</li>
+<li><b>開盤 30 分鐘只看得出方向，看不出是真趨勢還是震盪。</b> 前一天波動很小的話，隔天多半也沒行情。</li>
+<li><b>「好天氣就出門」不成立。</b> 前一晚美股費半大漲，確實看得出台股大盤當天偏強；但備戰名單這批波動大的股票，在好天氣的日子開盤買、跳空追、突破追都是賠的。</li>
+<li><b>高開低走做空、低開高走做多都測過了。</b> 低開高走做多每一段都賠；高開低走做空短期小賺、拉長到大半年等於沒賺，而且沒有比「開高就直接空」好。</li>
+<li><b>用日線猜不出盤中先碰停損還是先碰止盈。</b> 一定要用盤中資料重播才算數。這週補了這一塊，之後每兩週重測一次。</li>
+<li><b>「能不能先賣」要看證交所事先公告的名單。</b> 之前拿前一天的狀況當隔天用，日期邊界會錯，已改。</li>
+<li><b>觸價到不了的不能寫成機會。</b> 前一天跌停的股票，昨天最高價比隔天漲停價還高，隔天根本碰不到。卡片現在會直接寫「這天碰不到」，不再列賺多少。</li>
 </ul>
 <h3>接下來要做的</h3>
 <ul>
-<li>測試「開盤不追、等 09:30 確認方向再進場」能不能讓多1 轉正。</li>
-<li>測試「目前局勢」裡每個指標單獨有沒有用，沒用的拿掉。</li>
+<li>明天（11/16）是盤中追蹤、每分鐘快線、量的倍數第一次在真正開盤時跑，晚上健康檢查會核對有沒有照預期運作。</li>
+<li>11/28 前後重跑一次盤中重播（多兩週資料），看「三項都順才進」是不是還站得住。</li>
+<li>12 月中用實際累積的紀錄檢查：反手、量大、順勢逆勢到底有沒有差。</li>
 <li>有通過驗證的方法才會變成正式推薦，到時候網頁最上面會直接寫出來。</li>
 </ul>
 <p>（詳細數字由系統自己記錄在 <code>reports/週檢討_日期.md</code> 與 <code>策略變更紀錄.md</code>，不顯示在網頁上。）</p></div></section><footer>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</footer><p class="sub">歷史報告：<a href="reports/2026-11-13.html">2026-11-13</a>・<a href="reports/2026-11-12.html">2026-11-12</a>・<a href="reports/2026-11-11.html">2026-11-11</a>・<a href="reports/2026-11-10.html">2026-11-10</a>・<a href="reports/2026-11-09.html">2026-11-09</a>・<a href="reports/2026-11-06.html">2026-11-06</a>・<a href="reports/2026-11-05.html">2026-11-05</a>・<a href="reports/2026-11-04.html">2026-11-04</a>・<a href="reports/2026-11-03.html">2026-11-03</a>・<a href="reports/2026-11-02.html">2026-11-02</a>・<a href="reports/2026-10-30.html">2026-10-30</a>・<a href="reports/2026-10-29.html">2026-10-29</a>・<a href="reports/2026-10-28.html">2026-10-28</a>・<a href="reports/2026-10-27.html">2026-10-27</a>・<a href="reports/2026-10-22.html">2026-10-22</a></p></div><script>
