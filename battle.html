@@ -55,7 +55,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-17 00:33</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-17 00:40</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -95,7 +95,7 @@ function card(code){var x=D.stocks[code];if(!x)return'';var nf=function(v){retur
  var L=far('多',x.lt)?'<div><div class=tr>做多 站上 <b class=up>'+x.lt+'</b></div><div class=sl>比漲停價 '+x.up+' 還高，這天碰不到</div></div>':'<div><div class=tr>做多 站上 <b class=up>'+x.lt+'</b></div><div class=sl>停損 '+x.ls+'</div>'+(x.lp?chips('多',x.lb,x.lp,x.lp2,x.pl,x.p2l,x.gl):'')+'</div>';
  var S=x.so!=1?'<div><div class=tr>做空</div><div class=sl>這檔不能當沖先賣'+(x.sn?'<br>（'+esc(x.sn)+'）':'')+'</div></div>':far('空',x.st)?'<div><div class=tr>做空 跌破 <b class=down>'+x.st+'</b></div><div class=sl>比跌停價 '+x.dn+' 還低，這天碰不到</div></div>':'<div><div class=tr>做空 跌破 <b class=down>'+x.st+'</b></div><div class=sl>停損 '+x.ss+'</div>'+(x.sp2?chips('空',x.sb,x.sp2,x.sp3,x.ps,x.p2s,x.gs):'')+'</div>';
  var w=x.w.length?'<div class=wn>⚠ '+esc(x.w.join('；'))+'</div>':'';
- if(x.orb)w+='<div class=wn style="color:#d4a017">現在用：開盤 30 分鐘區間（09:30 前最高 '+x.oh+'／最低 '+x.ol+'），09:30 以後突破才算</div>';else if(x.orbw)w+='<div class=wn style="color:#d4a017">已切到開盤 30 分鐘區間：09:30 後才有價位，下面先顯示昨高昨低的價位（這段時間不追蹤）</div>';
+ if(x.mid)w+='<div class=wn style="color:#d4a017">現在用：昨收重估（昨收 '+x.c+' 往上、往下各 '+x.mu+' 元）</div>';else if(x.orb)w+='<div class=wn style="color:#d4a017">現在用：開盤 30 分鐘區間（09:30 前最高 '+x.oh+'／最低 '+x.ol+'），09:30 以後突破才算</div>';else if(x.orbw)w+='<div class=wn style="color:#d4a017">已切到開盤 30 分鐘區間：09:30 後才有價位，下面先顯示昨高昨低的價位（這段時間不追蹤）</div>';
  return '<div class=bc data-code="'+code+'"><div class=hd><span><a class=nm href="analysis/index.html#'+code+'">'+code+' '+esc(x.n)+'</a>　收 '+x.c+' <span class='+(x.r>0?'up':x.r<0?'down':'')+'>'+(x.r>0?'+':'')+x.r.toFixed(2)+'%</span>'+(x.up?' <span class=lim>（漲停 <span class=up>'+x.up+'</span>／跌停 <span class=down>'+x.dn+'</span>）</span>':'')+' <span class=vq style="font-size:.78rem;color:var(--muted);white-space:nowrap"></span></span><a href="#" data-del="'+code+'">移除</a></div>'+w+'<div class=lv></div><div class=sd>'+L+S+'</div><div class=ft><a href="analysis/index.html#'+code+'">個股分析 →</a></div></div>'}
 function draw(){if(!D)return;$('mytitle').textContent=D.target+' 我選的股';var a=get().filter(function(c){return D.stocks[c]});
  a.sort(function(p,q){var g=D.stocks[p].g.localeCompare(D.stocks[q].g,'zh-Hant');return g||D.stocks[q].a10-D.stocks[p].a10});
@@ -129,9 +129,9 @@ function lvside(nm,v,tps,p,stop,skip,su){if(!v)return '<span class=m>做'+nm+'�
  if(v.ck){var nm5=['大盤','族群',nm=='多'?'比大盤強':'比大盤弱','量','站穩'],y=0,n=3,h='';for(var i=0;i<5;i++){if(i==3)continue;var k=v.ck.charAt(i);if(i<3&&k=='1')y++;if(i==4)h+='<span class=cx>｜</span>';h+='<span class=c'+(k=='1'?'y':k=='0'?'n':'x')+'>'+nm5[i]+(k=='1'?'✓':k=='0'?'✗':'–')+'</span>'}
   s+='<br><span class="tr t'+(v.tr=='順'?'y':v.tr=='逆'?'n':'x')+'">'+(y==3?'三個都順':v.tr=='順'?'順勢':v.tr=='逆'?'逆勢':'大盤盤整')+' '+y+'/'+n+'</span>'+h}
  return s}
-function drawLive(){if(!LV||!D||LV.date!=D.target)return;[].forEach.call(document.querySelectorAll('.bc[data-code]'),function(el){var c=el.getAttribute('data-code'),v=LV.stocks[c],x=D.stocks[c],box=el.querySelector('.lv');if(!box)return;
+function drawLive(){if(!LV||!D||LV.date!=D.target||LV.pre)return;[].forEach.call(document.querySelectorAll('.bc[data-code]'),function(el){var c=el.getAttribute('data-code'),v=LV.stocks[c],x=D.stocks[c],box=el.querySelector('.lv');if(!box)return;
  if(!v||!x){box.className='lv on';box.innerHTML='<span class=m>盤中沒有這檔的資料（量太小，沒有列入每 5 分鐘快照）</span>';return}
- var vq=el.querySelector('.vq');if(vq)vq.innerHTML=v.v&&v.pv?'量 <b style="color:var(--ink)">'+v.v.toLocaleString()+'</b>／昨天 '+v.pv.toLocaleString()+' 張（'+Math.round(v.v/v.pv*100)+'%）':'';
+ var vq=el.querySelector('.vq');if(vq)vq.innerHTML=v.v&&v.pv?'<b style="color:var(--ink)">'+v.v+'</b>/'+v.pv+'（'+Math.round(v.v/v.pv*100)+'%）':'';
  var ch=(v.p/x.c-1)*100;box.className='lv on';
  box.innerHTML='現價 <b class='+(ch>0?'up':ch<0?'down':'')+'>'+v.p+'（'+(ch>0?'+':'')+ch.toFixed(1)+'%）</b> <span class=m>'+v.t+' 的快照</span><br><span class=m>大盤'+({'漲':'在漲','跌':'在跌','盤':'盤整'}[LV.mk]||'')+(LV.pts!=null?'（比開盤 '+(LV.pts>0?'+':'')+LV.pts+' 點）':'')+(v.g?'｜同族群 '+v.g[1]+' 漲 '+v.g[2]+' 跌':'')+'</span><br>'+flipTag(v,x)+lvside('多',v.L,[x.lb,x.lp,x.lp2],v.p,x.ls,v.xL,x.su)+(x.so==1?'<br>'+lvside('空',v.S,[x.sb,x.sp2,x.sp3],v.p,x.ss,v.xS,x.su):'')+nwl((LV.news||{})[c])});
  var mk=document.getElementById('mknews');if(!mk){mk=document.createElement('div');mk.id='mknews';mk.className='bc';var a=document.querySelector('.bc[data-code]');if(a)a.parentNode.insertBefore(mk,a)}
@@ -167,7 +167,7 @@ function flipTag(v,x){if(!v.f)return '';var sh=v.f=='空',e=sh?v.S:v.L,tr=sh?x.s
  if(on)return '<span class="fl w '+(sh?'s':'l')+'">'+a+b+'，等下一筆確認</span><br>';
  return '<span class="fl x">'+a+b+'後又'+(sh?'彈回':'跌回')+'，先不算反手</span><br>'}
 var D0={};
-function applyMode(){if(!D)return;var on=LV&&LV.date==D.target&&LV.mode=='orb',px=on&&LV.px||{},wt=on&&LV.wait||[];
+function applyMode(){if(!D)return;var on=LV&&LV.date==D.target&&(LV.mode=='orb'||LV.mode=='mid'),px=on&&LV.px||{},wt=on&&LV.wait||[];
  Object.keys(D0).forEach(function(c){Object.keys(D0[c]).forEach(function(k){D.stocks[c][k]=D0[c][k]});delete D.stocks[c].orbw});D0={};
  Object.keys(px).forEach(function(c){var x=D.stocks[c];if(!x)return;D0[c]={};Object.keys(px[c]).forEach(function(k){D0[c][k]=x[k];x[k]=px[c][k]})});
  wt.forEach(function(c){if(D.stocks[c]){D0[c]=D0[c]||{};D.stocks[c].orbw=1}})}
