@@ -35,7 +35,19 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
- body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-17 13:02</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-17｜「我選的股」有幾分鐘整個不見</b></p>
+ body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-17 23:42</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-17｜早上 08:50 寫「開低約 0.6%」，實際開低兩個多百分點</b></p>
+<ul>
+<li>錯在哪：開盤預估是看台指期的漲跌，但那個漲跌是跟「期貨自己昨天的收盤」比。前一天大跌時，期貨昨天就已經收得比大盤低很多，所以只看期貨漲跌會把今天的跳空估得太小。</li>
+<li>怎麼發現：晚上健康檢查拿早上的開盤預估對照實際開盤，差太多；再看同一頁下面的詳細數據，其實有寫「台指期比加權昨收低 511 點」，只是最上面沒講。</li>
+<li>改了什麼：以後台指期跟「大盤昨天收盤」比的差距，和最上面的數字差很多時，開盤預估下面會多一行粗體提醒「現貨開盤可能更低（或更高）」。最上面的主數字先不換，因為夏天除權息旺季期貨本來就會比大盤低，直接換會反過來估太多。</li>
+</ul>
+<p><b>2026-11-17｜09:01 看盤比對頁第一筆快照沒抓到</b></p>
+<ul>
+<li>錯在哪：開盤第一分鐘證交所還沒給加權指數報價，那一次快照失敗。</li>
+<li>怎麼發現：排程自動記到待修正清單。</li>
+<li>改了什麼：沒有改程式。09:06 起每一輪都正常，前幾天同一時間也都成功，屬於偶發；再發生一次就加「等幾秒重抓」。</li>
+</ul>
+<p><b>2026-11-17｜「我選的股」有幾分鐘整個不見</b></p>
 <ul>
 <li>錯在哪：改價位按鈕上的文字時，網頁程式多打了一個引號，整段程式跑不起來，「我選的股」的卡片和按鈕都沒畫出來（大約 5 分鐘）。</li>
 <li>怎麼發現：上傳後照例到正式網站用瀏覽器檢查，看到卡片是 0 張。</li>
