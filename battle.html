@@ -55,7 +55,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-17 12:40</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-17 12:59</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -172,8 +172,8 @@ var D0={},MID=null,MIDQ=0,PM={};
 function pmGet(){if(!D)return null;if(PM[D.target])return PM[D.target];try{return localStorage.getItem('pm_'+D.target)}catch(e){return null}}
 function pmSet(k){if(!D)return;PM[D.target]=k;try{localStorage.setItem('pm_'+D.target,k)}catch(e){}applyMode();draw()}
 function loadMid(){if(MIDQ)return;MIDQ=1;fetch('battle_mid.json?'+Date.now()).then(function(r){return r.json()}).then(function(j){MID=j;applyMode();draw()}).catch(function(){MIDQ=0})}
-function drawPm(){var el=$('pmbox');if(!el||!D)return;var ch=pmGet(),sv=LV&&LV.date==D.target&&LV.mode||'prev',cur=ch||sv;
- el.innerHTML='<div class=rgb><button class="'+(cur=='prev'?'on':'')+'" onclick="pmSet(\'prev\')">A 現行價位</button><button class="'+(cur=='mid'?'on':'')+'" onclick="pmSet(\'mid\')">昨收重估</button></div><p class=desc style="margin:4px 0 0"><small>'
+function drawPm(){var el=$('pmbox');if(!el||!D)return;var ch=pmGet(),sv=LV&&LV.date==D.target&&LV.mode||'prev',cur=ch||sv,rc=D.mk!=null&&Math.abs(D.mk)>=3;
+ el.innerHTML='<div class=rgb><button class="'+(cur=='prev'?'on':'')+'" onclick="pmSet(\'prev\')">現行價位</button><button class="'+(cur=='mid'?'on':'')+'" onclick="pmSet(\'mid\')">昨收重估'+(rc?'（推薦）':'')+'</button></div><p class=desc style="margin:4px 0 0"><small>'+(rc?'<span style="color:#d4a017">'+D.date.slice(5)+' 大盤'+(D.mk>0?'大漲 ':'大跌 ')+Math.abs(D.mk).toFixed(1)+'%，現行價位容易碰不到或太貼，所以標推薦；只是提醒，沒有比較會賺的證據，要不要換你決定。</span><br>':'')+'
   +(cur=='orb'?'現在用：開盤 30 分鐘區間。':'')+(ch=='mid'&&MID&&MID.target!=D.target?'昨收重估的資料還沒更新，先顯示 A。':'')+'按鈕只換這支手機上「我選的股」的價位和盤中追蹤，今天有效，明天回到 A；手機推播不會跟著換。</small></p>'}
 function applyMode(){if(!D)return;var ch=pmGet(),on=LV&&LV.date==D.target&&(LV.mode=='orb'||LV.mode=='mid'),px=on&&LV.px||{},wt=on&&LV.wait||[];
  if(ch=='prev'){px={};wt=[]}
