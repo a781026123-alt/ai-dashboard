@@ -35,7 +35,13 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
- body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-17 23:42</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-17｜早上 08:50 寫「開低約 0.6%」，實際開低兩個多百分點</b></p>
+ body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-18 23:41</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-18｜晚間快報的「台指期今日日盤收盤」抓到已經到期的合約</b></p>
+<ul>
+<li>錯在哪：今天是台指期結算日（每個月第三個週三）。11 月的合約下午 1:30 就結算了，但它今天的成交量還是最大，程式習慣挑「量最大的那一個」，結果晚間快報把已經到期的 11 月合約當成今天的日盤收盤（寫 40,025），連帶「台指期比加權高還是低」那格也寫反。最上面的「明天開盤預估」用的是夜盤，沒有受影響。</li>
+<li>怎麼發現：晚上健康檢查拿晚間快報跟下午的收盤快報對照，同一個台指期差了快 300 點，再看合約名稱才發現一個是 11 月、一個是 12 月。</li>
+<li>改了什麼：以後收盤後只挑「交易到下午 1:40 以後」的合約，已經結算的不會再被選到。改完當晚用期交所的實際資料確認抓到的是 12 月合約，並重新產生晚間快報。</li>
+</ul>
+<p><b>2026-11-17｜早上 08:50 寫「開低約 0.6%」，實際開低兩個多百分點</b></p>
 <ul>
 <li>錯在哪：開盤預估是看台指期的漲跌，但那個漲跌是跟「期貨自己昨天的收盤」比。前一天大跌時，期貨昨天就已經收得比大盤低很多，所以只看期貨漲跌會把今天的跳空估得太小。</li>
 <li>怎麼發現：晚上健康檢查拿早上的開盤預估對照實際開盤，差太多；再看同一頁下面的詳細數據，其實有寫「台指期比加權昨收低 511 點」，只是最上面沒講。</li>
