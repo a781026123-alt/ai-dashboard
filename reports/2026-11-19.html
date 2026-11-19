@@ -1,0 +1,97 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>台股當沖看板</title><style>
+/* 黑曜金（2026-11-11 使用者選定）：黑曜深藍底、香檳金重點、暖珍珠白文字、墨綠輔助；台股紅漲綠跌不變 */
+:root{--bg:#111827;--surface:#1a2333;--ink:#f4f0e6;--muted:#a9a495;--line:#2b3547;--accent:#d6b56d;--accent-soft:#2e2a1e;
+--up:#ff5a6e;--up-soft:#3a1c24;--down:#3ccb7f;--down-soft:#14302a;--warn:#f2a35e;--warn-soft:#33241a;--jade:#526b63;
+--gold-grad:linear-gradient(135deg,#f1d99a,#d6b56d 55%,#a9873f);
+--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;--num:ui-monospace,Consolas,"Cascadia Mono",monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;padding:20px 16px 48px}
+.wrap{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px}
+h1{font-size:1.6rem;margin:0;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent} h2{font-size:1.05rem;margin:0;color:var(--accent)} h2.up{color:var(--up)} h2.down{color:var(--down)} h3{font-size:.95rem;margin:.6em 0 .2em}
+.sub,.desc{color:var(--muted);font-size:.86rem;margin:0}
+section{background:var(--surface);border:1px solid rgba(214,181,109,.16);border-radius:18px;box-shadow:0 4px 18px rgba(0,0,0,.35);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.warnbar{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 12px;font-size:.88rem}
+.num{font-family:var(--num);font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)} .kpi small{color:var(--muted);display:block;font-size:.78rem}
+.kpi b{font-family:var(--num);font-size:1.25rem;color:var(--accent)} .kpi b.up{color:var(--up)} .kpi b.down{color:var(--down)}
+svg.spark{width:100%;height:56px;display:block}
+.tabs{display:flex;gap:2px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{font:inherit;background:none;border:none;border-bottom:3px solid transparent;padding:6px 12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.tab[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:700}
+.tablebox{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:.78rem;color:var(--muted);font-weight:500;cursor:pointer;user-select:none}
+th.l,td.l{text-align:left} td.num{font-family:var(--num)}
+.chip{display:inline-block;font-size:.75rem;padding:0 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--jade);color:var(--ink);border-color:transparent}
+.chip.obs{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.chip.few{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.chip.bad{background:var(--up-soft);color:var(--up);border-color:transparent}
+details summary{cursor:pointer;color:var(--accent)}
+.md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
+footer{color:var(--muted);font-size:.82rem;text-align:center}
+a{color:var(--accent)}
+</style></head><body><div class="wrap"><header><div><h1>台股隔日當沖看板</h1><p class="sub">資料日 2026-11-19・產生於 2026-11-19 16:32・紅漲綠跌</p></div><p class="sub">資料：證交所、櫃買中心公開資料</p></header><p class="warnbar">本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</p><section><h2>市場概況 2026-11-19</h2><div class="kpis"><div class="kpi"><small>上市 1089 檔</small><b class="down">-4.56%</b><small>漲 67・跌 997（普通股等權平均漲跌）</small></div><div class="kpi"><small>上櫃 876 檔</small><b class="down">-5.14%</b><small>漲 51・跌 807（普通股等權平均漲跌）</small></div></div><svg class="spark" viewBox="0 0 600 56" preserveAspectRatio="none" role="img" aria-label="近期上漲家數比例"><line x1="0" x2="600" y1="23.8" y2="23.8" stroke="var(--line)" stroke-dasharray="4 4"/><polyline fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke" points="0.0,22.8 10.2,35.4 20.3,29.6 30.5,9.5 40.7,24.8 50.8,32.3 61.0,35.9 71.2,21.5 81.4,32.9 91.5,43.7 101.7,13.6 111.9,31.7 122.0,38.8 132.2,22.8 142.4,39.3 152.5,41.8 162.7,33.8 172.9,41.4 183.1,12.4 193.2,14.9 203.4,12.6 213.6,25.6 223.7,36.2 233.9,31.7 244.1,30.3 254.2,30.6 264.4,11.8 274.6,31.0 284.7,25.1 294.9,34.2 305.1,30.7 315.3,22.6 325.4,30.0 335.6,27.2 345.8,41.2 355.9,13.1 366.1,45.9 376.3,15.4 386.4,45.1 396.6,36.5 406.8,19.1 416.9,42.9 427.1,30.5 437.3,13.0 447.5,41.8 457.6,48.7 467.8,25.9 478.0,52.0 488.1,28.6 498.3,46.5 508.5,49.0 518.6,6.0 528.8,23.8 539.0,17.9 549.2,38.8 559.3,10.3 569.5,49.5 579.7,42.8 589.8,28.2 600.0,52.0"/></svg><p class="desc">折線是近 60 個交易日「上漲家數比例」，虛線為 50%。</p></section><section><h2>2026-11-20 當沖候選名單</h2><p class="warnbar">目前沒有「上線」的策略（策略要先通過 walk-forward 回測：驗證期獲利因子 &gt; 1.2 且樣本 ≥ 100）。所以正式名單是空的；下面「觀察中」的訊號照樣記錄、對答案，但不建議參考。</p><p class="desc">模擬規則（規格書第 2 版）：2026-11-20 開盤價進場（加 0.1% 滑價），開盤跳空超過 2% 或開在漲跌停就放棄；停損＝該股近 10 日平均振幅的一半、停利＝停損 2 倍，都沒碰到就收盤出場。只在大盤（0050／富櫃 50）站上 20 日線時做多、跌破時做空；20 日均成交金額 ≥ 2 億。「參考停損」用今日收盤價估，實際以開盤價計。每個策略顯示成交金額最大的 5 檔，成績則把所有觸發的都算進去。</p><div class="tabs" data-tabs><button class="tab" data-t="L" aria-selected="true">做多 0</button><button class="tab" data-t="S" aria-selected="false">做空 0</button></div><div data-pane="L"><p class="desc">沒有符合條件的股票。</p></div><div data-pane="S" hidden><p class="desc">沒有符合條件的股票。</p></div><details><summary>觀察中策略的訊號（2 檔，不列入名單）</summary><div class="tablebox"><table class="sort"><thead><tr><th class="l">股票</th><th class="l">市場</th><th class="l">策略</th><th>今日收盤</th><th>參考停損</th><th class="l">理由</th></tr></thead><tbody><tr><td class="l"><span class="num">4966</span> 譜瑞-KY</td><td class="l">上櫃</td><td class="l">空1 弱勢延續</td><td class="num">369.00</td><td class="num">379.64</td><td class="l">積極區、漲跌 -8.3%、量比 2.3、成交 5.7 億</td></tr><tr><td class="l"><span class="num">8033</span> 雷虎</td><td class="l">上市</td><td class="l">空1 弱勢延續</td><td class="num">118.00</td><td class="num">121.27</td><td class="l">積極區、漲跌 -9.9%、量比 2.2、成交 3.6 億</td></tr></tbody></table></div></details></section><section><h2>今日盤中監看</h2><div class="tablebox"><table><thead><tr><th class="l">時間</th><th class="l">股票</th><th class="l">策略</th><th class="l">事件</th><th>價格</th><th class="l">說明</th></tr></thead><tbody><tr><td class="l num">09:05</td><td class="l">2884</td><td class="l">空1 弱勢延續</td><td class="l">開盤進場</td><td class="num">41.4</td><td class="l">空 模擬進場價 41.4</td></tr></tbody></table></div></section><section><h2>策略檢討（白話）</h2><div class="md"><p>更新：2026-11-15（每週日晚上的「每週優化」會改寫這份）</p>
+<p>&gt; 僅為個人研究與模擬，非投資建議；過去績效不代表未來。系統只提醒、絕不下單。</p>
+<h3>一句話結論</h3>
+<p>到目前為止，沒有任何一種「照規則機械式進場」的做法是穩定賺錢的，所以正式推薦還是 0 檔。這週最大的收穫是你提的想法：<b>先分清楚今天是什麼盤</b>。同一套做法，在一路跌的日子做空大多是賺的，在來回震盪的日子多空都賠，而震盪的日子最多。</p>
+<h3>每個方法錯在哪、怎麼改</h3>
+<p><b>多1 強勢延續</b>（今天大漲、量大、收在最高點附近，隔天買）</p>
+<ul>
+<li>錯在哪：隔天常開高走低，一買就套在高點。這週剛好碰到大漲日所以小賺，但拉長看還是賠。</li>
+<li>現在：系統已自動把它「停用」，不顯示、只在背景繼續記錄。</li>
+</ul>
+<p><b>多2 法人追價</b>（法人連買幾天，隔天買）</p>
+<ul>
+<li>錯在哪：法人買超大家都看得到，隔天開盤價早就反映了。</li>
+<li>現在：同樣自動停用，背景記錄。</li>
+</ul>
+<p><b>空1 弱勢延續</b>（今天大跌、量大、收在最低點附近，隔天放空）</p>
+<ul>
+<li>錯在哪：跌深的股票隔天很容易急彈。最近最賠的三筆都是這樣：隔天開盤就跳高，一路被軋上去，其中兩筆就在這週大盤大漲的日子。</li>
+<li>怎麼改：繼續觀察，不上線。</li>
+</ul>
+<p><b>空2 漲多反轉</b>（連漲好幾天、出現長上影線，隔天放空）</p>
+<ul>
+<li>錯在哪：機會太少，這週只有一筆而且賠，看不出有沒有用。</li>
+<li>怎麼改：繼續累積。</li>
+</ul>
+<p><b>空6 大漲法人賣</b>（之前唯一「快要及格」的候選）</p>
+<ul>
+<li>錯在哪：它之前看起來不錯，是用舊的算法（固定小停損、沒算鎖漲停買不回）。這週改用你規格書第 2 版的算法重算，其實是賠的。</li>
+<li>怎麼改：不再追蹤。這也是我的疏失：規則 11/11 改版時就該馬上重算，不該讓舊數字多掛一週。</li>
+</ul>
+<p><b>當沖備戰名單（碰到昨高就追多、跌破昨低就追空）</b></p>
+<ul>
+<li>錯在哪：選股沒問題，選到的股票隔天波動確實比較大。問題在進場方式：照價位「碰到就進」，用過去兩個多月的盤中走勢重播，整體是賠的；開盤前 5 分鐘進場的賠最多；只賺一點點就跑的，贏的次數多、卻賠最多。量大、反手都沒有比較好。</li>
+<li>怎麼改：照你的意思，系統只負責給即時、正確的資料和過去的數字，做不做由你決定。卡片和推播會標明「開盤 5 分鐘內」「沒把握」「大盤、族群、強弱三項符合幾項」。</li>
+</ul>
+<h3>這週新學到的事</h3>
+<ul>
+<li><b>先看是什麼盤，再決定做不做。</b> 大盤盤中明顯一路跌的日子，順著做空大多是賺的；一路漲的日子做多只賺一點點；來回震盪的日子多空都賠，而且這種日子最常見。</li>
+<li><b>開盤 30 分鐘只看得出方向，看不出是真趨勢還是震盪。</b> 前一天波動很小的話，隔天多半也沒行情。</li>
+<li><b>「好天氣就出門」不成立。</b> 前一晚美股費半大漲，確實看得出台股大盤當天偏強；但備戰名單這批波動大的股票，在好天氣的日子開盤買、跳空追、突破追都是賠的。</li>
+<li><b>高開低走做空、低開高走做多都測過了。</b> 低開高走做多每一段都賠；高開低走做空短期小賺、拉長到大半年等於沒賺，而且沒有比「開高就直接空」好。</li>
+<li><b>用日線猜不出盤中先碰停損還是先碰止盈。</b> 一定要用盤中資料重播才算數。這週補了這一塊，之後每兩週重測一次。</li>
+<li><b>「能不能先賣」要看證交所事先公告的名單。</b> 之前拿前一天的狀況當隔天用，日期邊界會錯，已改。</li>
+<li><b>觸價到不了的不能寫成機會。</b> 前一天跌停的股票，昨天最高價比隔天漲停價還高，隔天根本碰不到。卡片現在會直接寫「這天碰不到」，不再列賺多少。</li>
+</ul>
+<h3>接下來要做的</h3>
+<ul>
+<li>明天（11/16）是盤中追蹤、每分鐘快線、量的倍數第一次在真正開盤時跑，晚上健康檢查會核對有沒有照預期運作。</li>
+<li>11/28 前後重跑一次盤中重播（多兩週資料），看「三項都順才進」是不是還站得住。</li>
+<li>12 月中用實際累積的紀錄檢查：反手、量大、順勢逆勢到底有沒有差。</li>
+<li>有通過驗證的方法才會變成正式推薦，到時候網頁最上面會直接寫出來。</li>
+</ul>
+<p>（詳細數字由系統自己記錄在 <code>reports/週檢討_日期.md</code> 與 <code>策略變更紀錄.md</code>，不顯示在網頁上。）</p></div></section><footer>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</footer></div><script>
+document.querySelectorAll('[data-tabs]').forEach(g=>{const bs=g.querySelectorAll('.tab');bs.forEach(b=>b.onclick=()=>{
+bs.forEach(x=>x.setAttribute('aria-selected',x===b));g.parentNode.querySelectorAll('[data-pane]').forEach(p=>p.hidden=p.dataset.pane!==b.dataset.t)})});
+document.querySelectorAll('table.sort').forEach(t=>t.querySelectorAll('th').forEach((h,i)=>h.onclick=()=>{
+const rows=[...t.tBodies[0].rows],asc=h.dataset.asc!=='1';h.dataset.asc=asc?'1':'0';
+const v=r=>{const s=r.cells[i].dataset.v??r.cells[i].innerText;const n=parseFloat(s.replace(/[,%+]/g,''));return isNaN(n)?s:n};
+rows.sort((a,b)=>{const x=v(a),y=v(b);return (x>y?1:x<y?-1:0)*(asc?1:-1)});rows.forEach(r=>t.tBodies[0].appendChild(r))}));
+</script></body></html>
