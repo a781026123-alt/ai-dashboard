@@ -55,7 +55,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-23 21:54</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-23 21:56</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -98,8 +98,8 @@ function card(code){var x=D.stocks[code];if(!x)return'';var nf=function(v){retur
  if(x.mid)w+='<div class=wn style="color:#d4a017">現在用：昨收重估（昨收 '+x.c+' 往上、往下各 '+x.mu+' 元）</div>';else if(x.orb)w+='<div class=wn style="color:#d4a017">現在用：開盤 30 分鐘區間（09:30 前最高 '+x.oh+'／最低 '+x.ol+'），09:30 以後突破才算</div>';else if(x.orbw)w+='<div class=wn style="color:#d4a017">已切到開盤 30 分鐘區間：09:30 後才有價位，下面先顯示昨高昨低的價位（這段時間不追蹤）</div>';
  return '<div class=bc data-code="'+code+'"><div class=hd><span><a class=nm href="analysis/index.html#'+code+'">'+code+' '+esc(x.n)+'</a>　收 '+x.c+' <span class='+(x.r>0?'up':x.r<0?'down':'')+'>'+(x.r>0?'+':'')+x.r.toFixed(2)+'%</span>'+(x.up?' <span class=lim>（漲停 <span class=up>'+x.up+'</span>／跌停 <span class=down>'+x.dn+'</span>）</span>':'')+' <span class=vq style="font-size:.78rem;color:var(--muted);white-space:nowrap"></span></span><a href="#" data-del="'+code+'">移除</a></div>'+w+'<div class=lv></div><div class=sd>'+L+S+'</div><div class=ft><a href="analysis/index.html#'+code+'">個股分析 →</a></div></div>'}
 function draw(){if(!D)return;$('mytitle').textContent=D.target+' 我選的股';var a=get().filter(function(c){return D.stocks[c]});
- a.sort(function(p,q){var g=D.stocks[p].g.localeCompare(D.stocks[q].g,'zh-Hant');return g||D.stocks[q].a10-D.stocks[p].a10});
- $('mylist').innerHTML=a.map(card).join('');drawPm();drawLive();drawReg();if(a.length&&!$('mymsg').textContent)msg('共 '+a.length+' 檔，依 '+D.date+' 收盤計算，同族群排在一起。收盤後這裡會自動復盤這幾檔。')}
+ /* 2026-11-23 使用者要自己決定順序（國巨、聯電排最前）：照對話裡給的順序，不再依族群排 */
+ $('mylist').innerHTML=a.map(card).join('');drawPm();drawLive();drawReg();if(a.length&&!$('mymsg').textContent)msg('共 '+a.length+' 檔，依 '+D.date+' 收盤計算，照你給的順序排。收盤後這裡會自動復盤這幾檔。')}
 function find(text){var hit=[],t=text.replace(/[ \t]+/g,'');
  (text.match(/(^|[^\d.])[1-9]\d{3}(?![\d.])/gm)||[]).forEach(function(c){c=c.slice(-4);if(D.stocks[c]&&hit.indexOf(c)<0)hit.push(c)});
  var names=Object.keys(D.stocks).map(function(c){return[D.stocks[c].n,c]}).sort(function(a,b){return b[0].length-a[0].length});
