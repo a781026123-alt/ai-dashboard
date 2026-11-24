@@ -35,7 +35,13 @@ details summary{cursor:pointer;color:var(--accent)}
 .md{font-size:.92rem} .md table{width:auto} .md td,.md th{text-align:left;white-space:normal}
 footer{color:var(--muted);font-size:.82rem;text-align:center}
 a{color:var(--accent)}
- body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-22 22:19</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-22｜盤中 5 分鐘歷史資料會自己過期，上週答應的補存拖了一週</b></p>
+ body{background:#0f1520} .wrap{max-width:640px} header h1{font-size:20px;color:#a9a495;background:none;-webkit-text-fill-color:#a9a495} section{background:transparent;border:1px dashed #2b3547;box-shadow:none;border-radius:10px} section h2{font-size:14px;color:#a9a495;letter-spacing:.05em} .md,.desc{font-size:13.5px;color:#b9b4a6;line-height:1.75} .md p{margin:.9em 0 .2em} .md ul{margin:0;padding-left:1.2em} .md b{color:#d8d2c0}</style><body><div class=wrap><header><div><h1>📝 備註：修正錯誤與檢討</h1><p class=sub>更新 2026-11-24 21:14</p></div><a href="index.html">回首頁</a></header><div class="desc"><p>最新的寫在最上面。每天 23:30 的健康檢查、每週日的優化，只要發現錯誤或改了東西，就會補一條在這裡。</p></div><section><h2>台股</h2><div class="md"><p><b>2026-11-24｜整天鎖漲停的股票，備戰看板算不出來</b></p>
+<ul>
+<li>錯在哪：今天選的 8 檔全部開盤就鎖漲停到收盤。程式原本把「最高價等於最低價」的股票當成沒交易，直接略過，所以設定明天看板時 8 檔都顯示資料不足。</li>
+<li>怎麼發現：晚上幫使用者設定明天的選股時，程式回報每一檔都「資料不足」。</li>
+<li>改了什麼：自己選的股票不再略過，一樣算出價位。但整天只有一個價的日子，算出來的做多、做空線會緊貼收盤價，參考價值比平常低，看板回報時會講清楚。</li>
+</ul>
+<p><b>2026-11-22｜盤中 5 分鐘歷史資料會自己過期，上週答應的補存拖了一週</b></p>
 <ul>
 <li>錯在哪：拿來重播「碰到價位就進到底賺不賺」的盤中 5 分鐘資料，免費來源只留最近 60 天。原本的下載程式遇到已經有的股票就跳過，不會補新的日子，所以資料一直停在 11/13，舊的日子再過幾週就補不回來。上週說「下週先手動跑」，平日沒有做。</li>
 <li>怎麼發現：每週優化照上週的建議清單逐項檢查時發現。</li>
