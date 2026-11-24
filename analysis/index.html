@@ -39,6 +39,9 @@ a{color:var(--accent)}
  .bcs{display:grid;gap:10px}
 .bc .hd .lim{font-size:.74rem;white-space:nowrap}
 .bc{border:1px solid var(--line);border-radius:14px;padding:10px 12px;background:var(--surface)}
+.bc.pri{position:relative;margin-top:12px;border:2px solid #f1d99a;background:linear-gradient(180deg,rgba(214,181,109,.18),var(--surface) 60%);animation:prig 2.4s ease-in-out infinite}
+.bc.pri::before{content:'★' attr(data-pri);position:absolute;top:-11px;left:12px;background:#d6b56d;color:#111827;font-size:.72rem;font-weight:800;padding:1px 10px;border-radius:999px}
+@keyframes prig{0%,100%{box-shadow:0 0 6px rgba(241,217,154,.3)}50%{box-shadow:0 0 22px rgba(241,217,154,.8)}}
 .bc .hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:.82rem;color:var(--muted)} .bc .hd a.nm{color:inherit;filter:brightness(1.6);font-weight:700;text-decoration:none;font-size:.98rem}
 .bc .ft{margin-top:8px;font-size:.8rem;text-align:right}
 .bc .lv{font-size:.78rem;margin-top:6px;padding:5px 8px;border-radius:8px;background:rgba(255,255,255,.05);display:none;line-height:1.55} .bc .lv.on{display:block} .bc .lv b{font-weight:700}
@@ -61,7 +64,7 @@ a{color:var(--accent)}
 .search button{font:inherit;font-size:16px;border:none;border-radius:14px;padding:0 18px;color:#111827;font-weight:700;background:var(--gold-grad)}
 .hint{display:flex;flex-wrap:wrap;gap:6px} .hint a{font-size:14px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);text-decoration:none}
 #sug a{display:block;padding:8px 4px;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}</style><body><div class=wrap>
-<header><div><h1>個股分析</h1><p class=sub>打代號或名稱｜資料到 2026-11-23 收盤（每天 16:50 更新）</p></div><a href="../index.html">回首頁</a></header>
+<header><div><h1>個股分析</h1><p class=sub>打代號或名稱｜資料到 2026-11-24 收盤（每天 16:50 更新）</p></div><a href="../index.html">回首頁</a></header>
 <section><form class=search onsubmit="go(document.getElementById('q').value);return false"><input id=q placeholder="例如 2412 或 中華電" autocomplete=off inputmode=search>
 <button>查</button></form><div id=sug></div><p class=desc>搜尋紀錄（存在這支手機，<a href="#" onclick="clearH();return false">清除</a>）</p><div class=hint id=hist></div></section><div id=out></div>
 <footer>本系統僅為個人研究與模擬交易，非投資建議；過去績效不代表未來。絕不自動下單。</footer></div>
