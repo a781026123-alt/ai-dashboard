@@ -58,7 +58,7 @@ a{color:var(--accent)}
 .bc .why .k.l.on{background:#e5484d;border-color:#e5484d;color:#fff} .bc .why .k.s.on{background:#1fa971;border-color:#1fa971;color:#fff} .bc .why .k.n{border-style:dashed}
 .bc .why p{margin:2px 0;padding-left:1.6em;text-indent:-1.6em} .bc .why p i{font-style:normal;font-weight:700;margin-right:4px} .bc .why p.l i{color:#ff7a8a} .bc .why p.s i{color:#4fd6a0} .bc .why p.o{color:var(--muted)} .bc .why p.n{color:var(--muted);opacity:.8}
 .bc details.px{margin-top:8px;border-top:1px dashed var(--line)} .bc details.px>summary{cursor:pointer;padding:8px 0 2px;font-size:.84rem;color:var(--muted)} .bc details.px>summary b{font-size:1rem}
-.msd{margin-top:8px;font-size:.84rem} .mstb{width:100%;border-collapse:collapse;margin-top:3px} .mstb{table-layout:fixed} .mstb td{padding:3px 4px;border-bottom:1px dashed var(--line);text-align:left;white-space:normal;word-break:break-all} .mstb td:first-child{white-space:nowrap;width:6.5em} .mstb b{font-size:1rem}
+.msd{margin-top:8px;font-size:.84rem;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,.05);line-height:1.6} .mstb{width:100%;border-collapse:collapse;margin-top:3px} .mstb{table-layout:fixed} .mstb td{padding:3px 4px;border-bottom:1px dashed var(--line);text-align:left;white-space:normal;word-break:break-all} .mstb td:first-child{white-space:nowrap;width:6.5em} .mstb b{font-size:1rem}
 #tpsum:empty{display:none} #whysum,#tpsum{font-size:.84rem;margin:8px 0;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.05);line-height:1.6}
 .bc .sd{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
 .bc .tr{font-size:.8rem;color:var(--muted);white-space:nowrap} .bc .tr b{font-size:1.3rem}
@@ -66,7 +66,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-25 21:30</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-25 21:37</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <details class=fold><summary>加股票／上傳截圖</summary><p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -153,12 +153,11 @@ function lvside(nm,v,tps,p,stop,skip,su,gp,trig,jp){if(!v)return gp!=null?'<span
  if(v.ck){var nm5=['大盤','族群',nm=='多'?'比大盤強':'比大盤弱','量','站穩'],y=0,n=3,h='';for(var i=0;i<5;i++){if(i==3)continue;var k=v.ck.charAt(i);if(i<3&&k=='1')y++;if(i==4)h+='<span class=cx>｜</span>';h+='<span class=c'+(k=='1'?'y':k=='0'?'n':'x')+'>'+nm5[i]+(k=='1'?'✓':k=='0'?'✗':'–')+'</span>'}
   s+='<br><span class="tr t'+(v.tr=='順'?'y':v.tr=='逆'?'n':'x')+'">'+(y==3?'三個都順':v.tr=='順'?'順勢':v.tr=='逆'?'逆勢':'大盤盤整')+' '+y+'/'+n+'</span>'+h}
  return s}
-function msHtml(code,x,far){var row=function(k,v){return '<tr><td class=m>'+k+'</td><td>'+v+'</td></tr>'};
- var side=function(sd){var up=sd=='多',tr=up?x.lt:x.st,st=up?x.ls:x.ss,t2=up?x.lp:x.sp2,t3=up?x.lp2:x.sp3,in_=up?'買進':'賣出',out=up?'賣出':'買進',ge=up?'≥':'≤',le=up?'≤':'≥';
-  if(!up&&x.so!=1)return '<div class=msd><b>做空</b>：這檔不能當沖先賣，不掛</div>';if(far(sd,tr))return '<div class=msd><b>做'+sd+'</b>：'+tr+' 超過'+(up?'漲停':'跌停')+'價，碰不到，不掛</div>';
-  var tp=x.su&&t2&&!far(sd,t2)?'成交價 '+ge+' <b>'+t2+'</b> → '+out+(t3&&!far(sd,t3)?'（或用止盈③ <b>'+t3+'</b>）':''):'成交價 '+ge+' <b>'+(up?x.lb:x.sb)+'</b> → '+out+'（沒把握，只有最低止盈）';
-  return '<div class=msd><b class='+(up?'up':'down')+'>做'+sd+'</b> <span class=mst data-s="'+(up?'L':'S')+'"></span><table class=mstb>'+row('母單條件','成交價 '+ge+' <b>'+tr+'</b>')+row('母單下單',in_+' <b>'+tr+'</b>')+row('子單（停利）',tp)+row('子單（停損）','成交價 '+le+' <b>'+st+'</b> → '+out)+'</table></div>'};
- return '<details class="px ms" data-c="m'+code+'"'+(OPEN['m'+code]?' open':'')+'><summary>母子單填法 <span class=msn></span></summary>'+side('多')+side('空')+'<p class=desc style="margin:6px 0 0"><small>照元大說明圖：子單只有一個條件，停利、停損只能選一個填；另一個要自己盯。母單成交後才會開始看子單。做空（先賣後買）要不要開「開啟當沖」開關、子單下單價怎麼填，請以元大畫面為準，我沒有實際用過。停損用限價單，跳太快時可能賣不掉。</small></p></details>'}
+function msHtml(code,x,far){/* 2026-11-25 使用者：母子單填法表格取消，只留「可以掛／不要掛」的狀態 */
+ var side=function(sd){var up=sd=='多',tr=up?x.lt:x.st,h='<b class='+(up?'up':'down')+'>做'+sd+' '+tr+'</b>：';
+  if(!up&&x.so!=1)return '<div>'+h+'<span class=m>不能當沖先賣，不掛</span></div>';if(far(sd,tr))return '<div>'+h+'<span style="color:#ff7a8a">超過'+(up?'漲停':'跌停')+'價，碰不到 → 不掛</span></div>';
+  return '<div>'+h+'<span class=mst data-s="'+(up?'L':'S')+'"><span class=m>開盤後顯示能不能掛</span></span></div>'};
+ return '<div class=msd><span class=m>掛單狀態</span> <span class=msn></span>'+side('多')+side('空')+'</div>'}
 function msLive(el,v,x){var n=0,t=function(k,e,g,j,ok){var sp=el.querySelector('.mst[data-s="'+k+'"]');if(!sp)return;var s,c='#4fd6a0';if(g!=null){s='開盤 '+g+' 已經跳過這個價位 → 不要掛';c='#ff7a8a'}else if(e){s=e.e+' 已經碰過價位';c='var(--muted)'}else if(j){s=j[0]+' 一筆跳過價位，現在在價位外面 → 先不要掛';c='#ff7a8a'}else if(!ok){s='現價已經在價位外面 → 先不要掛';c='#ff7a8a'}else{s='可以掛';n++}sp.innerHTML='<span style="color:'+c+'">'+s+'</span>'};
  t('L',v.L,v.gL,v.jL,v.p<x.lt);t('S',v.S,v.gS,v.jS,v.p>x.st);var a=el.querySelector('.msn');if(a)a.innerHTML='<span class=m>（'+v.t+'：'+(n?'可掛 '+n+' 邊':'現在沒有可掛的')+'）</span>'}
 function tpSum(){var el=$('tpsum');if(!el)return;var n=0,a=0,b=0,ch=pmGet();get().forEach(function(c){var v=LV.stocks[c];if(!v)return;var ss=ch&&LV.sets&&LV.sets[ch]&&LV.sets[ch][c];if(ss)v=ss;[v.L,v.S].forEach(function(e){if(!e)return;n++;if(e.tp>=2)a++;else if(e.sl)b++})});
