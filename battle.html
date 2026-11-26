@@ -66,7 +66,7 @@ a{color:var(--accent)}
 .tps{display:flex;gap:4px} .tp{flex:1;min-width:0;text-align:center;border:1px solid rgba(214,181,109,.5);border-radius:8px;padding:3px 1px;background:rgba(214,181,109,.10)}
 .tp i{display:block;font-style:normal;font-size:.62rem;color:var(--muted);white-space:nowrap} .tp b{display:block;color:#e6c77a;font-size:.92rem;line-height:1.25} .tp em{display:block;font-style:normal;font-size:.62rem;color:#b9b4a6;white-space:nowrap}
 .tp{border-width:1.5px} .tp:nth-child(2){background:rgba(214,181,109,.26);border-color:#d6b56d} .tp:nth-child(3){background:rgba(214,181,109,.42);border-color:#f1d99a} .tp:nth-child(3) b{color:#fff3cf}
-.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-26 22:30</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
+.tp.lo{border-style:dashed;border-width:1px;background:rgba(214,181,109,.07)} .tp.no{border-style:dotted;background:transparent;display:flex;flex-direction:column;justify-content:center}</style><body><div class=wrap><header><div><h1>當沖備戰名單</h1><p class=sub>更新 2026-11-26 22:32</p></div><a href="index.html">回首頁</a></header><section><h2 id=mytitle>我選的股</h2>
 <details class=fold><summary>加股票／上傳截圖</summary><p class=desc>打代號或名稱（可一次多檔，用空白隔開），或直接上傳自選股截圖。清單只存在這支手機裡，截圖也只在手機上辨識、不會上傳。</p>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><input id=myq placeholder="例：富喬 2337 聯電" style="flex:1;min-width:160px;padding:10px;border-radius:10px;border:1px solid #2b3547;background:#111827;color:inherit;font-size:16px">
 <button id=myadd style="padding:10px 16px;border-radius:10px;border:0;background:#d6b56d;color:#111827;font-weight:700">加入</button></div>
@@ -110,7 +110,7 @@ function whysum(a){var el=$('whysum');if(!el)return;var l=0,s=0,n=0;a.forEach(fu
  if(!n){el.style.display='none';return}el.style.display='';
  el.innerHTML='你選的 '+a.length+' 檔：有<b class=up>偏多</b>理由的 '+l+' 檔、有<b class=down>偏空</b>理由的 '+s+' 檔'+(l+s==0?'，都沒有明顯偏向，主要看開盤位置':'')+'。<br><span style="color:var(--muted)">只列兩年資料測過的理由；是歷史平均，不是預測。'+(D.mk!=null?'昨天大盤（0050）'+(D.mk>0?'+':'')+D.mk+'%。':'')+'</span>'}
 /* 2026-11-26 使用者要求：個股旁邊備註 1% 是幾元（用昨收算），順便寫一跳幾元 */
-function pct1(c){if(!c)return '';var t=c<10?0.01:c<50?0.05:c<100?0.1:c<500?0.5:c<1000?1:5,y=+(c/100).toFixed(2);
+function pct1(c){if(!c)return '';var t=c<10?0.01:c<50?0.05:c<100?0.1:c<500?0.5:c<1000?1:5,y=+(c/100).toFixed(3);
  return ' <span class=lim style="white-space:nowrap">｜1%＝'+y+' 元（1 張 '+Math.round(c*10).toLocaleString()+' 元）、一跳 '+t+' 元</span>'}
 function card(code){var x=D.stocks[code];if(!x)return'';var nf=function(v){return (v>=0?'+':'')+v.toLocaleString()};
  var chip=function(lab,price,g,cls){return '<div class="tp '+(cls||'')+'"><i>'+lab+'</i><b>'+price+'</b><em>'+nf(g)+'</em></div>'};
